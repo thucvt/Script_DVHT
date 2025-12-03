@@ -20,7 +20,7 @@
         "auto_run": true,
         "desc": "Công cụ tải, cài đặt chính hãng Microsoft (Có sẵn .NET Runtime)"},
       { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit" },
-      { "name": "Draw.IO (Vẽ biểu đồ)", "type": "winget", "id": "jgraph.drawio" },
+      { "name": "Draw.IO (Vẽ biểu đồ)", "type": "winget", "id": "JGraph.Draw" },
       { "name": "OpenOffice", "type": "winget", "id": "Apache.OpenOffice" },
       { "name": "Canva", "type": "winget", "id": "Canva.Canva" }
     ]
@@ -66,7 +66,7 @@
     "apps": [
       { "name": "Visual C++ AIO (2005-2022)", "type": "winget", "id": "Abbott.VCRedist" },
       { "name": "Java Runtime (JRE)", "type": "winget", "id": "Oracle.JavaRuntimeEnvironment" },
-      { "name": ".NET Framework 3.5 (Win Feature)", "type": "custom", "id": "ENABLE_NET35" },
+      { "name": ".NET Framework 3.5", "type": "custom", "id": "ENABLE_NET35" },
       { "name": ".NET Desktop Runtime 8.0", "type": "winget", "id": "Microsoft.DotNet.DesktopRuntime.8" },
       { "name": "Node.js (LTS)", "type": "winget", "id": "OpenJS.NodeJS.LTS" },
       { "name": "Python 3.12", "type": "winget", "id": "Python.Python.3.12" },
