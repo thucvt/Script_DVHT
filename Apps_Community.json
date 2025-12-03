@@ -28,7 +28,7 @@
     "group_name": "4. 💬 CHAT & HỌP ONLINE",
     "apps": [
       { "name": "Microsoft Teams", "type": "winget", "id": "Microsoft.Teams" },
-      { "name": "Zalo", "type": "winget", "id": "VNG.Zalo" },
+      { "name": "Zalo", "type": "exe_url", "id": "VNG.Zalo", "url": "https://zalo.me/download/zalo-pc", "install_args": "/install" } ,
       { "name": "Zoom", "type": "winget", "id": "Zoom.Zoom" }
     ]
   },
