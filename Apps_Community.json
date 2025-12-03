@@ -1,0 +1,63 @@
+[
+  {
+    "group_name": "1. ⌨️ BỘ GÕ & FONT",
+    "apps": [
+      { "name": "Cài Font (Full Tiếng Việt)", "type": "custom", "id": "LOCAL_FONT_INSTALL" },
+      { "name": "Unikey 4.6 RC2", "type": "portable", "id": "Unikey", "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip", "exe_in_zip": "UniKeyNT.exe", "kill_process": "UniKeyNT.exe" },
+      { "name": "EVKey (Thay thế Unikey)", "type": "portable", "id": "EVKey", "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip", "exe_in_zip": "EVKey64.exe", "kill_process": "EVKey64.exe" }
+    ]
+  },
+  {
+    "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
+    "apps": [
+      { "name": "Microsoft 365 / Office", "type": "winget", "id": "Microsoft.Office" },
+      { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit" },
+      { "name": "OpenOffice", "type": "winget", "id": "Apache.OpenOffice" },
+      { "name": "Canva", "type": "winget", "id": "Canva.Canva" }
+    ]
+  },
+  {
+    "group_name": "3. 🌐 TRÌNH DUYỆT WEB",
+    "apps": [
+      { "name": "Google Chrome", "type": "winget", "id": "Google.Chrome" },
+      { "name": "Mozilla Firefox", "type": "winget", "id": "Mozilla.Firefox" },
+      { "name": "Cốc Cốc Browser", "type": "exe_url", "id": "CocCoc", "url": "https://files.coccoc.com/browser/coccoc_vi.exe", "install_args": "/install" }
+    ]
+  },
+  {
+    "group_name": "4. 💬 CHAT & HỌP ONLINE",
+    "apps": [
+      { "name": "Microsoft Teams", "type": "winget", "id": "Microsoft.Teams" },
+      { "name": "Zalo", "type": "winget", "id": "VNG.Zalo" },
+      { "name": "Zoom", "type": "winget", "id": "Zoom.Zoom" }
+    ]
+  },
+  {
+    "group_name": "5. 🧰 TIỆN ÍCH (NÉN, ẢNH)",
+    "apps": [
+      { "name": "7-Zip", "type": "winget", "id": "7zip.7zip" },
+      { "name": "Lightshot (Chụp màn hình)", "type": "winget", "id": "Skillbrains.Lightshot" },
+      { "name": "Everything (Tìm file nhanh)", "type": "winget", "id": "voidtools.Everything" },
+      { "name": "UltraViewer", "type": "exe_url", "id": "UltraViewer", "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe", "install_args": "/VERYSILENT /NORESTART" }
+    ]
+  },
+  {
+    "group_name": "6. 💻 LẬP TRÌNH & RUNTIME",
+    "apps": [
+      { "name": "Python 3.12", "type": "winget", "id": "Python.Python.3.12" },
+      { "name": "Notepad++", "type": "winget", "id": "Notepad++.Notepad++" },
+      { "name": "VLC Media Player", "type": "winget", "id": "VideoLAN.VLC" },
+      { "name": "Java Runtime (JRE)", "type": "winget", "id": "Oracle.JavaRuntimeEnvironment" },
+      { "name": "Visual Studio Code", "type": "winget", "id": "Microsoft.VisualStudioCode" },
+      { "name": ".NET Framework 3.5 (Win Feature)", "type": "custom", "id": "ENABLE_NET35" }
+    ]
+  },
+  {
+    "group_name": "7. 🗄️ CƠ SỞ DỮ LIỆU (DB)",
+    "apps": [
+      { "name": "SQL Server 2022 Express", "type": "winget", "id": "Microsoft.SQLServer.2022.Express" },
+      { "name": "SSMS (Quản lý SQL)", "type": "winget", "id": "Microsoft.SQLServerManagementStudio" },
+      { "name": "DBeaver Community", "type": "winget", "id": "dbeaver.dbeaver" }
+    ]
+  }
+]
