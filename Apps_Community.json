@@ -15,7 +15,7 @@
         "name": "Office Tool Plus",
         "type": "portable",
         "id": "OfficeToolPlus",
-        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/Office Tool.zip",
+        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
         "exe_in_zip": "Office Tool Plus.exe",
         "desc": "Công cụ tải, cài đặt và quản lý Office mạnh mẽ nhất hiện nay"},
       { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit" },
