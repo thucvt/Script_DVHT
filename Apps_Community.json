@@ -12,7 +12,7 @@
     "apps": [
       { "name": "Microsoft 365 (Online)", "type": "winget", "id": "Microsoft.Office" },
       {
-        "name": "Office Tool Plus (Quản lý Office Chuyên nghiệp)",
+        "name": "Office Tool Plus",
         "type": "portable",
         "id": "OfficeToolPlus",
         "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/Office Tool.zip",
