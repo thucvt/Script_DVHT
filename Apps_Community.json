@@ -12,11 +12,12 @@
     "apps": [
       { "name": "Microsoft 365 (Online)", "type": "winget", "id": "Microsoft.Office" },
       {
-        "name": "Office Tool Plus (Quản lý VIP)",
+        "name": "Office Tool Plus",
         "type": "portable",
         "id": "OfficeToolPlus",
         "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
         "exe_in_zip": "Office Tool Plus.exe",
+        "auto_run": true,
         "desc": "Công cụ tải, cài đặt chính hãng Microsoft (Có sẵn .NET Runtime)"},
       { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit" },
       { "name": "Draw.IO (Vẽ biểu đồ)", "type": "winget", "id": "jgraph.drawio" },
