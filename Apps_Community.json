@@ -11,6 +11,13 @@
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
       { "name": "Microsoft 365 (Online)", "type": "winget", "id": "Microsoft.Office" },
+      {
+        "name": "Office Tool Plus (Quản lý Office Chuyên nghiệp)",
+        "type": "portable",
+        "id": "OfficeToolPlus",
+        "url": "https://yerong.cmn-data.com/Office_Tool_with_runtime_v10.15.3.0_x64.zip",
+        "exe_in_zip": "Office Tool Plus.exe",
+        "desc": "Công cụ tải, cài đặt và quản lý Office mạnh mẽ nhất hiện nay"},
       { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit" },
       { "name": "Draw.IO (Vẽ biểu đồ)", "type": "winget", "id": "jgraph.drawio" },
       { "name": "OpenOffice", "type": "winget", "id": "Apache.OpenOffice" },
