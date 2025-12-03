@@ -2,9 +2,30 @@
   {
     "group_name": "1. ⌨️ BỘ GÕ & FONT",
     "apps": [
-      { "name": "Cài Font (Full Tiếng Việt)", "type": "custom", "id": "LOCAL_FONT_INSTALL" },
-      { "name": "Unikey 4.6 RC2", "type": "portable", "id": "Unikey", "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip", "exe_in_zip": "UniKeyNT.exe", "kill_process": "UniKeyNT.exe" },
-      { "name": "EVKey (Thay thế Unikey)", "type": "portable", "id": "EVKey", "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip", "exe_in_zip": "EVKey64.exe", "kill_process": "EVKey64.exe" }
+      { 
+        "name": "Cài Font (Full Tiếng Việt)", 
+        "type": "custom", 
+        "id": "LOCAL_FONT_INSTALL", 
+        "check_path": "%WINDIR%\\Fonts\\VNI-Times.TTF" 
+      },
+      { 
+        "name": "Unikey 4.6 RC2", 
+        "type": "portable", 
+        "id": "Unikey", 
+        "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip", 
+        "exe_in_zip": "UniKeyNT.exe", 
+        "kill_process": "UniKeyNT.exe", 
+        "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe" 
+      },
+      { 
+        "name": "EVKey (Thay thế Unikey)", 
+        "type": "portable", 
+        "id": "EVKey", 
+        "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip", 
+        "exe_in_zip": "EVKey64.exe", 
+        "kill_process": "EVKey64.exe", 
+        "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe" 
+      }
     ]
   },
   {
@@ -18,47 +39,70 @@
         "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
         "exe_in_zip": "Office Tool Plus.exe",
         "auto_run": true,
-        "desc": "Công cụ tải, cài đặt chính hãng Microsoft (Có sẵn .NET Runtime)"},
-      { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit" },
-      { "name": "Draw.IO (Vẽ biểu đồ)", "type": "winget", "id": "JGraph.Draw" },
+        "desc": "Công cụ tải, cài đặt chính hãng Microsoft",
+        "check_path": "%ProgramFiles%\\OfficeToolPlus\\Office Tool Plus.exe"
+      },
+      { "name": "Adobe Acrobat Reader", "type": "winget", "id": "Adobe.Acrobat.Reader.64-bit", "check_path": "%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" },
+      { "name": "Draw.IO (Vẽ biểu đồ)", "type": "winget", "id": "jgraph.drawio", "check_path": "%ProgramFiles%\\draw.io\\draw.io.exe" },
       { "name": "OpenOffice", "type": "winget", "id": "Apache.OpenOffice" },
-      { "name": "Canva", "type": "winget", "id": "Canva.Canva" }
+      { "name": "Canva", "type": "winget", "id": "Canva.Canva", "check_path": "%LOCALAPPDATA%\\Programs\\Canva\\Canva.exe" }
     ]
   },
   {
     "group_name": "3. 📡 ĐIỀU KHIỂN TỪ XA",
     "apps": [
-      { "name": "UltraViewer", "type": "exe_url", "id": "UltraViewer", "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe", "install_args": "/VERYSILENT /NORESTART" },
-      { "name": "TeamViewer", "type": "winget", "id": "TeamViewer.TeamViewer" },
-      { "name": "AnyDesk", "type": "winget", "id": "AnyDesk.AnyDesk" }
+      { 
+        "name": "UltraViewer", 
+        "type": "exe_url", 
+        "id": "UltraViewer", 
+        "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe", 
+        "install_args": "/VERYSILENT /NORESTART", 
+        "check_path": "%ProgramFiles(x86)%\\UltraViewer\\UltraViewer_Desktop.exe" 
+      },
+      { "name": "TeamViewer", "type": "winget", "id": "TeamViewer.TeamViewer", "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe" },
+      { "name": "AnyDesk", "type": "winget", "id": "AnyDesk.AnyDesk", "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe" }
     ]
   },
   {
     "group_name": "4. 🌐 TRÌNH DUYỆT WEB",
     "apps": [
-      { "name": "Google Chrome", "type": "winget", "id": "Google.Chrome" },
-      { "name": "Cốc Cốc Browser", "type": "exe_url", "id": "CocCoc", "url": "https://files.coccoc.com/browser/coccoc_vi.exe", "install_args": "/install" },
-      { "name": "Mozilla Firefox", "type": "winget", "id": "Mozilla.Firefox" },
-      { "name": "Opera GX (Gaming)", "type": "winget", "id": "Opera.OperaGX" },
+      { "name": "Google Chrome", "type": "winget", "id": "Google.Chrome", "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe" },
+      { 
+        "name": "Cốc Cốc Browser", 
+        "type": "exe_url", 
+        "id": "CocCoc", 
+        "url": "https://files.coccoc.com/browser/coccoc_vi.exe", 
+        "install_args": "/install", 
+        "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe" 
+      },
+      { "name": "Mozilla Firefox", "type": "winget", "id": "Mozilla.Firefox", "check_path": "%ProgramFiles%\\Mozilla Firefox\\firefox.exe" },
+      { "name": "Opera GX (Gaming)", "type": "winget", "id": "Opera.OperaGX", "check_path": "%LOCALAPPDATA%\\Programs\\Opera GX\\launcher.exe" },
       { "name": "Brave Browser", "type": "winget", "id": "Brave.Brave" }
     ]
   },
   {
     "group_name": "5. 💬 CHAT & HỌP ONLINE",
     "apps": [
-      { "name": "Zalo", "type": "exe_url", "id": "VNG.Zalo", "url": "https://zalo.me/download/zalo-pc", "install_args": "/install" },
+      { 
+        "name": "Zalo", 
+        "type": "exe_url", 
+        "id": "VNG.Zalo", 
+        "url": "https://zalo.me/download/zalo-pc", 
+        "install_args": "/install", 
+        "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe" 
+      },
       { "name": "Microsoft Teams", "type": "winget", "id": "Microsoft.Teams" },
-      { "name": "Viber", "type": "winget", "id": "Viber.Viber" },
-      { "name": "Zoom", "type": "winget", "id": "Zoom.Zoom" }
+      { "name": "Viber", "type": "winget", "id": "Viber.Viber", "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe" },
+      { "name": "Zoom", "type": "winget", "id": "Zoom.Zoom", "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe" }
     ]
   },
   {
     "group_name": "6. 🧰 TIỆN ÍCH (NÉN, ẢNH)",
     "apps": [
-      { "name": "WinRAR", "type": "winget", "id": "RARLab.WinRAR" },
-      { "name": "7-Zip", "type": "winget", "id": "7zip.7zip" },
-      { "name": "Lightshot (Chụp màn hình)", "type": "winget", "id": "Skillbrains.Lightshot" },
-      { "name": "Everything (Tìm file nhanh)", "type": "winget", "id": "voidtools.Everything" }
+      { "name": "WinRAR", "type": "winget", "id": "RARLab.WinRAR", "check_path": "%ProgramFiles%\\WinRAR\\WinRAR.exe" },
+      { "name": "7-Zip", "type": "winget", "id": "7zip.7zip", "check_path": "%ProgramFiles%\\7-Zip\\7zFM.exe" },
+      { "name": "Lightshot (Chụp màn hình)", "type": "winget", "id": "Skillbrains.Lightshot", "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe" },
+      { "name": "Everything (Tìm file nhanh)", "type": "winget", "id": "voidtools.Everything", "check_path": "%ProgramFiles%\\Everything\\Everything.exe" }
     ]
   },
   {
@@ -70,8 +114,8 @@
       { "name": ".NET Desktop Runtime 8.0", "type": "winget", "id": "Microsoft.DotNet.DesktopRuntime.8" },
       { "name": "Node.js (LTS)", "type": "winget", "id": "OpenJS.NodeJS.LTS" },
       { "name": "Python 3.12", "type": "winget", "id": "Python.Python.3.12" },
-      { "name": "Notepad++", "type": "winget", "id": "Notepad++.Notepad++" },
-      { "name": "Visual Studio Code", "type": "winget", "id": "Microsoft.VisualStudioCode" }
+      { "name": "Notepad++", "type": "winget", "id": "Notepad++.Notepad++", "check_path": "%ProgramFiles%\\Notepad++\\notepad++.exe" },
+      { "name": "Visual Studio Code", "type": "winget", "id": "Microsoft.VisualStudioCode", "check_path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe" }
     ]
   },
   {
