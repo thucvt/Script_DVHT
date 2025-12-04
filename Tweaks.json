@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Supper Optimize For Win 10/11",
+    "desc": "Siêu tối ưu cực mạnh (By ThucIT) - Siêu nhẹ máy",
+    "cmd": "RUN_ThucIT_SERVICES"
+  },
+  {
+    "name": "Create Restore Point",
+    "desc": "Tạo điểm khôi phục (Backup) an toàn",
+    "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
+  },
+  {
+    "name": "Disable Bing Search",
+    "desc": "Tắt tìm kiếm Web trong Start Menu",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Disable Sticky Keys",
+    "desc": "Tắt phím dính (Shift 5 lần)",
+    "cmd": "reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f"
+  },
+  {
+    "name": "Disable Mouse Acceleration",
+    "desc": "Tắt gia tốc chuột (Chuẩn FPS)",
+    "cmd": "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseSpeed\" /t REG_SZ /d \"0\" /f; reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseThreshold1\" /t REG_SZ /d \"0\" /f; reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseThreshold2\" /t REG_SZ /d \"0\" /f"
+  },
+  {
+    "name": "Set Time to UTC",
+    "desc": "Fix lỗi lệch giờ Windows/macOS",
+    "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation\" /v \"RealTimeIsUniversal\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Disable Hibernation",
+    "desc": "Tắt ngủ đông (Tiết kiệm ổ cứng)",
+    "cmd": "powercfg /h off"
+  },
+  {
+    "name": "Show File Extensions",
+    "desc": "Hiện đuôi file (.exe, .txt)",
+    "cmd": "Set-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name \"HideFileExt\" -Value 0"
+  },
+  {
+    "name": "Classic Context Menu",
+    "desc": "Menu chuột phải kiểu cũ (Win 11)",
+    "cmd": "reg add \"HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32\" /f /ve"
+  },
+  {
+    "name": "Disable Telemetry",
+    "desc": "Chặn thu thập dữ liệu ngầm",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Disable Background Apps",
+    "desc": "Tắt ứng dụng chạy nền (Tiết kiệm Pin)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Disable GameDVR",
+    "desc": "Tắt Xbox Game Bar (Giảm lag)",
+    "cmd": "reg add \"HKCU\\System\\GameConfigStore\" /v GameDVR_Enabled /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Disable Consumer Features",
+    "desc": "Chặn tự tải CandyCrush, TikTok...",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Disable Location Tracking",
+    "desc": "Tắt định vị vị trí",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
+  }
+]
