@@ -76,8 +76,18 @@
         "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe"
       },
       { "name": "Mozilla Firefox", "type": "winget", "id": "Mozilla.Firefox", "check_path": "%ProgramFiles%\\Mozilla Firefox\\firefox.exe" },
-      { "name": "Opera GX (Gaming)", "type": "winget", "id": "Opera.OperaGX", "check_path": "%LOCALAPPDATA%\\Programs\\Opera GX\\launcher.exe" },
-      { "name": "Brave Browser", "type": "winget", "id": "Brave.Brave" }
+      { 
+        "name": "Opera GX (Gaming)", 
+        "type": "winget", 
+        "id": "Opera.OperaGX", 
+        "check_path": "%LOCALAPPDATA%\\Programs\\Opera GX\\opera.exe" 
+      },
+      { 
+        "name": "Brave Browser", 
+        "type": "winget", 
+        "id": "Brave.Brave",
+        "check_path": "%ProgramFiles%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+      }
     ]
   },
   {
@@ -91,9 +101,26 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe"
       },
-      { "name": "Microsoft Teams", "type": "winget", "id": "Microsoft.Teams" },
-      { "name": "Viber", "type": "winget", "id": "Viber.Viber", "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe" },
-      { "name": "Zoom", "type": "winget", "id": "Zoom.Zoom", "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe" }
+      { 
+        "name": "Microsoft Teams", 
+        "type": "winget", 
+        "id": "Microsoft.Teams",
+        "check_path": "%LOCALAPPDATA%\\Microsoft\\Teams\\current\\Teams.exe"
+      },
+      { 
+        "name": "Viber", 
+        "type": "exe_url", 
+        "id": "Viber_Direct", 
+        "url": "https://download.cdn.viber.com/desktop/windows/ViberSetup.exe", 
+        "install_args": "/Install /Quiet /NoRestart",
+        "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe" 
+      },
+      { 
+        "name": "Zoom", 
+        "type": "winget", 
+        "id": "Zoom.Zoom", 
+        "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe" 
+      }
     ]
   },
   {
@@ -133,6 +160,57 @@
       { "name": "SQL Server 2022 Express", "type": "winget", "id": "Microsoft.SQLServer.2022.Express" },
       { "name": "SSMS (Quản lý SQL)", "type": "winget", "id": "Microsoft.SQLServerManagementStudio" },
       { "name": "DBeaver Community", "type": "winget", "id": "dbeaver.dbeaver" }
+    ]
+  }
+  ,
+  {
+    "group_name": "9. 🎮 THƯ VIỆN GAME (GAMING LIBS)",
+    "apps": [
+      { 
+        "name": "DirectX End-User Runtime (Fix lỗi DLL)", 
+        "type": "exe_url", 
+        "id": "DirectX_June2010", 
+        "url": "https://download.microsoft.com/download/8/4/A/84A35BF1-DAFE-4AE8-82AF-AD2AE20B6B14/directx_Jun2010_redist.exe", 
+        "install_args": "/Q /T:%TEMP%\\DX9 /C /Q",
+        "auto_run": false,
+        "desc": "Bắt buộc cài để chơi game (Fix lỗi thiếu d3dx9_xx.dll, xinput...)",
+        "check_path": "%WINDIR%\\System32\\d3dx9_43.dll"
+      },
+      { 
+        "name": "Visual C++ AIO (Cần cho mọi Game)", 
+        "type": "exe_url", 
+        "id": "VCRedist_AIO_Game", 
+        "url": "https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe",
+        "install_args": "/ai /gm2",
+        "check_path": "%WINDIR%\\System32\\vcruntime140.dll"
+      },
+      { 
+        "name": "NVIDIA PhysX System (Game cũ)", 
+        "type": "exe_url", 
+        "id": "Nvidia.PhysX", 
+        "url": "https://us.download.nvidia.com/Windows/9.21.0713/PhysX-9.21.0713-SystemSoftware.exe", 
+        "install_args": "/silent", 
+        "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll" 
+      },
+      { 
+        "name": "XNA Framework 4.0 (Game Indie)", 
+        "type": "exe_url", 
+        "id": "XNA_Framework_4.0", 
+        "url": "https://download.microsoft.com/download/A/C/2/AC2C903B-E6E8-42C2-9FD7-BEBAC362A930/xnafx40_redist.msi", 
+        "install_args": "/quiet /norestart", 
+        "check_path": "%ProgramFiles(x86)%\\Microsoft XNA\\XNA Game Studio\\v4.0\\Redist\\DX Redist\\BDANT.exe" 
+      },
+      { 
+        "name": "OpenAL (Âm thanh game cũ)", 
+        "type": "exe_url", 
+        "id": "OpenAL", 
+        "url": "https://openal.org/downloads/oalinst.zip", 
+        "exe_in_zip": "oalinst.exe", 
+        "type": "portable",
+        "auto_run": true,
+        "desc": "Thư viện âm thanh 3D cho các game cũ",
+        "check_path": "%WINDIR%\\System32\\OpenAL32.dll"
+      }
     ]
   }
 ]
