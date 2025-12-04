@@ -2,29 +2,29 @@
   {
     "group_name": "1. ⌨️ BỘ GÕ & FONT",
     "apps": [
-      { 
-        "name": "Cài Font (Full Tiếng Việt)", 
-        "type": "custom", 
-        "id": "LOCAL_FONT_INSTALL", 
-        "check_path": "%WINDIR%\\Fonts\\VNI-Times.TTF" 
+      {
+        "name": "Cài Font (Full Tiếng Việt)",
+        "type": "custom",
+        "id": "LOCAL_FONT_INSTALL",
+        "check_path": "%WINDIR%\\Fonts\\VNI-Times.TTF"
       },
-      { 
-        "name": "Unikey 4.6 RC2", 
-        "type": "portable", 
-        "id": "Unikey", 
-        "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip", 
-        "exe_in_zip": "UniKeyNT.exe", 
-        "kill_process": "UniKeyNT.exe", 
-        "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe" 
+      {
+        "name": "Unikey 4.6 RC2",
+        "type": "portable",
+        "id": "Unikey",
+        "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip",
+        "exe_in_zip": "UniKeyNT.exe",
+        "kill_process": "UniKeyNT.exe",
+        "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe"
       },
-      { 
-        "name": "EVKey (Thay thế Unikey)", 
-        "type": "portable", 
-        "id": "EVKey", 
-        "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip", 
-        "exe_in_zip": "EVKey64.exe", 
-        "kill_process": "EVKey64.exe", 
-        "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe" 
+      {
+        "name": "EVKey (Thay thế Unikey)",
+        "type": "portable",
+        "id": "EVKey",
+        "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip",
+        "exe_in_zip": "EVKey64.exe",
+        "kill_process": "EVKey64.exe",
+        "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe"
       }
     ]
   },
@@ -51,13 +51,13 @@
   {
     "group_name": "3. 📡 ĐIỀU KHIỂN TỪ XA",
     "apps": [
-      { 
-        "name": "UltraViewer", 
-        "type": "exe_url", 
-        "id": "UltraViewer", 
-        "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe", 
-        "install_args": "/VERYSILENT /NORESTART", 
-        "check_path": "%ProgramFiles(x86)%\\UltraViewer\\UltraViewer_Desktop.exe" 
+      {
+        "name": "UltraViewer",
+        "type": "exe_url",
+        "id": "UltraViewer",
+        "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe",
+        "install_args": "/VERYSILENT /NORESTART",
+        "check_path": "%ProgramFiles(x86)%\\UltraViewer\\UltraViewer_Desktop.exe"
       },
       { "name": "TeamViewer", "type": "winget", "id": "TeamViewer.TeamViewer", "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe" },
       { "name": "AnyDesk", "type": "winget", "id": "AnyDesk.AnyDesk", "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe" }
@@ -67,13 +67,13 @@
     "group_name": "4. 🌐 TRÌNH DUYỆT WEB",
     "apps": [
       { "name": "Google Chrome", "type": "winget", "id": "Google.Chrome", "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe" },
-      { 
-        "name": "Cốc Cốc Browser", 
-        "type": "exe_url", 
-        "id": "CocCoc", 
-        "url": "https://files.coccoc.com/browser/coccoc_vi.exe", 
-        "install_args": "/install", 
-        "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe" 
+      {
+        "name": "Cốc Cốc Browser",
+        "type": "exe_url",
+        "id": "CocCoc",
+        "url": "https://files.coccoc.com/browser/coccoc_vi.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe"
       },
       { "name": "Mozilla Firefox", "type": "winget", "id": "Mozilla.Firefox", "check_path": "%ProgramFiles%\\Mozilla Firefox\\firefox.exe" },
       { "name": "Opera GX (Gaming)", "type": "winget", "id": "Opera.OperaGX", "check_path": "%LOCALAPPDATA%\\Programs\\Opera GX\\launcher.exe" },
@@ -83,13 +83,13 @@
   {
     "group_name": "5. 💬 CHAT & HỌP ONLINE",
     "apps": [
-      { 
-        "name": "Zalo", 
-        "type": "exe_url", 
-        "id": "VNG.Zalo", 
-        "url": "https://zalo.me/download/zalo-pc", 
-        "install_args": "/install", 
-        "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe" 
+      {
+        "name": "Zalo",
+        "type": "exe_url",
+        "id": "VNG.Zalo",
+        "url": "https://zalo.me/download/zalo-pc",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe"
       },
       { "name": "Microsoft Teams", "type": "winget", "id": "Microsoft.Teams" },
       { "name": "Viber", "type": "winget", "id": "Viber.Viber", "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe" },
@@ -103,13 +103,21 @@
       { "name": "7-Zip", "type": "winget", "id": "7zip.7zip", "check_path": "%ProgramFiles%\\7-Zip\\7zFM.exe" },
       { "name": "Lightshot (Chụp màn hình)", "type": "winget", "id": "Skillbrains.Lightshot", "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe" },
       { "name": "Everything (Tìm file nhanh)", "type": "winget", "id": "voidtools.Everything", "check_path": "%ProgramFiles%\\Everything\\Everything.exe" },
-       { "name": "OBS Studio", "type": "winget", "id": "OBSProject.OBSStudio" }
+      { "name": "OBS Studio", "type": "winget", "id": "OBSProject.OBSStudio" }
     ]
   },
   {
     "group_name": "7. 💻 LẬP TRÌNH & RUNTIME",
     "apps": [
-      { "name": "Visual C++ AIO (2005-2022)", "type": "winget", "id": "Abbott.VCRedist" },
+      { 
+        "name": "Visual C++ AIO (2005-2022)", 
+        "type": "exe_url", 
+        "id": "VCRedist_AIO", 
+        "url": "https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe",
+        "install_args": "/ai /gm2",
+        "desc": "Cài đặt tất cả thư viện C++ cần thiết để chạy Game/App",
+        "check_path": "%WINDIR%\\System32\\vcruntime140.dll"
+      },
       { "name": "Java Runtime (JRE)", "type": "winget", "id": "Oracle.JavaRuntimeEnvironment" },
       { "name": ".NET Framework 3.5", "type": "custom", "id": "ENABLE_NET35" },
       { "name": ".NET Desktop Runtime 8.0", "type": "winget", "id": "Microsoft.DotNet.DesktopRuntime.8" },
