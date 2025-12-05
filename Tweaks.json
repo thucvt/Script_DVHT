@@ -164,6 +164,13 @@
     "desc": "Kích hoạt thuật toán nén Zstd & Dictionary Transport (Tăng tốc tải trang & Tiết kiệm băng thông)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"CompressionDictionaryTransportEnabled\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ZstdContentEncodingEnabled\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Optimize Network TCP/IP (Gaming/Latency)",
+    "desc": "Giảm độ trễ mạng (Ping), Tối ưu TCP NoDelay (Giúp phản hồi game/thao tác remote desktop nhanh hơn)",
+    "type": "cmd",
+    "cmd": "cmd /c \"for /f \"tokens=*\" %a in ('reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces /s /f \"{*}\" /k ^| findstr HKEY') do (reg add \"%a\" /v TcpAckFrequency /t REG_DWORD /d 1 /f & reg add \"%a\" /v TCPNoDelay /t REG_DWORD /d 1 /f & reg add \"%a\" /v TcpDelAckTicks /t REG_DWORD /d 0 /f) & netsh int tcp set global autotuninglevel=normal & netsh int tcp set global rss=enabled & netsh int tcp set heuristics disabled\""
   }
+
  
 ]
