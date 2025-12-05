@@ -6,7 +6,7 @@
         "name": "Cài Font (Full Tiếng Việt)",
         "type": "custom",
         "id": "LOCAL_FONT_INSTALL",
-        "check_path": "%WINDIR%\\Fonts\\VNI-Times.TTF"
+        "check_path": "%WINDIR%\\Fonts\\VNTIMEB.TTF"
       },
       {
         "name": "Unikey 4.6 RC2",
