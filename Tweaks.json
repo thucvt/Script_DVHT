@@ -75,6 +75,11 @@
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 1 /f"
   },
   {
+  "name": "Restore: Explorer to Quick Access",
+  "desc": "Khôi phục mở File Explorer vào Quick Access (Mặc định)",
+  "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 2 /f"
+  },
+  {
     "name": "Verbose Status Messages",
     "desc": "Hiện chi tiết quá trình tắt/mở máy (Loading...)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v \"VerboseStatus\" /t REG_DWORD /d 1 /f"
