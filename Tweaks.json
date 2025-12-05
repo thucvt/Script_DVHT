@@ -170,7 +170,29 @@
     "desc": "Giảm độ trễ mạng (Ping), Tối ưu TCP NoDelay (Giúp phản hồi game/thao tác remote desktop nhanh hơn)",
     "type": "cmd",
     "cmd": "cmd /c \"for /f \"tokens=*\" %a in ('reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces /s /f \"{*}\" /k ^| findstr HKEY') do (reg add \"%a\" /v TcpAckFrequency /t REG_DWORD /d 1 /f & reg add \"%a\" /v TCPNoDelay /t REG_DWORD /d 1 /f & reg add \"%a\" /v TcpDelAckTicks /t REG_DWORD /d 0 /f) & netsh int tcp set global autotuninglevel=normal & netsh int tcp set global rss=enabled & netsh int tcp set heuristics disabled\""
+  },
+  {
+    "name": "Quick System Clean",
+    "desc": "Dọn dẹp File tạm (Temp), Prefetch, File Log, Empty Recycle Bin (An toàn - Nhanh)",
+    "type": "cmd",
+    "cmd": "cmd /c \"del /f /s /q \"%TEMP%\\*\" & rd /s /q \"%TEMP%\" & del /f /s /q \"%windir%\\Temp\\*\" & del /f /s /q \"%windir%\\Prefetch\\*.*\" & wevtutil cl Application & wevtutil cl System & PowerShell -Command \"Clear-RecycleBin -Force -ErrorAction SilentlyContinue\"\""
+  },
+  {
+    "name": "Rebuild Icon Cache",
+    "desc": "Xóa và tạo lại bộ nhớ đệm Icon (Sửa lỗi icon bị trắng/lỗi hình)",
+    "type": "cmd",
+    "cmd": "cmd /c \"taskkill /f /im explorer.exe & del /f /q \"%localappdata%\\IconCache.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\iconcache_*.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" & start explorer.exe\""
+  },
+  {
+    "name": "Reset Windows Update & Clean Cache",
+    "desc": "Dừng dịch vụ Update, xóa cache tải về bị lỗi và khởi động lại (Sửa lỗi không update được)",
+    "type": "cmd",
+    "cmd": "cmd /c \"net stop wuauserv & net stop cryptSvc & net stop bits & net stop msiserver & rd /s /q \"%windir%\\SoftwareDistribution\\Download\" & md \"%windir%\\SoftwareDistribution\\Download\" & net start wuauserv & net start bits & net start cryptSvc & net start msiserver\""
+  },
+  {
+    "name": "Clean Browser Cache (Chrome/Edge)",
+    "desc": "Xóa bộ nhớ đệm trình duyệt (Giữ lại Cookie & Lịch sử đăng nhập)",
+    "type": "cmd",
+    "cmd": "cmd /c \"del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\GPUCache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\*\"\""
   }
-
- 
 ]
