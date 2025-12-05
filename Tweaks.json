@@ -68,5 +68,65 @@
     "name": "Disable Location Tracking",
     "desc": "Tắt định vị vị trí",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Open Explorer to This PC",
+    "desc": "Mở File Explorer vào This PC (thay vì Quick Access)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Verbose Status Messages",
+    "desc": "Hiện chi tiết quá trình tắt/mở máy (Loading...)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v \"VerboseStatus\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "name": "Disable Network Throttling",
+    "desc": "Tắt giới hạn băng thông mạng (Giảm Ping/Lag)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d 4294967295 /f"
+  },
+  {
+    "name": "Disable Startup Delay",
+    "desc": "Tắt độ trễ khi khởi động ứng dụng cùng Windows (Boot nhanh hơn)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v StartupDelayInMSec /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Instant Menu Display",
+    "desc": "Menu chuột phải/Start hiện ngay lập tức (Không delay)",
+    "cmd": "reg add \"HKCU\\Control Panel\\Desktop\" /v MenuShowDelay /t REG_SZ /d \"0\" /f"
+  },
+  {
+    "name": "Disable Transparency Effects",
+    "desc": "Tắt hiệu ứng trong suốt (Giảm tải GPU/VRAM)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v EnableTransparency /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Disable Delivery Optimization",
+    "desc": "Tắt chia sẻ update P2P (Hút băng thông/Ổ cứng ngầm)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization\" /v DODownloadMode /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Disable SysMain (Superfetch)",
+    "desc": "Tắt SysMain (Giảm 100% Disk trên HDD, tiết kiệm RAM)",
+    "cmd": "Set-Service -Name SysMain -StartupType Disabled; Stop-Service -Name SysMain -Force"
+  },
+  {
+    "name": "Disable Windows Search Indexing",
+    "desc": "Tắt lập chỉ mục tìm kiếm (Giảm tải CPU/Disk chạy ngầm)",
+    "cmd": "Set-Service -Name WSearch -StartupType Disabled; Stop-Service -Name WSearch -Force"
+  },
+  {
+    "name": "Disable VBS (Core Isolation)",
+    "desc": "Tắt Virtualization-Based Security (Tăng FPS Game 10-20%)",
+    "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\" /v \"EnableVirtualizationBasedSecurity\" /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "High Priority for Games",
+    "desc": "Ưu tiên CPU cho tác vụ Game/Đồ họa (Win32Priority)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"GPU Priority\" /t REG_DWORD /d 8 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Priority\" /t REG_DWORD /d 6 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Scheduling Category\" /t REG_SZ /d \"High\" /f"
+  },
+  {
+    "name": "Disable Print Spooler",
+    "desc": "Tắt dịch vụ máy in (Tiết kiệm RAM nếu không in ấn)",
+    "cmd": "Set-Service -Name Spooler -StartupType Disabled; Stop-Service -Name Spooler -Force"
   }
 ]
