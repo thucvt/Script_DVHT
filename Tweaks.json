@@ -199,5 +199,24 @@
     "desc": "Xóa bộ nhớ đệm trình duyệt (Giữ lại Cookie & Lịch sử đăng nhập)",
     "type": "cmd",
     "cmd": "cmd /c \"del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\GPUCache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\*\"\""
+  },
+  {
+    "name": "Install .NET Framework 3.5",
+    "desc": "Cài đặt .NET 3.5 (Cần cho phần mềm kế toán MISA, HTKK, iTaxViewer...)",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:NetFx3 /all /norestart"
+  },
+  {
+    "name": "Install DirectPlay (Legacy)",
+    "desc": "Kích hoạt DirectPlay (Hỗ trợ game cũ, ứng dụng đồ họa đời cũ)",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:LegacyComponents /all /norestart & dism /online /enable-feature /featurename:DirectPlay /all /norestart"
+  },
+  {
+    "name": "Enable SMB 1.0 Protocol",
+    "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
   }
+
 ]
