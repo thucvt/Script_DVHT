@@ -1,0 +1,30 @@
+{
+  "basic": [
+    {"id": "temp_user", "name": "Temp người dùng (%TEMP%)", "type": "path", "path": "%TEMP%"},
+    {"id": "temp_sys", "name": "Temp hệ thống (Windows/Temp)", "type": "path", "path": "%SystemRoot%\\Temp"},
+    {"id": "prefetch", "name": "Prefetch (Cache khởi động)", "type": "path", "path": "%SystemRoot%\\Prefetch"},
+    {"id": "recycle", "name": "Dọn sạch Thùng rác", "type": "cmd", "cmd": "rd /s /q %systemdrive%\\$Recycle.Bin", "always_show": true},
+    {"id": "log_files", "name": "File Log hệ thống (*.log)", "type": "cmd", "cmd": "del /s /q /f %SystemRoot%\\*.log", "always_show": true},
+    {"id": "recent", "name": "Recent Items (Lịch sử mở file)", "type": "path", "path": "%APPDATA%\\Microsoft\\Windows\\Recent"},
+    {"id": "dns", "name": "Xóa Cache DNS", "type": "cmd", "cmd": "ipconfig /flushdns", "always_show": true}
+  ],
+  "adv": [
+    {"id": "win_update", "name": "Cache Windows Update (Fix lỗi)", "type": "special", "action": "clean_update", "check_path": "%SystemRoot%\\SoftwareDistribution\\Download"},
+    {"id": "event_log", "name": "Xóa Nhật ký sự kiện (Event Logs)", "type": "cmd", "cmd": "for /F \"tokens=*\" %1 in ('wevtutil.exe el') DO wevtutil.exe cl \"%1\"", "always_show": true},
+    {"id": "error_report", "name": "Báo cáo lỗi (WER)", "type": "path", "path": "%ProgramData%\\Microsoft\\Windows\\WER"},
+    {"id": "defender", "name": "Lịch sử quét Defender", "type": "path", "path": "%ProgramData%\\Microsoft\\Windows Defender\\Scans\\History"},
+    {"id": "thumbnail", "name": "Cache hình ảnh thu nhỏ", "type": "cmd", "cmd": "del /f /s /q /a %LocalAppData%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db", "always_show": true},
+    {"id": "icon_cache", "name": "Xây dựng lại Cache Icon", "type": "cmd", "cmd": "del /f /s /q /a %LocalAppData%\\IconCache.db", "always_show": true},
+    {"id": "clipboard", "name": "Xóa Clipboard", "type": "cmd", "cmd": "echo off | clip", "always_show": true}
+  ],
+  "app": [
+    {"id": "zalo", "name": "Zalo PC (Siêu Sạch)", "type": "special", "action": "clean_zalo_hardcore", "check_path": "%LOCALAPPDATA%\\ZaloPC"},
+    {"id": "chrome", "name": "Cache Google Chrome", "type": "path", "path": "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Default\\Cache"},
+    {"id": "edge", "name": "Cache Microsoft Edge", "type": "path", "path": "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Default\\Cache"},
+    {"id": "firefox", "name": "Cache Firefox", "type": "path", "path": "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles"},
+    {"id": "discord", "name": "Cache Discord", "type": "path", "path": "%APPDATA%\\discord\\Cache"},
+    {"id": "vscode", "name": "Cache VS Code", "type": "path", "path": "%APPDATA%\\Code\\Cache"},
+    {"id": "telegram", "name": "Cache Telegram", "type": "path", "path": "%APPDATA%\\Telegram Desktop\\tdata\\user_data"},
+    {"id": "download_temp", "name": "File rác (*.tmp) trong Downloads", "type": "cmd", "cmd": "del /s /q %USERPROFILE%\\Downloads\\*.tmp", "always_show": true}
+  ]
+}
