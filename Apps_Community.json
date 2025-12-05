@@ -62,15 +62,19 @@
         "check_path": "%ProgramFiles%\\draw.io\\draw.io.exe" 
       },
       { 
-        "name": "OpenOffice", 
-        "type": "winget", 
+        "name": "OpenOffice 4.1.16", 
+        "type": "exe_url", 
         "id": "Apache.OpenOffice",
+        "url": "https://downloads.sourceforge.net/project/openofficeorg.mirror/4.1.16/binaries/en-US/Apache_OpenOffice_4.1.16_Win_x86_install_en-US.exe?use_mirror=autoselect",
+        "install_args": "/S",
         "check_path": "%ProgramFiles(x86)%\\OpenOffice 4\\program\\soffice.exe"
       },
       { 
-        "name": "Canva", 
-        "type": "winget", 
+        "name": "Canva PC", 
+        "type": "exe_url", 
         "id": "Canva.Canva", 
+        "url": "https://desktop-release.canva.com/Canva%20Setup%201.87.0.exe",
+        "install_args": "/silent",
         "check_path": "%LOCALAPPDATA%\\Programs\\Canva\\Canva.exe" 
       }
     ]
