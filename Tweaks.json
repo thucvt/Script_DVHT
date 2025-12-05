@@ -147,10 +147,23 @@
     "type": "cmd",
     "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\policy\" /v \"adminSettings\" /t REG_SZ /d \"{\\\"userSettings\\\":{\\\"advancedUserEnabled\\\":true,\\\"cloudStorageEnabled\\\":true,\\\"uiAccentCustom0\\\":\\\"#56a22b\\\",\\\"selectedFilterLists\\\":[\\\"user-filters\\\",\\\"ublock-filters\\\",\\\"ublock-badware\\\",\\\"ublock-privacy\\\",\\\"ublock-quick-fixes\\\",\\\"easylist\\\",\\\"adguard-generic\\\",\\\"adguard-mobile\\\",\\\"easyprivacy\\\",\\\"urlhaus-1\\\",\\\"https://filters.adtidy.org/windows/filters/18.txt\\\"]}}\" /f"
   },
+   {
+    "name": "Freeze Google/Chrome Updates",
+    "desc": "Chặn Google tự động Update & Chuyển Chrome sang kênh ổn định (Extended Stable)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"UpdateDefault\" /t REG_DWORD /d 3 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"InstallDefault\" /t REG_DWORD /d 4 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"AutoUpdateCheckPeriodMinutes\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"ProxyMode\" /t REG_SZ /d \"direct\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"TargetChannel{8A69D345-D564-463C-AFF1-A69D9E530F96}\" /t REG_SZ /d \"extended\" /f"
+  },
   {
     "name": "Block Urban VPN Telemetry",
     "desc": "Chặn Urban VPN thu thập dữ liệu & theo dõi người dùng (Privacy)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_extensions_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"log_to_eventlog\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f"
+  },
+  {
+    "name": "Enable Chrome Zstd Compression",
+    "desc": "Kích hoạt thuật toán nén Zstd & Dictionary Transport (Tăng tốc tải trang & Tiết kiệm băng thông)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"CompressionDictionaryTransportEnabled\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ZstdContentEncodingEnabled\" /t REG_DWORD /d 1 /f"
   }
+ 
 ]
