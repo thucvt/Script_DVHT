@@ -1,0 +1,22 @@
+{
+  "version": "v3.0 Final",
+  "notification": "Tool IT Sacombank đã cập nhật hệ thống Load Dynamic!",
+  "resources": {
+    "fonts_url": "https://raw.githubusercontent.com/thucvt/fonts/main/Fonts.zip",
+    "scripts_config_url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/Scripts_Config.json"
+  },
+  "tabs": [
+    {
+      "id": "tab_apps",
+      "name": "📦 Kho Ứng Dụng",
+      "type": "store",
+      "data_url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/Apps_Community.json"
+    },
+    {
+      "id": "tab_tweaks",
+      "name": "🛠️ Tinh Chỉnh",
+      "type": "action",
+      "data_url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/Tweaks.json"
+    }
+  ]
+}
