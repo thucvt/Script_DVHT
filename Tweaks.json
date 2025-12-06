@@ -217,5 +217,17 @@
     "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
     "type": "cmd",
     "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
+  },
+  {
+    "name": "Hardening Brave Browser (Enterprise)",
+    "desc": "Tối ưu hóa Brave: Tắt Wallet/VPN/AI, Chặn Telemetry, Bật nén Zstd, Tối ưu RAM (Super Lite)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveWalletDisabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveVPNDisabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveAIChatEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BackgroundModeEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v MetricsReportingEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v SafeBrowsingEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v ZstdContentEncodingEnabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v NetworkPredictionOptions /t REG_DWORD /d 2 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v HomepageLocation /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v NewTabPageLocation /t REG_SZ /d \"google.com\" /f"
+  },
+  {
+    "name": "Firefox: Enterprise Hardening",
+    "desc": "Tối ưu Firefox: Tắt Pocket/Sync/Telemetry, Chặn theo dõi, Tắt Disk Cache, Ram Nghèo Không Dùng",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableTelemetry /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxAccounts /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisablePocket /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxStudies /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableBuiltinPDFViewer /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v URL /t REG_SZ /d \"https://google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v StartPage /t REG_SZ /d \"homepage\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v Locked /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v SponsoredTopSites /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v Pocket /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"browser.cache.disk.enable\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"geo.enabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Permissions\\Location\" /v BlockNewRequests /t REG_DWORD /d 1 /f"
   }
 ]
