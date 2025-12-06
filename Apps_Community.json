@@ -31,11 +31,13 @@
   {
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
-      { 
+     { 
         "name": "Microsoft 365 (Online)", 
         "type": "winget", 
         "id": "Microsoft.Office",
-        "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
+        "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+        "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
+        "install_args": "/configure"
       },
       {
         "name": "Office Tool Plus",
@@ -51,7 +53,9 @@
         "name": "Adobe Acrobat Reader", 
         "type": "winget", 
         "id": "Adobe.Acrobat.Reader.64-bit", 
-        "check_path": "%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" 
+        "check_path": "%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+        "fallback_url": "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/2300620380/AcroRdrDC2300620380_en_US.exe",
+        "install_args": "/sAll /rs /msi EULA_ACCEPT=YES"
       },
       { 
         "name": "Draw.IO (Vẽ biểu đồ)", 
@@ -94,13 +98,17 @@
         "name": "TeamViewer", 
         "type": "winget", 
         "id": "TeamViewer.TeamViewer", 
-        "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe" 
+        "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe",
+        "fallback_url": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
+        "install_args": "/S"
       },
       { 
-        "name": "AnyDesk", 
-        "type": "winget", 
-        "id": "AnyDesk.AnyDesk", 
-        "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe" 
+    "name": "AnyDesk", 
+    "type": "winget", 
+    "id": "AnyDesk.AnyDesk", 
+    "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
+    "fallback_url": "https://download.anydesk.com/AnyDesk.exe",
+    "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent"
       }
     ]
   },
@@ -111,7 +119,9 @@
         "name": "Google Chrome", 
         "type": "winget", 
         "id": "Google.Chrome", 
-        "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe" 
+        "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe",
+        "fallback_url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
+        "install_args": "/silent /install"
       },
       {
         "name": "Cốc Cốc Browser",
@@ -122,23 +132,29 @@
         "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe"
       },
       { 
-        "name": "Mozilla Firefox", 
-        "type": "winget", 
-        "id": "Mozilla.Firefox", 
-        "check_path": "%ProgramFiles%\\Mozilla Firefox\\firefox.exe" 
-      },
-      { 
-        "name": "Opera GX (Gaming)", 
-        "type": "winget", 
-        "id": "Opera.OperaGX", 
-        "check_path": "%LOCALAPPDATA%\\Programs\\Opera GX\\opera.exe" 
-      },
-      { 
-        "name": "Brave Browser", 
-        "type": "winget", 
-        "id": "Brave.Brave",
-        "check_path": "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
-      }
+    "name": "Mozilla Firefox", 
+    "type": "winget", 
+    "id": "Mozilla.Firefox", 
+    "check_path": "%ProgramFiles%\\Mozilla Firefox\\firefox.exe",
+    "fallback_url": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=vi",
+    "install_args": "-ms" 
+  },
+    { 
+      "name": "Opera GX (Gaming)", 
+      "type": "winget", 
+      "id": "Opera.OperaGX", 
+      "check_path": "%LOCALAPPDATA%\\Programs\\Opera GX\\opera.exe",
+      "fallback_url": "https://net.geo.opera.com/opera/gx/stable/windows?mode=offline",
+      "install_args": "/silent /launchopera=0 /desktop=1" 
+    },
+    { 
+      "name": "Brave Browser", 
+      "type": "winget", 
+      "id": "Brave.Brave",
+      "check_path": "%ProgramFiles%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+      "fallback_url": "https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe",
+      "install_args": "/silent /install"
+    }
     ]
   },
   {
@@ -167,46 +183,58 @@
         "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe" 
       },
       { 
-        "name": "Zoom", 
+        "name": "Zoom Workplace", 
         "type": "winget", 
         "id": "Zoom.Zoom", 
-        "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe" 
+        "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe",
+        "fallback_url": "https://zoom.us/client/latest/ZoomInstaller.exe",
+        "install_args": "/silent /install" 
       }
     ]
   },
   {
     "group_name": "6. 🧰 TIỆN ÍCH (NÉN, ẢNH)",
     "apps": [
-      { 
-        "name": "WinRAR", 
-        "type": "winget", 
-        "id": "RARLab.WinRAR", 
-        "check_path": "%ProgramFiles%\\WinRAR\\WinRAR.exe" 
-      },
-      { 
-        "name": "7-Zip", 
+    { 
+    "name": "WinRAR 7.01 (64-bit)", 
+    "type": "winget", 
+    "id": "RARLab.WinRAR", 
+    "check_path": "%ProgramFiles%\\WinRAR\\WinRAR.exe",
+    "fallback_url": "https://www.rarlab.com/rar/winrar-x64-701.exe",
+    "install_args": "/S" 
+    },
+    { 
+        "name": "7-Zip (64-bit)", 
         "type": "winget", 
         "id": "7zip.7zip", 
-        "check_path": "%ProgramFiles%\\7-Zip\\7zFM.exe" 
-      },
-      { 
-        "name": "Lightshot (Chụp màn hình)", 
-        "type": "winget", 
-        "id": "Skillbrains.Lightshot", 
-        "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe" 
-      },
-      { 
-        "name": "Everything (Tìm file nhanh)", 
-        "type": "winget", 
-        "id": "voidtools.Everything", 
-        "check_path": "%ProgramFiles%\\Everything\\Everything.exe" 
-      },
-      { 
-        "name": "OBS Studio", 
-        "type": "winget", 
-        "id": "OBSProject.OBSStudio",
-        "check_path": "%ProgramFiles%\\obs-studio\\bin\\64bit\\obs64.exe"
-      }
+        "check_path": "%ProgramFiles%\\7-Zip\\7zFM.exe",
+        "fallback_url": "https://www.7-zip.org/a/7z2407-x64.exe",
+        "install_args": "/S" 
+    },
+    { 
+    "name": "Lightshot (Chụp màn hình)", 
+    "type": "winget", 
+    "id": "Skillbrains.Lightshot", 
+    "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe",
+    "fallback_url": "https://app.prntscr.com/build/setup-lightshot.exe",
+    "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" 
+    },
+    { 
+      "name": "Everything (Tìm file nhanh)", 
+      "type": "winget", 
+      "id": "voidtools.Everything", 
+      "check_path": "%ProgramFiles%\\Everything\\Everything.exe",
+      "fallback_url": "https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe",
+      "install_args": "/S" 
+    },
+    { 
+      "name": "OBS Studio", 
+      "type": "winget", 
+      "id": "OBSProject.OBSStudio",
+      "check_path": "%ProgramFiles%\\obs-studio\\bin\\64bit\\obs64.exe",
+      "fallback_url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.1.2-Full-Installer-x64.exe",
+      "install_args": "/S"
+    }
     ]
   },
   {
@@ -222,10 +250,12 @@
         "check_path": "%WINDIR%\\System32\\vcruntime140.dll"
       },
       { 
-        "name": "Java Runtime (JRE)", 
+        "name": "Java Runtime (JRE 8)", 
         "type": "winget", 
-        "id": "Oracle.JavaRuntimeEnvironment",
-        "check_path": "%ProgramData%\\Oracle\\Java\\javapath\\java.exe"
+        "id": "Oracle.JavaRuntimeEnvironment", 
+        "check_path": "%ProgramData%\\Oracle\\Java\\javapath\\java.exe",
+        "fallback_url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4",
+        "install_args": "/s"
       },
       { 
         "name": ".NET Framework 3.5", 
@@ -237,31 +267,41 @@
         "name": ".NET Desktop Runtime 8.0", 
         "type": "winget", 
         "id": "Microsoft.DotNet.DesktopRuntime.8",
-        "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\8.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json"
+        "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\8.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "fallback_url": "https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe",
+        "install_args": "/install /quiet /norestart"
       },
       { 
-        "name": "Node.js (LTS)", 
+        "name": "Node.js (LTS v20)", 
         "type": "winget", 
-        "id": "OpenJS.NodeJS.LTS",
-        "check_path": "%ProgramFiles%\\nodejs\\node.exe"
+        "id": "OpenJS.NodeJS.LTS", 
+        "check_path": "%ProgramFiles%\\nodejs\\node.exe",
+        "fallback_url": "https://nodejs.org/dist/v20.12.2/node-v20.12.2-x64.msi",
+        "install_args": "/qn /norestart"
       },
       { 
         "name": "Python 3.12", 
         "type": "winget", 
-        "id": "Python.Python.3.12",
-        "check_path": "%LOCALAPPDATA%\\Programs\\Python\\Python312\\python.exe"
+        "id": "Python.Python.3.12", 
+        "check_path": "%LOCALAPPDATA%\\Programs\\Python\\Python312\\python.exe",
+        "fallback_url": "https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe",
+        "install_args": "/quiet InstallAllUsers=0 PrependPath=1 Include_test=0"
       },
       { 
         "name": "Notepad++", 
         "type": "winget", 
         "id": "Notepad++.Notepad++", 
-        "check_path": "%ProgramFiles%\\Notepad++\\notepad++.exe" 
+        "check_path": "%ProgramFiles%\\Notepad++\\notepad++.exe",
+        "fallback_url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.5/npp.8.6.5.Installer.x64.exe",
+        "install_args": "/S" 
       },
       { 
         "name": "Visual Studio Code", 
         "type": "winget", 
         "id": "Microsoft.VisualStudioCode", 
-        "check_path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe" 
+        "check_path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+        "fallback_url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+        "install_args": "/verysilent /mergetasks=!runcode" 
       }
     ]
   },
