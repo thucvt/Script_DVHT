@@ -1,273 +1,273 @@
 [
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Super Optimize For Win 10/11",
     "desc": "Siêu tối ưu cực mạnh (By ThucIT) - Siêu nhẹ máy",
     "cmd": "RUN_ThucIT_SERVICES"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Create Restore Point",
     "desc": "Tạo điểm khôi phục (Backup) an toàn",
     "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Sticky Keys",
     "desc": "Tắt phím dính (Shift 5 lần)",
     "cmd": "reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Mouse Acceleration",
     "desc": "Tắt gia tốc chuột (Chuẩn FPS)",
     "cmd": "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseSpeed\" /t REG_SZ /d \"0\" /f; reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseThreshold1\" /t REG_SZ /d \"0\" /f; reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseThreshold2\" /t REG_SZ /d \"0\" /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Set Time to UTC",
     "desc": "Fix lỗi lệch giờ Windows/macOS",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation\" /v \"RealTimeIsUniversal\" /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Hibernation",
     "desc": "Tắt ngủ đông (Tiết kiệm ổ cứng)",
     "cmd": "powercfg /h off"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Show File Extensions",
     "desc": "Hiện đuôi file (.exe, .txt)",
     "cmd": "Set-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name \"HideFileExt\" -Value 0"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Classic Context Menu",
     "desc": "Menu chuột phải kiểu cũ (Win 11)",
     "cmd": "reg add \"HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32\" /f /ve"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Background Apps",
     "desc": "Tắt ứng dụng chạy nền (Tiết kiệm Pin)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable GameDVR",
     "desc": "Tắt Xbox Game Bar (Giảm lag)",
     "cmd": "reg add \"HKCU\\System\\GameConfigStore\" /v GameDVR_Enabled /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Open Explorer to This PC",
     "desc": "Mở File Explorer vào This PC (thay vì Quick Access)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Restore: Explorer to Quick Access",
     "desc": "Khôi phục mở File Explorer vào Quick Access (Mặc định)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 2 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Verbose Status Messages",
     "desc": "Hiện chi tiết quá trình tắt/mở máy (Loading...)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v \"VerboseStatus\" /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Startup Delay",
     "desc": "Tắt độ trễ khi khởi động ứng dụng cùng Windows (Boot nhanh hơn)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v StartupDelayInMSec /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Instant Menu Display",
     "desc": "Menu chuột phải/Start hiện ngay lập tức (Không delay)",
     "cmd": "reg add \"HKCU\\Control Panel\\Desktop\" /v MenuShowDelay /t REG_SZ /d \"0\" /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Transparency Effects",
     "desc": "Tắt hiệu ứng trong suốt (Giảm tải GPU/VRAM)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v EnableTransparency /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🚀 TỐI ƯU HỆ THỐNG (SYSTEM)",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "High Priority for Games",
     "desc": "Ưu tiên CPU cho tác vụ Game/Đồ họa (Win32Priority)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"GPU Priority\" /t REG_DWORD /d 8 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Priority\" /t REG_DWORD /d 6 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Scheduling Category\" /t REG_SZ /d \"High\" /f"
   },
   {
-    "category": "🔒 QUYỀN RIÊNG TƯ (PRIVACY)",
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Bing Search",
     "desc": "Tắt tìm kiếm Web trong Start Menu",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🔒 QUYỀN RIÊNG TƯ (PRIVACY)",
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Telemetry",
     "desc": "Chặn thu thập dữ liệu ngầm",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🔒 QUYỀN RIÊNG TƯ (PRIVACY)",
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Consumer Features",
     "desc": "Chặn tự tải CandyCrush, TikTok...",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🔒 QUYỀN RIÊNG TƯ (PRIVACY)",
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Location Tracking",
     "desc": "Tắt định vị vị trí",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🔒 QUYỀN RIÊNG TƯ (PRIVACY)",
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Block Urban VPN Telemetry",
     "desc": "Chặn Urban VPN thu thập dữ liệu & theo dõi người dùng (Privacy)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_extensions_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"log_to_eventlog\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🌐 MẠNG & INTERNET (NETWORK)",
+    "category": "🌐 MẠNG & INTERNET",
     "name": "Disable Network Throttling",
     "desc": "Tắt giới hạn băng thông mạng (Giảm Ping/Lag)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d 4294967295 /f"
   },
   {
-    "category": "🌐 MẠNG & INTERNET (NETWORK)",
+    "category": "🌐 MẠNG & INTERNET",
     "name": "Disable Delivery Optimization",
     "desc": "Tắt chia sẻ update P2P (Hút băng thông/Ổ cứng ngầm)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization\" /v DODownloadMode /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "🌐 MẠNG & INTERNET (NETWORK)",
+    "category": "🌐 MẠNG & INTERNET",
     "name": "Optimize Network TCP/IP (Gaming/Latency)",
     "desc": "Giảm độ trễ mạng (Ping), Tối ưu TCP NoDelay (Giúp phản hồi game/thao tác remote desktop nhanh hơn)",
     "type": "cmd",
     "cmd": "cmd /c \"for /f \"tokens=*\" %a in ('reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces /s /f \"{*}\" /k ^| findstr HKEY') do (reg add \"%a\" /v TcpAckFrequency /t REG_DWORD /d 1 /f & reg add \"%a\" /v TCPNoDelay /t REG_DWORD /d 1 /f & reg add \"%a\" /v TcpDelAckTicks /t REG_DWORD /d 0 /f) & netsh int tcp set global autotuninglevel=normal & netsh int tcp set global rss=enabled & netsh int tcp set heuristics disabled\""
   },
   {
-    "category": "🛠️ CÔNG CỤ SỬA LỖI & DỌN DẸP (TOOLS)",
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Quick System Clean",
     "desc": "Dọn dẹp File tạm (Temp), Prefetch, File Log, Empty Recycle Bin (An toàn - Nhanh)",
     "type": "cmd",
     "cmd": "cmd /c \"del /f /s /q \"%TEMP%\\*\" & rd /s /q \"%TEMP%\" & del /f /s /q \"%windir%\\Temp\\*\" & del /f /s /q \"%windir%\\Prefetch\\*.*\" & wevtutil cl Application & wevtutil cl System & PowerShell -Command \"Clear-RecycleBin -Force -ErrorAction SilentlyContinue\"\""
   },
   {
-    "category": "🛠️ CÔNG CỤ SỬA LỖI & DỌN DẸP (TOOLS)",
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Rebuild Icon Cache",
     "desc": "Xóa và tạo lại bộ nhớ đệm Icon (Sửa lỗi icon bị trắng/lỗi hình)",
     "type": "cmd",
     "cmd": "cmd /c \"taskkill /f /im explorer.exe & del /f /q \"%localappdata%\\IconCache.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\iconcache_*.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" & start explorer.exe\""
   },
   {
-    "category": "🛠️ CÔNG CỤ SỬA LỖI & DỌN DẸP (TOOLS)",
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Reset Windows Update & Clean Cache",
     "desc": "Dừng dịch vụ Update, xóa cache tải về bị lỗi và khởi động lại (Sửa lỗi không update được)",
     "type": "cmd",
     "cmd": "cmd /c \"net stop wuauserv & net stop cryptSvc & net stop bits & net stop msiserver & rd /s /q \"%windir%\\SoftwareDistribution\\Download\" & md \"%windir%\\SoftwareDistribution\\Download\" & net start wuauserv & net start bits & net start cryptSvc & net start msiserver\""
   },
   {
-    "category": "🛠️ CÔNG CỤ SỬA LỖI & DỌN DẸP (TOOLS)",
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Clean Browser Cache (Chrome/Edge)",
     "desc": "Xóa bộ nhớ đệm trình duyệt (Giữ lại Cookie & Lịch sử đăng nhập)",
     "type": "cmd",
     "cmd": "cmd /c \"del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\GPUCache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\*\"\""
   },
   {
-    "category": "⚠️ NÂNG CAO (ADVANCED & RISKY)",
+    "category": "⚠️ NÂNG CAO",
     "name": "Disable SysMain (Superfetch)",
     "desc": "Tắt SysMain (Giảm 100% Disk trên HDD, tiết kiệm RAM)",
     "cmd": "Set-Service -Name SysMain -StartupType Disabled; Stop-Service -Name SysMain -Force"
   },
   {
-    "category": "⚠️ NÂNG CAO (ADVANCED & RISKY)",
+    "category": "⚠️ NÂNG CAO",
     "name": "Disable Windows Search Indexing",
     "desc": "Tắt lập chỉ mục tìm kiếm (Giảm tải CPU/Disk chạy ngầm)",
     "cmd": "Set-Service -Name WSearch -StartupType Disabled; Stop-Service -Name WSearch -Force"
   },
   {
-    "category": "⚠️ NÂNG CAO (ADVANCED & RISKY)",
+    "category": "⚠️ NÂNG CAO",
     "name": "Disable VBS (Core Isolation)",
     "desc": "Tắt Virtualization-Based Security (Tăng FPS Game 10-20%)",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\" /v \"EnableVirtualizationBasedSecurity\" /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "⚠️ NÂNG CAO (ADVANCED & RISKY)",
+    "category": "⚠️ NÂNG CAO",
     "name": "Disable Print Spooler",
     "desc": "Tắt dịch vụ máy in (Tiết kiệm RAM nếu không in ấn)",
     "cmd": "Set-Service -Name Spooler -StartupType Disabled; Stop-Service -Name Spooler -Force"
   },
   {
-    "category": "⚠️ NÂNG CAO (ADVANCED & RISKY)",
+    "category": "⚠️ NÂNG CAO",
     "name": "Enable SMB 1.0 Protocol",
     "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
     "type": "cmd",
     "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Chrome: Force Install Extensions",
     "desc": "Tự động cài uBlock, I don't care about cookies, Return YT Dislike (Không cho gỡ)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"1\" /t REG_SZ /d \"cjpalhdlnbpafiamejdnhcphjbkeiagm\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"2\" /t REG_SZ /d \"fihnjjcciajhdojfnbdddfaoknhalnja\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"3\" /t REG_SZ /d \"bnomihfieiccainjcjblhegjgglakjdd\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"8\" /t REG_SZ /d \"gebbhagfogifgggkldgodflihgfeippi\" /f"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Chrome: Enterprise Hardening",
     "desc": "Tối ưu Chrome: Tắt Telemetry, Chặn theo dõi, Tắt chạy nền, Set Google là trang chủ",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"MetricsReportingEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"BackgroundModeEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"SafeBrowsingEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"PasswordLeakDetectionEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"HomepageLocation\" /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"NewTabPageLocation\" /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"ShowCastIconInToolbar\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"ForceGoogleSafeSearch\" /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Chrome: Config uBlock Origin",
     "desc": "Nạp sẵn bộ lọc quảng cáo VN & Quốc tế cho uBlock (Cực mạnh)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\policy\" /v \"adminSettings\" /t REG_SZ /d \"{\\\"userSettings\\\":{\\\"advancedUserEnabled\\\":true,\\\"cloudStorageEnabled\\\":true,\\\"uiAccentCustom0\\\":\\\"#56a22b\\\",\\\"selectedFilterLists\\\":[\\\"user-filters\\\",\\\"ublock-filters\\\",\\\"ublock-badware\\\",\\\"ublock-privacy\\\",\\\"ublock-quick-fixes\\\",\\\"easylist\\\",\\\"adguard-generic\\\",\\\"adguard-mobile\\\",\\\"easyprivacy\\\",\\\"urlhaus-1\\\",\\\"https://filters.adtidy.org/windows/filters/18.txt\\\"]}}\" /f"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Freeze Google/Chrome Updates",
     "desc": "Chặn Google tự động Update & Chuyển Chrome sang kênh ổn định (Extended Stable)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"UpdateDefault\" /t REG_DWORD /d 3 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"InstallDefault\" /t REG_DWORD /d 4 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"AutoUpdateCheckPeriodMinutes\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"ProxyMode\" /t REG_SZ /d \"direct\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"TargetChannel{8A69D345-D564-463C-AFF1-A69D9E530F96}\" /t REG_SZ /d \"extended\" /f"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Enable Chrome Zstd Compression",
     "desc": "Kích hoạt thuật toán nén Zstd & Dictionary Transport (Tăng tốc tải trang & Tiết kiệm băng thông)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"CompressionDictionaryTransportEnabled\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ZstdContentEncodingEnabled\" /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Hardening Brave Browser (Enterprise)",
     "desc": "Tối ưu hóa Brave: Tắt Wallet/VPN/AI, Chặn Telemetry, Bật nén Zstd, Tối ưu RAM (Super Lite)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveWalletDisabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveVPNDisabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveAIChatEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BackgroundModeEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v MetricsReportingEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v SafeBrowsingEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v ZstdContentEncodingEnabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v NetworkPredictionOptions /t REG_DWORD /d 2 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v HomepageLocation /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v NewTabPageLocation /t REG_SZ /d \"google.com\" /f"
   },
   {
-    "category": "🌍 TRÌNH DUYỆT (BROWSER)",
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Firefox: Enterprise Hardening",
     "desc": "Tối ưu Firefox: Tắt Pocket/Sync/Telemetry, Chặn theo dõi, Tắt Disk Cache, Ram Nghèo Không Dùng",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableTelemetry /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxAccounts /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisablePocket /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxStudies /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableBuiltinPDFViewer /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v URL /t REG_SZ /d \"https://google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v StartPage /t REG_SZ /d \"homepage\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v Locked /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v SponsoredTopSites /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v Pocket /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"browser.cache.disk.enable\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"geo.enabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Permissions\\Location\" /v BlockNewRequests /t REG_DWORD /d 1 /f"
   },
   {
-    "category": "💾 CÀI ĐẶT BỔ SUNG (INSTALL)",
+    "category": "💾 CÀI ĐẶT BỔ SUNG",
     "name": "Install .NET Framework 3.5",
     "desc": "Cài đặt .NET 3.5 (Cần cho phần mềm kế toán MISA, HTKK, iTaxViewer...)",
     "type": "cmd",
     "cmd": "dism /online /enable-feature /featurename:NetFx3 /all /norestart"
   },
   {
-    "category": "💾 CÀI ĐẶT BỔ SUNG (INSTALL)",
+    "category": "💾 CÀI ĐẶT BỔ SUNG",
     "name": "Install DirectPlay (Legacy)",
     "desc": "Kích hoạt DirectPlay (Hỗ trợ game cũ, ứng dụng đồ họa đời cũ)",
     "type": "cmd",
