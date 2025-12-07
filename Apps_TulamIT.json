@@ -60,7 +60,9 @@
         "name": "Adobe Acrobat Reader",
         "type": "winget",
         "check_path": "%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
-        "check_name": "adobe acrobat"
+        "check_name": "adobe acrobat",
+        "fallback_url": "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/2400220687/AcroRdrDC2400220687_en_US.exe",
+        "install_args": "/sAll /rs /msi EULA_ACCEPT=YES"
       },
       {
         "id": "DrawIO_Direct",
@@ -102,6 +104,7 @@
         "name": "TeamViewer",
         "type": "winget",
         "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe",
+        "fallback_url": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
         "install_args": "/S",
         "check_name": "teamviewer"
       },
@@ -110,6 +113,8 @@
         "name": "AnyDesk",
         "type": "winget",
         "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
+        "fallback_url": "https://download.anydesk.com/AnyDesk.exe",
+        "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
         "check_name": "anydesk"
       }
     ]
@@ -122,7 +127,9 @@
         "name": "Google Chrome",
         "type": "winget",
         "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe",
-        "check_name": "google chrome"
+        "check_name": "google chrome",
+        "fallback_url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
+        "install_args": "/silent /install"
       },
       {
         "id": "CocCoc",
@@ -139,14 +146,18 @@
         "name": "Mozilla Firefox",
         "type": "winget",
         "check_path": "%ProgramFiles%\\Mozilla Firefox\\firefox.exe",
-        "check_name": "mozilla firefox"
+        "check_name": "mozilla firefox",
+        "fallback_url": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=vi",
+        "install_args": "-ms"
       },
       {
         "id": "Brave.Brave",
         "name": "Brave Browser",
         "type": "winget",
         "check_path": "%ProgramFiles%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-        "check_name": "brave"
+        "check_name": "brave",
+        "fallback_url": "https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe",
+        "install_args": "/silent /install"
       }
     ]
   },
@@ -168,7 +179,9 @@
         "name": "Microsoft Teams",
         "type": "winget",
         "check_path": "%LOCALAPPDATA%\\Microsoft\\Teams\\current\\Teams.exe",
-        "check_name": "microsoft teams"
+        "check_name": "microsoft teams",
+        "fallback_url": "https://statics.teams.cdn.office.net/production-windows-x64/l/1.6.00.29964/Teams_windows_x64.exe",
+        "install_args": "/s"
       },
       {
         "id": "Viber_Direct",
@@ -185,7 +198,9 @@
         "name": "Zoom Workplace",
         "type": "winget",
         "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe",
-        "check_name": "zoom"
+        "check_name": "zoom",
+        "fallback_url": "https://zoom.us/client/latest/ZoomInstaller.exe",
+        "install_args": "/silent /install"
       }
     ]
   },
@@ -197,28 +212,36 @@
         "name": "WinRAR 7.01 (64-bit)",
         "type": "winget",
         "check_path": "%ProgramFiles%\\WinRAR\\WinRAR.exe",
-        "check_name": "winrar"
+        "check_name": "winrar",
+        "fallback_url": "https://www.rarlab.com/rar/winrar-x64-701.exe",
+        "install_args": "/S"
       },
       {
         "id": "7zip.7zip",
         "name": "7-Zip (64-bit)",
         "type": "winget",
         "check_path": "%ProgramFiles%\\7-Zip\\7zFM.exe",
-        "check_name": "7-zip"
+        "check_name": "7-zip",
+        "fallback_url": "https://www.7-zip.org/a/7z2408-x64.exe",
+        "install_args": "/S"
       },
       {
         "id": "Skillbrains.Lightshot",
         "name": "Lightshot (Chụp ảnh)",
         "type": "winget",
         "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe",
-        "check_name": "lightshot"
+        "check_name": "lightshot",
+        "fallback_url": "https://app.prntscr.com/build/setup-lightshot.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
       },
       {
         "id": "Jaryaa.NeatDownloadManager",
         "name": "Neat Download Manager",
         "type": "winget",
         "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
-        "check_name": "neat download manager"
+        "check_name": "neat download manager",
+        "fallback_url": "https://neatdownloadmanager.com/index.php/en/?download=win",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
       }
     ]
   },
@@ -227,10 +250,11 @@
     "apps": [
       {
         "id": "VCRedist_AIO",
-        "name": "Visual C++ AIO (2005-2022)",
+        "name": "Visual C++ AIO (2005-2025)",
         "type": "zip_install", 
         "url": "https://raw.githubusercontent.com/thucvt/fonts/main/Visual-C-Runtimes-All-in-One-Dec-2025.zip",
         "install_script": "install_all.bat",
+        "install_args": "/ai /gm2",
         "check_path": "%WINDIR%\\System32\\vcruntime140.dll",
         "check_name": "microsoft visual c++ 2015-2022",
         "latest_version": "14.40"
@@ -240,21 +264,59 @@
         "name": "Java Runtime (JRE 8)",
         "type": "winget",
         "check_path": "%ProgramData%\\Oracle\\Java\\javapath\\java.exe",
-        "check_name": "java"
+        "check_name": "java",
+        "fallback_url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4",
+        "install_args": "/s"
       },
       {
         "id": "Microsoft.DotNet.DesktopRuntime.8",
         "name": ".NET Desktop Runtime 8.0",
         "type": "winget",
         "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\8.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json",
-        "check_name": "windows desktop runtime"
+        "check_name": "windows desktop runtime",
+        "fallback_url": "https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe",
+        "install_args": "/install /quiet /norestart"
       },
       {
         "id": "Microsoft.VisualStudioCode",
         "name": "Visual Studio Code",
         "type": "winget",
         "check_path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
-        "check_name": "microsoft visual studio code"
+        "check_name": "microsoft visual studio code",
+        "fallback_url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+        "install_args": "/verysilent /mergetasks=!runcode"
+      }
+    ]
+  },
+  {
+    "group_name": "9. 🎮 THƯ VIỆN GAME (GAMING LIBS)",
+    "apps": [
+      { 
+        "name": "DirectX End-User Runtime (Fix lỗi DLL)", 
+        "type": "exe_url", 
+        "id": "DirectX_Web_Setup", 
+        "url": "https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe", 
+        "install_args": "/Q",
+        "desc": "Bắt buộc cài để chơi game (Fix lỗi thiếu d3dx9_xx.dll, xinput...)",
+        "check_path": "%WINDIR%\\System32\\d3dx9_43.dll"
+      },
+      { 
+        "name": "NVIDIA PhysX System (Game cũ)", 
+        "type": "exe_url", 
+        "id": "Nvidia.PhysX", 
+        "url": "https://us.download.nvidia.com/Windows/9.21.0713/PhysX-9.21.0713-SystemSoftware.exe", 
+        "install_args": "/silent", 
+        "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll" 
+      },
+      { 
+        "name": "OpenAL (Âm thanh game cũ)", 
+        "type": "portable", 
+        "id": "OpenAL", 
+        "url": "https://openal.org/downloads/oalinst.zip", 
+        "exe_in_zip": "oalinst.exe", 
+        "auto_run": true,
+        "desc": "Thư viện âm thanh 3D cho các game cũ",
+        "check_path": "%WINDIR%\\System32\\OpenAL32.dll"
       }
     ]
   }
