@@ -32,7 +32,7 @@
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
      { 
-        "name": "Microsoft 365 (Online)", 
+        "name": "Microsoft 365", 
         "type": "winget", 
         "id": "Microsoft.Office",
         "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
