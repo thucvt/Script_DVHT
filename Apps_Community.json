@@ -168,11 +168,14 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe"
       },
-      { 
-        "name": "Microsoft Teams", 
-        "type": "winget", 
+      {
         "id": "Microsoft.Teams",
-        "check_path": "%LOCALAPPDATA%\\Microsoft\\Teams\\current\\Teams.exe"
+        "name": "Microsoft Teams",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Microsoft\\Teams\\current\\Teams.exe",
+        "check_name": "microsoft teams",
+        "fallback_url": "https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe",
+        "install_args": "/s"
       },
       { 
         "name": "Viber", 
