@@ -113,7 +113,7 @@
         "name": "AnyDesk",
         "type": "winget",
         "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
-        "fallback_url": "https://download.anydesk.com/AnyDesk.exe",
+        "fallback_url": "https://anydesk.com/en/downloads/thank-you?dv=win_exe",
         "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
         "check_name": "anydesk"
       }
