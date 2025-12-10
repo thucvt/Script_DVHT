@@ -138,7 +138,7 @@
         "id": "CentBrowser",
         "name": "Cent Browser (Nhẹ & Mượt)",
         "type": "exe_url",
-        "url": "http://static.centbrowser.com/win_stable/5.1.1130.82/centbrowser_5.1.1130.82_x64.exe",
+        "url": "https://static.centbrowser.com/win_stable/5.2.1168.83/centbrowser_5.2.1168.83_x64.exe",
         "install_args": "/silent",
         "check_path": "%ProgramFiles(x86)%\\CentBrowser\\Application\\chrome.exe",
         "check_name": "cent browser",
