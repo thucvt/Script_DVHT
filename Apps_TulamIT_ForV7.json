@@ -214,7 +214,7 @@
         "type": "winget",
         "check_path": "%ProgramFiles%\\ShareX\\ShareX.exe",
         "check_name": "sharex",
-        "fallback_url": "https://github.com/ShareX/ShareX/releases/latest/download/ShareX-setup.exe",
+        "fallback_url": "https://github.com/ShareX/ShareX/releases/download/v18.0.1/ShareX-18.0.1-setup.exe",
         "install_args": "/VERYSILENT /NORESTART"
       },
       {
