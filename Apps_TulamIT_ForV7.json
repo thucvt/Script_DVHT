@@ -234,6 +234,14 @@
         "check_name": "neat download manager",
         "fallback_url": "https://neatdownloadmanager.com/index.php/en/?download=win",
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+      },
+       { 
+      "name": "OBS Studio", 
+      "type": "winget", 
+      "id": "OBSProject.OBSStudio",
+      "check_path": "%ProgramFiles%\\obs-studio\\bin\\64bit\\obs64.exe",
+      "fallback_url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.1.2-Full-Installer-x64.exe",
+      "install_args": "/S"
       }
     ]
   },
