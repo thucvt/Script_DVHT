@@ -105,8 +105,8 @@
       {
         "id": "AnyDesk.AnyDesk",
         "name": "AnyDesk",
-        "type": "exe_url", 
-        "url": "https://download.anydesk.com/AnyDesk.exe", 
+        "type": "exe_url",
+        "url": "https://download.anydesk.com/AnyDesk.exe",
         "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
         "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
         "check_name": "anydesk"
