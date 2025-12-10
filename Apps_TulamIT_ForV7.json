@@ -1,0 +1,345 @@
+[
+  {
+    "group_name": "1. ⌨️ BỘ GÕ & FONT",
+    "apps": [
+      {
+        "id": "LOCAL_FONT_INSTALL",
+        "name": "Cài Font (Full Tiếng Việt)",
+        "type": "custom",
+        "check_path": "%WINDIR%\\Fonts\\VNTIMEB.TTF"
+      },
+      {
+        "id": "Unikey",
+        "name": "Unikey 4.6 RC2",
+        "type": "portable",
+        "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip",
+        "exe_in_zip": "UniKeyNT.exe",
+        "kill_process": "UniKeyNT.exe",
+        "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe",
+        "check_name": "unikey"
+      },
+      {
+        "id": "EVKey",
+        "name": "EVKey (Thay thế Unikey)",
+        "type": "portable",
+        "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip",
+        "exe_in_zip": "EVKey64.exe",
+        "kill_process": "EVKey64.exe",
+        "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe",
+        "check_name": "evkey"
+      }
+    ]
+  },
+  {
+    "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
+    "apps": [
+      {
+        "id": "Microsoft.Office",
+        "name": "Microsoft 365 (Online)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+        "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
+        "install_args": "/configure",
+        "check_name": "microsoft 365"
+      },
+      {
+        "id": "OfficeToolPlus",
+        "name": "Office Tool Plus",
+        "type": "portable",
+        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
+        "exe_in_zip": "Office Tool Plus.exe",
+        "auto_run": true,
+        "check_path": "%ProgramFiles%\\OfficeToolPlus\\Office Tool Plus.exe",
+        "check_name": "office tool plus"
+      },
+      {
+        "id": "Adobe.Acrobat.Reader.64-bit",
+        "name": "Adobe Acrobat Reader",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+        "check_name": "adobe acrobat",
+        "fallback_url": "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/2400220687/AcroRdrDC2400220687_en_US.exe",
+        "install_args": "/sAll /rs /msi EULA_ACCEPT=YES"
+      },
+      {
+        "id": "DrawIO_Direct",
+        "name": "Draw.IO (Vẽ biểu đồ)",
+        "type": "exe_url",
+        "url": "https://github.com/jgraph/drawio-desktop/releases/latest/download/draw.io-windows-installer.exe",
+        "install_args": "/allusers /S",
+        "check_path": "%ProgramFiles%\\draw.io\\draw.io.exe",
+        "check_name": "draw.io"
+      },
+      {
+        "id": "Canva.Canva",
+        "name": "Canva PC",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Canva\\Canva.exe",
+        "check_name": "canva",
+        "fallback_url": "https://desktop-release.canva.com/Canva%20Setup.exe",
+        "install_args": "/silent"
+      }
+    ]
+  },
+  {
+    "group_name": "3. 📡 ĐIỀU KHIỂN TỪ XA",
+    "apps": [
+      {
+        "id": "UltraViewer",
+        "name": "UltraViewer",
+        "type": "exe_url",
+        "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe",
+        "install_args": "/VERYSILENT /NORESTART",
+        "check_path": "%ProgramFiles(x86)%\\UltraViewer\\UltraViewer_Desktop.exe",
+        "check_name": "ultraviewer"
+      },
+      {
+        "id": "TeamViewer.TeamViewer",
+        "name": "TeamViewer",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe",
+        "fallback_url": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
+        "install_args": "/S",
+        "check_name": "teamviewer"
+      },
+      {
+        "id": "AnyDesk.AnyDesk",
+        "name": "AnyDesk",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
+        "fallback_url": "https://anydesk.com/en/downloads/thank-you?dv=win_exe",
+        "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
+        "check_name": "anydesk"
+      }
+    ]
+  },
+  {
+    "group_name": "4. 🌐 TRÌNH DUYỆT WEB",
+    "apps": [
+      {
+        "id": "Google.Chrome",
+        "name": "Google Chrome",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe",
+        "check_name": "google chrome",
+        "fallback_url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
+        "install_args": "/silent /install"
+      },
+      {
+        "id": "CocCoc",
+        "name": "Cốc Cốc Browser",
+        "type": "exe_url",
+        "url": "https://files.coccoc.com/browser/coccoc_vi.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe",
+        "check_name": "cốc cốc"
+      },
+      {
+        "id": "CentBrowser",
+        "name": "Cent Browser (Nhẹ & Mượt)",
+        "type": "exe_url",
+        "url": "http://static.centbrowser.com/win_stable/5.1.1130.82/centbrowser_5.1.1130.82_x64.exe",
+        "install_args": "/silent",
+        "check_path": "%ProgramFiles(x86)%\\CentBrowser\\Application\\chrome.exe",
+        "check_name": "cent browser",
+        "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ"
+      },
+      {
+        "id": "Brave.Brave",
+        "name": "Brave Browser",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "check_name": "brave",
+        "fallback_url": "https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe",
+        "install_args": "/silent /install"
+      }
+    ]
+  },
+  {
+    "group_name": "5. 💬 CHAT & HỌP ONLINE",
+    "apps": [
+      {
+        "id": "VNG.Zalo",
+        "name": "Zalo PC",
+        "type": "exe_url",
+        "url": "https://zalo.me/download/zalo-pc",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe",
+        "check_name": "zalo"
+      },
+      {
+        "id": "Microsoft.Teams",
+        "name": "Microsoft Teams",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Microsoft\\Teams\\current\\Teams.exe",
+        "check_name": "microsoft teams",
+        "fallback_url": "https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe",
+        "install_args": "/s"
+      },
+      {
+        "id": "Viber_Direct",
+        "name": "Viber",
+        "type": "exe_url",
+        "url": "https://download.cdn.viber.com/desktop/windows/ViberSetup.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe",
+        "check_name": "viber"
+      },
+      {
+        "id": "Zoom.Zoom",
+        "name": "Zoom Workplace",
+        "type": "winget",
+        "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe",
+        "check_name": "zoom",
+        "fallback_url": "https://zoom.us/client/latest/ZoomInstaller.exe",
+        "install_args": "/silent /install"
+      }
+    ]
+  },
+  {
+    "group_name": "6. 🧰 TIỆN ÍCH (NÉN, ẢNH)",
+    "apps": [
+      {
+        "id": "RARLab.WinRAR",
+        "name": "WinRAR (64-bit)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\WinRAR\\WinRAR.exe",
+        "check_name": "winrar",
+        "fallback_url": "https://www.rarlab.com/rar/winrar-x64-701.exe",
+        "install_args": "/S"
+      },
+      {
+        "id": "ShareX.ShareX",
+        "name": "ShareX (Chụp & Quay màn hình)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\ShareX\\ShareX.exe",
+        "check_name": "sharex",
+        "fallback_url": "https://github.com/ShareX/ShareX/releases/latest/download/ShareX-setup.exe",
+        "install_args": "/VERYSILENT /NORESTART"
+      },
+      {
+        "id": "Skillbrains.Lightshot",
+        "name": "Lightshot",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe",
+        "check_name": "lightshot",
+        "fallback_url": "https://app.prntscr.com/build/setup-lightshot.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+      },
+      {
+        "id": "Jaryaa.NeatDownloadManager",
+        "name": "Neat Download Manager",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
+        "check_name": "neat download manager",
+        "fallback_url": "https://neatdownloadmanager.com/index.php/en/?download=win",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+      }
+    ]
+  },
+  {
+    "group_name": "7. 💻 LẬP TRÌNH & RUNTIME",
+    "apps": [
+      {
+        "id": "VCRedist_AIO",
+        "name": "Visual C++ AIO (2005-2025)",
+        "type": "zip_install",
+        "url": "https://raw.githubusercontent.com/thucvt/fonts/main/Visual-C-Runtimes-All-in-One-Dec-2025.zip",
+        "install_script": "install_all.bat",
+        "install_args": "/ai /gm2",
+        "check_path": "%WINDIR%\\System32\\vcruntime140.dll",
+        "check_name": "microsoft visual c++"
+      },
+      {
+        "id": "Oracle.JavaRuntimeEnvironment",
+        "name": "Java Runtime (JRE 8)",
+        "type": "winget",
+        "check_path": "%ProgramData%\\Oracle\\Java\\javapath\\java.exe",
+        "check_name": "java",
+        "fallback_url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4",
+        "install_args": "/s"
+      },
+      {
+        "id": "Microsoft.DotNet.DesktopRuntime.8",
+        "name": ".NET Desktop Runtime 8.0",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\8.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "check_name": "windows desktop runtime",
+        "fallback_url": "https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe",
+        "install_args": "/install /quiet /norestart"
+      },
+      {
+        "id": "Microsoft.VisualStudioCode",
+        "name": "Visual Studio Code",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+        "check_name": "microsoft visual studio code",
+        "fallback_url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+        "install_args": "/verysilent /mergetasks=!runcode"
+      }
+    ]
+  },
+  {
+    "group_name": "8. 🗄️ CƠ SỞ DỮ LIỆU (DB)",
+    "apps": [
+      {
+        "id": "Microsoft.SQLServer.2022.Express",
+        "name": "SQL Server 2022 Express",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Microsoft SQL Server\\MSSQL16.SQLEXPRESS\\MSSQL\\Binn\\sqlservr.exe",
+        "check_name": "microsoft sql server 2022",
+        "fallback_url": "https://go.microsoft.com/fwlink/p/?linkid=2215158",
+        "install_args": "/Q /IAcceptSqlServerLicenseTerms /Action=Install /Features=SQLEngine /InstanceName=SQLEXPRESS"
+      },
+      {
+        "id": "Microsoft.SQLServerManagementStudio",
+        "name": "SSMS (Quản lý SQL)",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\Microsoft SQL Server Management Studio 19\\Common7\\IDE\\Ssms.exe",
+        "check_name": "microsoft sql server management studio",
+        "fallback_url": "https://aka.ms/ssmsfullsetup",
+        "install_args": "/Quiet /NoRestart"
+      },
+      {
+        "id": "dbeaver.dbeaver",
+        "name": "DBeaver Community",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\DBeaver\\dbeaver.exe",
+        "check_name": "dbeaver community",
+        "fallback_url": "https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe",
+        "install_args": "/S"
+      }
+    ]
+  },
+  {
+    "group_name": "9. 🎮 THƯ VIỆN GAME",
+    "apps": [
+      {
+        "id": "DirectX_Web_Setup",
+        "name": "DirectX End-User Runtime",
+        "type": "exe_url",
+        "url": "https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe",
+        "install_args": "/Q",
+        "check_path": "%WINDIR%\\System32\\d3dx9_43.dll",
+        "desc": "Fix lỗi thiếu DLL khi chơi game"
+      },
+      {
+        "id": "Nvidia.PhysX",
+        "name": "NVIDIA PhysX System",
+        "type": "exe_url",
+        "url": "https://us.download.nvidia.com/Windows/9.21.0713/PhysX-9.21.0713-SystemSoftware.exe",
+        "install_args": "/silent",
+        "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll"
+      },
+      {
+        "id": "OpenAL",
+        "name": "OpenAL (Audio Game)",
+        "type": "portable",
+        "url": "https://openal.org/downloads/oalinst.zip",
+        "exe_in_zip": "oalinst.exe",
+        "auto_run": true,
+        "check_path": "%WINDIR%\\System32\\OpenAL32.dll"
+      }
+    ]
+  }
+]
