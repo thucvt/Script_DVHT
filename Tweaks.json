@@ -359,8 +359,8 @@
   },
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
-    "name": "Custom Branding (Nhập tên bạn)",
-    "desc": "Tự điền Tên & SĐT của bạn vào thông tin máy.",
+    "name": "Custom Branding (Khả dụng từ V1.8)",
+    "desc": "Để lại thông tin của bạn để hỗ trợ khách hehe.",
     "cmd": "RUN_CUSTOM_OEM_SETUP"
   }
 ]
