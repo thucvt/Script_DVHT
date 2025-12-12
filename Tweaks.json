@@ -29,6 +29,12 @@
     "desc": "Chạy Explorer tiến trình riêng (Chống Crash toàn bộ), Tắt check Shortcut/Disk Space/Internet Search",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Advanced\" /v \"SeparateProcess\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v \"StartupDelayInMSec\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoLowDiskSpaceChecks\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"LinkResolveIgnoreLinkInfo\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveSearch\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveTrack\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoInternetOpenWith\" /t REG_DWORD /d 1 /f"
   },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Add 'Copy To' & 'Move To'",
+    "desc": "Thêm tùy chọn Copy/Move nhanh vào menu chuột phải trick của mình sài lâu rồi nên share lại hihi  (Tiện lợi)",
+    "cmd": "reg add \"HKCR\\AllFilesystemObjects\\shellex\\ContextMenuHandlers\\Copy To\" /ve /d \"{C2FBB630-2971-11D1-A18C-00C04FD75D13}\" /f; reg add \"HKCR\\AllFilesystemObjects\\shellex\\ContextMenuHandlers\\Move To\" /ve /d \"{C2FBB631-2971-11D1-A18C-00C04FD75D13}\" /f"
+  },
 
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
