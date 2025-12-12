@@ -19,6 +19,7 @@
   ],
   "app": [
     {"id": "zalo", "name": "Zalo PC (Siêu Sạch)", "type": "special", "action": "clean_zalo_hardcore", "check_path": "%LOCALAPPDATA%\\ZaloPC"},
+    {"id": "capcut", "name": "Cache CapCut PC", "type": "path", "path": "%LOCALAPPDATA%\\CapCut\\User Data\\Cache"},
     {"id": "chrome", "name": "Cache Google Chrome", "type": "path", "path": "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Default\\Cache"},
     {"id": "edge", "name": "Cache Microsoft Edge", "type": "path", "path": "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Default\\Cache"},
     {"id": "firefox", "name": "Cache Firefox", "type": "path", "path": "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles"},
