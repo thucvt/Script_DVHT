@@ -333,9 +333,16 @@
   },
   {
     "category": "🖨️ MÁY IN",
-    "name": "Enable SMB 1.0 Protocol",
-    "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
+    "name": "Enable SMB 1.0 (Fix Scan LAN)",
+    "desc": "Bật giao thức chia sẻ file cũ. Sửa lỗi máy in/photocopy đời cũ không scan được vào máy tính.",
     "type": "cmd",
     "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
+  },
+  {
+    "category": "🖨️ MÁY IN",
+    "name": "Disable SMB 1.0 (Secure)",
+    "desc": "Tắt SMB 1.0 để bảo mật (Chống mã độc WannaCry). Nên tắt ngay nếu không dùng máy in cũ.",
+    "type": "cmd",
+    "cmd": "dism /online /disable-feature /featurename:SMB1Protocol /norestart"
   }
 ]
