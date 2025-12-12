@@ -139,11 +139,13 @@
         "name": "Cent Browser (Nhẹ & Mượt)",
         "type": "exe_url",
         "url": "https://static.centbrowser.com/win_stable/5.2.1168.83/centbrowser_5.2.1168.83_x64.exe",
-        "install_args": "/silent",
-        "check_path": "%ProgramFiles(x86)%\\CentBrowser\\Application\\chrome.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\CentBrowser\\Application\\chrome.exe",
         "check_name": "cent browser",
         "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ"
       },
+
+      
       {
         "id": "Brave.Brave",
         "name": "Brave Browser",
@@ -254,7 +256,7 @@
         "type": "zip_install",
         "url": "https://raw.githubusercontent.com/thucvt/fonts/main/Visual-C-Runtimes-All-in-One-Dec-2025.zip",
         "install_script": "install_all.bat",
-        "install_args": "/ai /gm2",
+        "install_args": "",
         "check_path": "%WINDIR%\\System32\\vcruntime140.dll",
         "check_name": "microsoft visual c++"
       },
