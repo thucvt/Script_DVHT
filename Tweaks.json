@@ -241,14 +241,7 @@
     "name": "Optimize Memory Strategy (RAM)",
     "desc": "Ép nhân hệ thống chạy trên RAM (DisablePagingExecutive), Tăng System Cache, Tự nhả DLL thừa",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"DisablePagingExecutive\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d 2 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"LargeSystemCache\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"AlwaysUnloadDLL\" /t REG_DWORD /d 1 /f"
-  },
-  {
-    "category": "⚠️ NÂNG CAO",
-    "name": "Enable SMB 1.0 Protocol",
-    "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
-    "type": "cmd",
-    "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
-  },
+  },  
   {
     "category": "⚠️ NÂNG CAO",
     "name": "Nuke Bloatware Tasks (Deep Clean)",
@@ -337,5 +330,12 @@
     "name": "Enable Print Spooler",
     "desc": "Bật lại dịch vụ máy in (Cần thiết để in ấn & cài Driver)",
     "cmd": "Set-Service -Name Spooler -StartupType Automatic; Start-Service -Name Spooler"
+  },
+  {
+    "category": "🖨️ MÁY IN",
+    "name": "Enable SMB 1.0 Protocol",
+    "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
   }
 ]
