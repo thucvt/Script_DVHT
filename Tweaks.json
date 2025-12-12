@@ -1,15 +1,15 @@
 [
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Super Optimize For Win 10/11",
-    "desc": "Siêu tối ưu cực mạnh (By ThucIT) - Siêu nhẹ máy",
-    "cmd": "RUN_ThucIT_SERVICES"
-  },
-  {
-    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Create Restore Point",
     "desc": "Tạo điểm khôi phục (Backup) an toàn",
     "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Super Optimize For Win 10/11",
+    "desc": "Siêu tối ưu cực mạnh (By ThucIT) - Siêu nhẹ máy",
+    "cmd": "RUN_ThucIT_SERVICES"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
