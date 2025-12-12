@@ -350,5 +350,17 @@
     "desc": "Tắt SMB 1.0 để bảo mật (Chống mã độc WannaCry). Nên tắt ngay nếu không dùng máy in cũ.",
     "type": "cmd",
     "cmd": "dism /online /disable-feature /featurename:SMB1Protocol /norestart"
+  },
+  {
+    "category": "👑 BẢN QUYỀN & THÔNG TIN",
+    "name": "Branding: TỰ LÀM IT Signature",
+    "desc": "Đóng dấu thông tin OEM: TỰ LÀM IT by ThucVuong (Thay thế thông tin FPT/Dell/HP...)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"TỰ LÀM IT (by ThucVuong)\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"01204825860\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://www.facebook.com/trongthuc.vuong\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOwner\" /t REG_SZ /d \"ThucVuong\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"TỰ LÀM IT\" /f"
+  },
+  {
+    "category": "👑 BẢN QUYỀN & THÔNG TIN",
+    "name": "Custom Branding (Nhập tên bạn)",
+    "desc": "Tự điền Tên & SĐT của bạn vào thông tin máy.",
+    "cmd": "RUN_CUSTOM_OEM_SETUP"
   }
 ]
