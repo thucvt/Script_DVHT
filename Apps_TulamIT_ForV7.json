@@ -234,7 +234,7 @@
         "type": "winget",
         "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
         "check_name": "neat download manager",
-        "fallback_url": "https://neatdownloadmanager.com/index.php/en/?download=win",
+        "fallback_url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/NeatDM_setup.exe",
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
       },
        { 
