@@ -110,6 +110,15 @@
         "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
         "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
         "check_name": "anydesk"
+      },
+      {
+        "id": "RustDesk",
+        "name": "RustDesk (Remote Open Source)",
+        "type": "exe_url",
+        "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.4/rustdesk-1.4.4-x86_64.exe",
+        "install_args": "--silent-install",
+        "check_path": "%ProgramFiles%\\RustDesk\\RustDesk.exe",
+        "check_name": "rustdesk"
       }
     ]
   },
@@ -229,13 +238,22 @@
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
       },
       {
-        "id": "Jaryaa.NeatDownloadManager",
+        "id": "NeatDownloadManager",
         "name": "Neat Download Manager",
-        "type": "winget",
+        "type": "exe_url",
+        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/NeatDM_setup.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
         "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
-        "check_name": "neat download manager",
-        "fallback_url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/NeatDM_setup.exe",
-        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+        "check_name": "neat download manager"
+      },
+      {
+        "id": "MemReduct",
+        "name": "Mem Reduct (Dọn RAM)",
+        "type": "exe_url",
+        "url": "https://github.com/henrypp/memreduct/releases/download/v.3.5.2/memreduct-3.5.2-setup.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
+        "check_path": "%ProgramFiles%\\Mem Reduct\\memreduct.exe",
+        "check_name": "memreduct"
       },
        { 
       "name": "OBS Studio", 
