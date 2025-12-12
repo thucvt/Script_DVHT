@@ -2,7 +2,7 @@
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Create Restore Point",
-    "desc": "Tạo điểm khôi phục (Backup) an toàn",
+    "desc": "Tạo điểm khôi phục (Backup) an toàn nên chạy trước khi áp dụng các tweak kia",
     "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
   },
   {
