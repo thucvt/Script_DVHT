@@ -7,7 +7,8 @@
         "name": "Cài Font (Full Tiếng Việt)",
         "type": "custom",
         "check_path": "%WINDIR%\\Fonts\\VNTIMEB.TTF",
-        "domain": "google.com"
+        "domain": "google.com",
+        "desc": "Tự động cài đặt bộ Font Tiếng Việt đầy đủ (VNI, TCVN3, Unicode) còn thiếu vào hệ thống."
       },
       {
         "id": "Unikey",
@@ -18,8 +19,9 @@
         "kill_process": "UniKeyNT.exe",
         "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe",
         "check_name": "unikey",
-        "icon_url": "https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg" 
-    },
+        "icon_url": "https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg",
+        "desc": "Bộ gõ tiếng Việt phổ biến nhất, bản ổn định RC2 chính chủ."
+      },
       {
         "id": "EVKey",
         "name": "EVKey (Thay thế Unikey)",
@@ -29,14 +31,15 @@
         "kill_process": "EVKey64.exe",
         "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe",
         "check_name": "evkey",
-        "domain": "https://evkeyvn.com/"
+        "domain": "https://evkeyvn.com/",
+        "desc": "Bộ gõ hiện đại, khắc phục lỗi gõ tiếng Việt trên Chrome, Excel và gợi ý từ thông minh."
       }
     ]
   },
   {
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
-    {
+      {
         "id": "Microsoft.Office",
         "name": "Microsoft 365 (Online)",
         "type": "winget",
@@ -44,8 +47,9 @@
         "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
         "install_args": "/configure",
         "check_name": "microsoft 365",
-        "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png"
-    },
+        "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
+        "desc": "Bộ cài đặt Office 365/2021 online chính chủ từ Microsoft (Cần mạng để tải)."
+      },
       {
         "id": "OfficeToolPlus",
         "name": "Office Tool Plus",
@@ -55,7 +59,8 @@
         "auto_run": true,
         "check_path": "%ProgramFiles%\\OfficeToolPlus\\Office Tool Plus.exe",
         "check_name": "office tool plus",
-        "domain": "officetool.plus"
+        "domain": "officetool.plus",
+        "desc": "Công cụ mạnh mẽ hỗ trợ tải, cài đặt tùy chỉnh và quản lý bản quyền Office."
       },
       {
         "id": "Adobe.Acrobat.Reader.64-bit",
@@ -65,7 +70,8 @@
         "check_name": "adobe acrobat",
         "fallback_url": "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/2400220687/AcroRdrDC2400220687_en_US.exe",
         "install_args": "/sAll /rs /msi EULA_ACCEPT=YES",
-        "domain": "adobe.com"
+        "domain": "adobe.com",
+        "desc": "Phần mềm xem và đọc file PDF tiêu chuẩn toàn cầu, phiên bản miễn phí."
       },
       {
         "id": "DrawIO_Direct",
@@ -75,7 +81,8 @@
         "install_args": "/allusers /S",
         "check_path": "%ProgramFiles%\\draw.io\\draw.io.exe",
         "check_name": "draw.io",
-        "domain": "draw.io"
+        "domain": "draw.io",
+        "desc": "Công cụ vẽ sơ đồ tư duy, quy trình, biểu đồ luồng (Flowchart) miễn phí offline."
       },
       {
         "id": "Canva.Canva",
@@ -85,7 +92,8 @@
         "check_name": "canva",
         "fallback_url": "https://desktop-release.canva.com/Canva%20Setup.exe",
         "install_args": "/silent",
-        "domain": "canva.com"
+        "domain": "canva.com",
+        "desc": "Ứng dụng thiết kế đồ họa kéo thả: làm slide, poster, ảnh bìa nhanh chóng."
       }
     ]
   },
@@ -100,7 +108,8 @@
         "install_args": "/VERYSILENT /NORESTART",
         "check_path": "%ProgramFiles(x86)%\\UltraViewer\\UltraViewer_Desktop.exe",
         "check_name": "ultraviewer",
-        "domain": "ultraviewer.net"
+        "domain": "ultraviewer.net",
+        "desc": "Phần mềm điều khiển máy tính từ xa của Việt Nam, miễn phí và dễ sử dụng."
       },
       {
         "id": "TeamViewer.TeamViewer",
@@ -110,7 +119,8 @@
         "fallback_url": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
         "install_args": "/S",
         "check_name": "teamviewer",
-        "domain": "teamviewer.com"
+        "domain": "teamviewer.com",
+        "desc": "Giải pháp hỗ trợ từ xa chuyên nghiệp, ổn định hàng đầu thế giới."
       },
       {
         "id": "AnyDesk.AnyDesk",
@@ -120,7 +130,8 @@
         "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
         "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
         "check_name": "anydesk",
-        "domain": "anydesk.com"
+        "domain": "anydesk.com",
+        "desc": "Phần mềm điều khiển từ xa siêu nhẹ, tốc độ cao và độ trễ thấp."
       },
       {
         "id": "RustDesk",
@@ -130,7 +141,8 @@
         "install_args": "--silent-install",
         "check_path": "%ProgramFiles%\\RustDesk\\RustDesk.exe",
         "check_name": "rustdesk",
-        "domain": "rustdesk.com"
+        "domain": "rustdesk.com",
+        "desc": "Mã nguồn mở thay thế TeamViewer, không bị giới hạn thời gian kết nối."
       }
     ]
   },
@@ -145,7 +157,8 @@
         "check_name": "google chrome",
         "fallback_url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
         "install_args": "/silent /install",
-        "domain": "google.com"
+        "domain": "google.com",
+        "desc": "Trình duyệt web phổ biến nhất thế giới, đồng bộ dữ liệu Google mạnh mẽ."
       },
       {
         "id": "CocCoc",
@@ -155,7 +168,8 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe",
         "check_name": "cốc cốc",
-        "domain": "coccoc.com"
+        "domain": "coccoc.com",
+        "desc": "Trình duyệt Việt, tích hợp tải video, vào Facebook dễ dàng và chặn quảng cáo."
       },
       {
         "id": "CentBrowser",
@@ -165,7 +179,7 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\CentBrowser\\Application\\chrome.exe",
         "check_name": "cent browser",
-        "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ",
+        "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ, nhiều tính năng cử chỉ chuột tiện lợi.",
         "domain": "centbrowser.com"
       },
       {
@@ -176,7 +190,8 @@
         "check_name": "brave",
         "fallback_url": "https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe",
         "install_args": "/silent /install",
-        "domain": "brave.com"
+        "domain": "brave.com",
+        "desc": "Trình duyệt tập trung vào quyền riêng tư, chặn quảng cáo mặc định, tốc độ nhanh."
       }
     ]
   },
@@ -191,7 +206,8 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe",
         "check_name": "zalo",
-        "domain": "zalo.me"
+        "domain": "zalo.me",
+        "desc": "Ứng dụng chat, gọi điện, gửi file số 1 tại Việt Nam."
       },
       {
         "id": "Microsoft.Teams",
@@ -201,7 +217,8 @@
         "check_name": "microsoft teams",
         "fallback_url": "https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe",
         "install_args": "/s",
-        "icon_url": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxi87FXbfaqfqVR.HAnzNbchdxTrX6oTHYnKJYGjY.uNRLC1xtHwTCnBNHfwM.TY69WKyCTG.bjYnwWsp6KkJsEM-&format=source"
+        "icon_url": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxi87FXbfaqfqVR.HAnzNbchdxTrX6oTHYnKJYGjY.uNRLC1xtHwTCnBNHfwM.TY69WKyCTG.bjYnwWsp6KkJsEM-&format=source",
+        "desc": "Nền tảng làm việc nhóm, họp trực tuyến chuyên nghiệp của hệ sinh thái Microsoft."
       },
       {
         "id": "Viber_Direct",
@@ -211,7 +228,8 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe",
         "check_name": "viber",
-        "domain": "viber.com"
+        "domain": "viber.com",
+        "desc": "Ứng dụng gọi điện, nhắn tin miễn phí, bảo mật đầu cuối."
       },
       {
         "id": "Zoom.Zoom",
@@ -221,7 +239,8 @@
         "check_name": "zoom",
         "fallback_url": "https://zoom.us/client/latest/ZoomInstaller.exe",
         "install_args": "/silent /install",
-        "domain": "zoom.us"
+        "domain": "zoom.us",
+        "desc": "Phần mềm họp trực tuyến, học online ổn định và phổ biến nhất."
       }
     ]
   },
@@ -236,7 +255,8 @@
         "check_name": "winrar",
         "fallback_url": "https://www.rarlab.com/rar/winrar-x64-701.exe",
         "install_args": "/S",
-        "domain": "rarlab.com"
+        "domain": "rarlab.com",
+        "desc": "Trình quản lý nén và giải nén file mạnh mẽ nhất, hỗ trợ định dạng RAR/ZIP."
       },
       {
         "id": "ShareX.ShareX",
@@ -246,7 +266,8 @@
         "check_name": "sharex",
         "fallback_url": "https://github.com/ShareX/ShareX/releases/download/v18.0.1/ShareX-18.0.1-setup.exe",
         "install_args": "/VERYSILENT /NORESTART",
-        "domain": "getsharex.com"
+        "domain": "getsharex.com",
+        "desc": "Công cụ chụp ảnh, quay phim màn hình và chia sẻ file tự động (Mã nguồn mở)."
       },
       {
         "id": "Skillbrains.Lightshot",
@@ -256,7 +277,8 @@
         "check_name": "lightshot",
         "fallback_url": "https://app.prntscr.com/build/setup-lightshot.exe",
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
-        "domain": "prntscr.com"
+        "domain": "prntscr.com",
+        "desc": "Chụp ảnh màn hình nhanh gọn, hỗ trợ chỉnh sửa và upload lấy link tức thì."
       },
       {
         "id": "NeatDownloadManager",
@@ -266,7 +288,8 @@
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
         "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
         "check_name": "neat download manager",
-        "domain": "neatdownloadmanager.com"
+        "domain": "neatdownloadmanager.com",
+        "desc": "Trình hỗ trợ download miễn phí, tốc độ cao, thay thế hoàn hảo cho IDM."
       },
       {
         "id": "MemReduct",
@@ -276,16 +299,18 @@
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
         "check_path": "%ProgramFiles%\\Mem Reduct\\memreduct.exe",
         "check_name": "memreduct",
-        "domain": "henrypp.org"
+        "domain": "henrypp.org",
+        "desc": "Công cụ nhỏ gọn giúp giải phóng bộ nhớ RAM tức thời, giúp máy mượt hơn."
       },
       {
+        "id": "OBSProject.OBSStudio",
         "name": "OBS Studio",
         "type": "winget",
-        "id": "OBSProject.OBSStudio",
         "check_path": "%ProgramFiles%\\obs-studio\\bin\\64bit\\obs64.exe",
         "fallback_url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.1.2-Full-Installer-x64.exe",
         "install_args": "/S",
-        "domain": "obsproject.com"
+        "domain": "obsproject.com",
+        "desc": "Phần mềm quay màn hình và livestream chuyên nghiệp, mã nguồn mở miễn phí."
       }
     ]
   },
@@ -301,7 +326,8 @@
         "install_args": "",
         "check_path": "%WINDIR%\\System32\\vcruntime140.dll",
         "check_name": "microsoft visual c++",
-        "domain": "microsoft.com"
+        "domain": "microsoft.com",
+        "desc": "Gói thư viện Visual C++ đầy đủ, sửa lỗi thiếu DLL khi chạy Game và Ứng dụng."
       },
       {
         "id": "Oracle.JavaRuntimeEnvironment",
@@ -311,7 +337,8 @@
         "check_name": "java",
         "fallback_url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4",
         "install_args": "/s",
-        "domain": "java.com"
+        "domain": "java.com",
+        "desc": "Môi trường chạy ứng dụng Java (Cần thiết cho Kê khai thuế, Minecraft...)."
       },
       {
         "id": "Microsoft.DotNet.DesktopRuntime.8",
@@ -321,7 +348,8 @@
         "check_name": "windows desktop runtime",
         "fallback_url": "https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe",
         "install_args": "/install /quiet /norestart",
-        "domain": "dotnet.microsoft.com"
+        "domain": "dotnet.microsoft.com",
+        "desc": "Thư viện nền tảng để chạy các ứng dụng được viết bằng .NET 8.0 mới nhất."
       },
       {
         "id": "Microsoft.VisualStudioCode",
@@ -331,7 +359,8 @@
         "check_name": "microsoft visual studio code",
         "fallback_url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
         "install_args": "/verysilent /mergetasks=!runcode",
-        "domain": "code.visualstudio.com"
+        "domain": "code.visualstudio.com",
+        "desc": "Trình soạn thảo Code nhẹ, mạnh mẽ, hỗ trợ nhiều Extension cho lập trình viên."
       }
     ]
   },
@@ -346,7 +375,8 @@
         "check_name": "microsoft sql server 2022",
         "fallback_url": "https://go.microsoft.com/fwlink/p/?linkid=2215158",
         "install_args": "/Q /IAcceptSqlServerLicenseTerms /Action=Install /Features=SQLEngine /InstanceName=SQLEXPRESS",
-        "domain": "microsoft.com"
+        "domain": "microsoft.com",
+        "desc": "Hệ quản trị cơ sở dữ liệu SQL Server phiên bản miễn phí, nhẹ dành cho máy cá nhân."
       },
       {
         "id": "Microsoft.SQLServerManagementStudio",
@@ -356,7 +386,8 @@
         "check_name": "microsoft sql server management studio",
         "fallback_url": "https://aka.ms/ssmsfullsetup",
         "install_args": "/Quiet /NoRestart",
-        "domain": "microsoft.com"
+        "domain": "microsoft.com",
+        "desc": "Công cụ quản trị giao diện (GUI) chính chủ cho SQL Server."
       },
       {
         "id": "dbeaver.dbeaver",
@@ -366,24 +397,25 @@
         "check_name": "dbeaver community",
         "fallback_url": "https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe",
         "install_args": "/S",
-        "domain": "dbeaver.io"
+        "domain": "dbeaver.io",
+        "desc": "Trình quản lý CSDL đa năng (MySQL, PostgreSQL, SQL Server...) miễn phí."
       }
     ]
   },
   {
     "group_name": "9. 🎮 THƯ VIỆN GAME",
     "apps": [
-       {
-      "id": "DirectX_June2010",
-      "name": "DirectX",
-      "type": "zip_install",
-      "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/DirectX_June2010_Silent.zip", 
-      "install_script": "DXSETUP.exe",
-      "install_args": "/silent",
-      "check_path": "%WINDIR%\\System32\\d3dx9_43.dll",
-      "desc": "Bản Offline đầy đủ nhất, fix mọi lỗi thiếu DLL",
-      "domain": "microsoft.com"
-    },
+      {
+        "id": "DirectX_June2010",
+        "name": "DirectX",
+        "type": "zip_install",
+        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/DirectX_June2010_Silent.zip",
+        "install_script": "DXSETUP.exe",
+        "install_args": "/silent",
+        "check_path": "%WINDIR%\\System32\\d3dx9_43.dll",
+        "desc": "Bản Offline đầy đủ nhất, fix mọi lỗi thiếu DLL khi chơi game cũ.",
+        "domain": "microsoft.com"
+      },
       {
         "id": "Nvidia.PhysX",
         "name": "NVIDIA PhysX System",
@@ -391,7 +423,8 @@
         "url": "https://us.download.nvidia.com/Windows/9.21.0713/PhysX-9.21.0713-SystemSoftware.exe",
         "install_args": "/silent",
         "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll",
-        "domain": "nvidia.com"
+        "domain": "nvidia.com",
+        "desc": "Công cụ hỗ trợ xử lý vật lý trong game, cần thiết cho các máy dùng card NVIDIA."
       },
       {
         "id": "OpenAL",
@@ -401,7 +434,8 @@
         "exe_in_zip": "oalinst.exe",
         "auto_run": true,
         "check_path": "%WINDIR%\\System32\\OpenAL32.dll",
-        "icon_url": "https://img.utdstc.com/icon/b93/78a/b9378a80bdac44d23fd6731f109dc00bb67476cf54c0cb8e9b51732a382edb08:200"
+        "icon_url": "https://img.utdstc.com/icon/b93/78a/b9378a80bdac44d23fd6731f109dc00bb67476cf54c0cb8e9b51732a382edb08:200",
+        "desc": "Thư viện âm thanh 3D đa nền tảng, sửa lỗi mất tiếng trong một số game cũ."
       }
     ]
   }
