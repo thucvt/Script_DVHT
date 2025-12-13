@@ -343,14 +343,16 @@
     "group_name": "9. 🎮 THƯ VIỆN GAME",
     "apps": [
       {
-        "id": "DirectX_Web_Setup",
-        "name": "DirectX End-User Runtime",
-        "type": "exe_url",
-        "url": "https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe",
-        "install_args": "/Q",
-        "check_path": "%WINDIR%\\System32\\d3dx9_43.dll",
-        "desc": "Fix lỗi thiếu DLL khi chơi game"
-      },
+      "id": "DirectX_June2010",
+      "name": "DirectX Offline",
+      "type": "zip_install",
+      "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/DirectX_June2010_Silent.zip", 
+      "install_script": "DXSETUP.exe",
+      "install_args": "/silent",
+      "check_path": "%WINDIR%\\System32\\d3dx9_43.dll",
+      "desc": "Bản Offline đầy đủ nhất, fix mọi lỗi thiếu DLL",
+      "domain": "microsoft.com"
+    },
       {
         "id": "Nvidia.PhysX",
         "name": "NVIDIA PhysX System",
