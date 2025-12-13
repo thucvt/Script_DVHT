@@ -18,7 +18,7 @@
         "kill_process": "UniKeyNT.exe",
         "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe",
         "check_name": "unikey",
-        "icon_url": "https://raw.githubusercontent.com/thucvt/fonts/main/unikey_icon.png" 
+        "icon_url": "https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg" 
     },
       {
         "id": "EVKey",
@@ -29,7 +29,7 @@
         "kill_process": "EVKey64.exe",
         "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe",
         "check_name": "evkey",
-        "domain": "github.com"
+        "domain": "https://evkeyvn.com/"
       }
     ]
   },
