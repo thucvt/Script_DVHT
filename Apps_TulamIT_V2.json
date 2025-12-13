@@ -74,6 +74,17 @@
         "desc": "Phần mềm xem và đọc file PDF tiêu chuẩn toàn cầu, phiên bản miễn phí."
       },
       {
+        "id": "Foxit.FoxitReader",
+        "name": "Foxit PDF Reader",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe",
+        "check_name": "foxit pdf reader",
+        "fallback_url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2025.2.1/FoxitPDFReader202521_L10N_Setup_Prom_x64.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /DesktopShortcut",
+        "domain": "foxit.com",
+        "desc": "Trình đọc PDF siêu nhẹ, tốc độ mở file nhanh, hỗ trợ tạo chữ ký và ghi chú mạnh mẽ."
+      },
+      {
         "id": "DrawIO_Direct",
         "name": "Draw.IO (Vẽ biểu đồ)",
         "type": "exe_url",
