@@ -375,7 +375,7 @@
     "apps": [
        {
       "id": "DirectX_June2010",
-      "name": "DirectX Offline",
+      "name": "DirectX",
       "type": "zip_install",
       "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/DirectX_June2010_Silent.zip", 
       "install_script": "DXSETUP.exe",
