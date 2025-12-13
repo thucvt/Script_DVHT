@@ -421,7 +421,7 @@
         "name": "NVIDIA PhysX System",
         "type": "exe_url",
         "url": "https://us.download.nvidia.com/Windows/9.21.0713/PhysX-9.21.0713-SystemSoftware.exe",
-        "install_args": "/silent",
+        "install_args": "",
         "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll",
         "domain": "nvidia.com",
         "desc": "Công cụ hỗ trợ xử lý vật lý trong game, cần thiết cho các máy dùng card NVIDIA."
