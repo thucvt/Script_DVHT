@@ -18,8 +18,8 @@
         "kill_process": "UniKeyNT.exe",
         "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe",
         "check_name": "unikey",
-        "domain": "unikey.org"
-      },
+        "icon_url": "https://raw.githubusercontent.com/thucvt/fonts/main/unikey_icon.png" 
+    },
       {
         "id": "EVKey",
         "name": "EVKey (Thay thế Unikey)",
@@ -36,7 +36,7 @@
   {
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
-      {
+    {
         "id": "Microsoft.Office",
         "name": "Microsoft 365 (Online)",
         "type": "winget",
@@ -44,8 +44,8 @@
         "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
         "install_args": "/configure",
         "check_name": "microsoft 365",
-        "domain": "office.com"
-      },
+        "icon_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_365_%282022%29.svg/1024px-Microsoft_365_%282022%29.svg.png"
+    },
       {
         "id": "OfficeToolPlus",
         "name": "Office Tool Plus",
