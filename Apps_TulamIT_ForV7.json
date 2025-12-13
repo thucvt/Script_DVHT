@@ -369,7 +369,7 @@
         "name": "NVIDIA PhysX System",
         "type": "exe_url",
         "url": "https://us.download.nvidia.com/Windows/9.19.0218/PhysX-9.19.0218-SystemSoftware.exe",
-        "install_args": "/silent",
+        "install_args": "",
         "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll"
       },
       {
