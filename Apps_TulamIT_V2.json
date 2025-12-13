@@ -400,7 +400,7 @@
         "exe_in_zip": "oalinst.exe",
         "auto_run": true,
         "check_path": "%WINDIR%\\System32\\OpenAL32.dll",
-        "domain": "openal.org"
+        "icon_url": "https://img.utdstc.com/icon/b93/78a/b9378a80bdac44d23fd6731f109dc00bb67476cf54c0cb8e9b51732a382edb08:200"
       }
     ]
   }
