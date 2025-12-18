@@ -39,7 +39,14 @@
   {
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
-      
+  {
+  "id": "Microsoft.Tool.Selector",
+  "name": "🛠️ Microsoft Tool",
+  "type": "office_selector",
+  "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
+  "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
+  "desc": "Công cụ cài đặt Microsoft Office và các ứng dụng mở rộng (365, 2024, 2021, 2019, 2016, 2013, Visio, Project, Power BI)"
+    },
       {
         "id": "OfficeToolPlus",
         "name": "Office Tool Plus",
