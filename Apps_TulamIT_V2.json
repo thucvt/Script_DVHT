@@ -332,7 +332,7 @@
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
         "check_path": "%ProgramFiles%\\Mem Reduct\\memreduct.exe",
         "check_name": "memreduct",
-        "domain": "henrypp.org",
+        "domain": "memreduct.org",
         "desc": "Công cụ nhỏ gọn giúp giải phóng bộ nhớ RAM tức thời, giúp máy mượt hơn."
       },
       {
