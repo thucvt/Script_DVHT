@@ -51,27 +51,27 @@
       "desc": "Tự động tải và cài đặt bộ Office 365 bản mới nhất từ Microsoft."
     },
     {
-      "id": "Microsoft.Project",
-      "name": "Microsoft Project 2021",
-      "type": "winget",
-      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
-      "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=ProjectProRetail&platform=x64",
-      "install_args": "",
-      "check_name": "project",
-      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-project-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-4-pack-logos-icons-2944962.png",
-      "desc": "Phần mềm quản lý dự án chuyên nghiệp. (Cài online)"
-    },
-    {
-      "id": "Microsoft.Visio",
-      "name": "Microsoft Visio 2021",
-      "type": "winget",
-      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
-      "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=VisioProRetail&platform=x64",
-      "install_args": "",
-      "check_name": "visio",
-      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-visio-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-4-pack-logos-icons-2945000.png",
-      "desc": "Công cụ vẽ sơ đồ, lưu đồ kỹ thuật. (Cài online)"
-    },
+        "id": "Microsoft.Project.Auto",
+        "name": "Microsoft Project 2021 (Auto)",
+        "type": "portable",
+        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
+        "exe_in_zip": "Office Tool Plus.exe",
+        "install_args": "deploy /product ProjectPro2021Retail /channel Current /lang vi-vn /autoRun",
+        "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+        "check_name": "project",
+        "desc": "Tải và tự động chạy lệnh cài Project 2021 qua Office Tool Plus."
+      },
+      {
+        "id": "Microsoft.Visio.Auto",
+        "name": "Microsoft Visio 2021 (Auto)",
+        "type": "portable",
+        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
+        "exe_in_zip": "Office Tool Plus.exe",
+        "install_args": "deploy /product VisioPro2021Retail /channel Current /lang vi-vn /autoRun",
+        "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
+        "check_name": "visio",
+        "desc": "Tải và tự động chạy lệnh cài Visio 2021 qua Office Tool Plus."
+      },
       {
         "id": "OfficeToolPlus",
         "name": "Office Tool Plus",
