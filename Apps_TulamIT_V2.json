@@ -39,13 +39,69 @@
   {
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
-  {
+{
   "id": "Microsoft.Tool.Selector",
   "name": "🛠️ Microsoft Tool",
   "type": "office_selector",
   "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
-  "desc": "Công cụ cài đặt Microsoft Office và các ứng dụng mở rộng (365, 2024, 2021, 2019, 2016, 2013, Visio, Project, Power BI)"
+  "desc": "Công cụ cài đặt Microsoft Office và các ứng dụng mở rộng",
+  "office_options": {
+    "office_365": {
+      "name": "Microsoft 365",
+      "winget_id": "Microsoft.Office",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "check_name": "microsoft 365"
     },
+    "office_2021": {
+      "name": "Microsoft Office 2021",
+      "winget_id": "Microsoft.Office.2021",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "check_name": "office 2021"
+    },
+    "office_2019": {
+      "name": "Microsoft Office 2019",
+      "winget_id": "Microsoft.Office.2019",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "check_name": "office 2019"
+    },
+    "office_2016": {
+      "name": "Microsoft Office 2016",
+      "winget_id": "Microsoft.Office.2016",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "check_name": "office 2016"
+    },
+    "visio_2021": {
+      "name": "Microsoft Visio 2021",
+      "winget_id": "Microsoft.Visio.2021",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
+      "check_name": "visio"
+    },
+    "visio_2019": {
+      "name": "Microsoft Visio 2019",
+      "winget_id": "Microsoft.Visio.2019",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
+      "check_name": "visio"
+    },
+    "project_2021": {
+      "name": "Microsoft Project 2021",
+      "winget_id": "Microsoft.Project.2021",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "check_name": "project"
+    },
+    "project_2019": {
+      "name": "Microsoft Project 2019",
+      "winget_id": "Microsoft.Project.2019",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "check_name": "project"
+    },
+    "power_bi": {
+      "name": "Microsoft Power BI Desktop",
+      "winget_id": "Microsoft.PowerBI",
+      "check_path": "%ProgramFiles%\\Microsoft Power BI Desktop\\bin\\PBIDesktop.exe",
+      "check_name": "power bi"
+    }
+  }
+}
       {
         "id": "OfficeToolPlus",
         "name": "Office Tool Plus",
