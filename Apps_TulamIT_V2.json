@@ -41,7 +41,7 @@
     "apps": [
       {
       "id": "Microsoft.Office.365",
-      "name": "Microsoft 365 (Install via OTP)",
+      "name": "Microsoft 365",
       "type": "portable",
       "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
       "exe_in_zip": "Office Tool Plus.exe",
