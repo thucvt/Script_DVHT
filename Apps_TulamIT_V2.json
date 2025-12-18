@@ -130,14 +130,14 @@
       "check_name": "project"
     },
     "power_bi": {
-      "name": "Microsoft Power BI Desktop",
-      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-power-bi-282132.png",
-      "winget_id": "Microsoft.PowerBI",
-      "fallback_url": "https://aka.ms/pbidesktop",
-      "install_args": "",
-      "check_path": "%ProgramFiles%\\Microsoft Power BI Desktop\\bin\\PBIDesktop.exe",
-      "check_name": "power bi"
-    }
+    "name": "Microsoft Power BI Desktop",
+    "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-power-bi-282132.png",
+    "winget_id": "Microsoft.PowerBI",
+    "fallback_url": "https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup.exe",
+    "install_args": "",
+    "check_path": "%ProgramFiles%\\Microsoft Power BI Desktop\\bin\\PBIDesktop.exe",
+    "check_name": "power bi"
+  }
   }
 },
       {
