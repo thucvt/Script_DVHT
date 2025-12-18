@@ -65,12 +65,12 @@
       {
         "id": "Foxit.FoxitReader",
         "name": "Foxit PDF Reader",
-        "type": "exe_url",  // ✅ Đổi từ "winget" sang "exe_url"
-        "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2025.2.1/FoxitPDFReader202521_L10N_Setup_Prom_x64.exe",  // ✅ Dùng fallback_url làm url chính
+        "type": "exe_url",  
+        "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2025.2.1/FoxitPDFReader202521_L10N_Setup_Prom_x64.exe", 
         "check_path": "%ProgramFiles(x86)%\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe",
         "check_name": "foxit pdf reader",
         "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /DesktopShortcut",
-        "kill_process": "FoxitReader.exe",  // ✅ Thêm để tự động đóng Foxit cũ
+        "kill_process": "FoxitReader.exe",  
         "domain": "foxit.com",
         "desc": "Trình đọc PDF siêu nhẹ, tốc độ mở file nhanh, hỗ trợ tạo chữ ký và ghi chú mạnh mẽ."
       },
