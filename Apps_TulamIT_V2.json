@@ -40,16 +40,38 @@
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
       {
-        "id": "Microsoft.Office",
-        "name": "Microsoft 365 (Online)",
-        "type": "winget",
-        "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
-        "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
-        "install_args": "/configure",
-        "check_name": "microsoft 365",
-        "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
-        "desc": "Bộ cài đặt Office 365/2021 online chính chủ từ Microsoft (Cần mạng để tải)."
-      },
+      "id": "Microsoft.Office",
+      "name": "Microsoft 365 (Online)",
+      "type": "winget",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
+      "install_args": "", 
+      "check_name": "microsoft 365",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
+      "desc": "Tự động tải và cài đặt bộ Office 365 bản mới nhất từ Microsoft."
+    },
+    {
+      "id": "Microsoft.Project",
+      "name": "Microsoft Project 2021",
+      "type": "winget",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=ProjectProRetail&platform=x64",
+      "install_args": "",
+      "check_name": "project",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-project-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-4-pack-logos-icons-2944962.png",
+      "desc": "Phần mềm quản lý dự án chuyên nghiệp. (Cài online)"
+    },
+    {
+      "id": "Microsoft.Visio",
+      "name": "Microsoft Visio 2021",
+      "type": "winget",
+      "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
+      "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=VisioProRetail&platform=x64",
+      "install_args": "",
+      "check_name": "visio",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-visio-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-4-pack-logos-icons-2945000.png",
+      "desc": "Công cụ vẽ sơ đồ, lưu đồ kỹ thuật. (Cài online)"
+    },
       {
         "id": "OfficeToolPlus",
         "name": "Office Tool Plus",
