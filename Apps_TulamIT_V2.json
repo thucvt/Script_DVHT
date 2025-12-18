@@ -41,7 +41,7 @@
     "apps": [
       {
   "id": "Microsoft.Tool.Selector",
-  "name": "🛠️ Microsoft Tool",
+  "name": "🛠️ Microsoft Tool (1.9.1 mới dùng)",
   "type": "office_selector",
   "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
   "desc": "Công cụ cài đặt Microsoft Office và các ứng dụng mở rộng (365, 2024, 2021, 2019, 2016, 2013, Visio, Project, Power BI)",
