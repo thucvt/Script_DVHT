@@ -40,15 +40,16 @@
     "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
     "apps": [
       {
-      "id": "Microsoft.Office",
-      "name": "Microsoft 365 (Online)",
-      "type": "winget",
+      "id": "Microsoft.Office.365",
+      "name": "Microsoft 365 (Install via OTP)",
+      "type": "portable",
+      "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
+      "exe_in_zip": "Office Tool Plus.exe",
+      "install_args": "deploy /product O365BusinessRetail /channel Current /lang vi-vn /autoRun",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
-      "fallback_url": "https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=365businessretail&platform=x64",
-      "install_args": "", 
       "check_name": "microsoft 365",
       "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
-      "desc": "Tự động tải và cài đặt bộ Office 365 bản mới nhất từ Microsoft."
+      "desc": "Tự động tải và cài đặt Office 365 bản mới nhất (Tiếng Việt)."
     },
     {
         "id": "Microsoft.Project.Auto",
