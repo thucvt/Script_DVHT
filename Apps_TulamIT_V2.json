@@ -48,12 +48,14 @@
   "office_options": {
     "office_365": {
       "name": "Microsoft 365",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-365-logo-icon-svg-download-png-8630405.png",
       "winget_id": "Microsoft.Office",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
       "check_name": "microsoft 365"
     },
     "office_2024": {
       "name": "Microsoft Office 2024",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-office-2019-282124.png",
       "winget_id": "Microsoft.Office",
       "fallback_url": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
@@ -61,6 +63,7 @@
     },
     "office_2021": {
       "name": "Microsoft Office 2021",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-office-2019-282124.png",
       "winget_id": "Microsoft.Office",
       "fallback_url": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
@@ -68,6 +71,7 @@
     },
     "office_2019": {
       "name": "Microsoft Office 2019",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-office-2019-282124.png",
       "winget_id": "Microsoft.Office.2019",
       "fallback_url": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
@@ -75,6 +79,7 @@
     },
     "office_2016": {
       "name": "Microsoft Office 2016",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-office-2016-282122.png",
       "winget_id": "Microsoft.Office.2016",
       "fallback_url": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
@@ -82,6 +87,7 @@
     },
     "office_2013": {
       "name": "Microsoft Office 2013",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-office-2013-282120.png",
       "winget_id": "",
       "fallback_url": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office15\\WINWORD.EXE",
@@ -89,41 +95,46 @@
     },
     "visio_2021": {
       "name": "Microsoft Visio 2021",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-visio-282130.png",
       "winget_id": "",
       "fallback_url": "",
-      "install_args": "/quiet /norestart",
+      "install_args": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
       "check_name": "visio"
     },
     "visio_2019": {
       "name": "Microsoft Visio 2019",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-visio-282130.png",
       "winget_id": "",
       "fallback_url": "",
-      "install_args": "/quiet /norestart",
+      "install_args": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\VISIO.EXE",
       "check_name": "visio"
     },
     "project_2021": {
       "name": "Microsoft Project 2021",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-project-282128.png",
       "winget_id": "",
       "fallback_url": "",
-      "install_args": "/quiet /norestart",
+      "install_args": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
       "check_name": "project"
     },
     "project_2019": {
       "name": "Microsoft Project 2019",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-microsoft-project-282128.png",
       "winget_id": "",
       "fallback_url": "",
-      "install_args": "/quiet /norestart",
+      "install_args": "",
       "check_path": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
       "check_name": "project"
     },
     "power_bi": {
       "name": "Microsoft Power BI Desktop",
+      "icon_url": "https://cdn.iconscout.com/icon/free/png-256/free-power-bi-282132.png",
       "winget_id": "Microsoft.PowerBI",
       "fallback_url": "https://aka.ms/pbidesktop",
-      "install_args": "/quiet /norestart",
+      "install_args": "",
       "check_path": "%ProgramFiles%\\Microsoft Power BI Desktop\\bin\\PBIDesktop.exe",
       "check_name": "power bi"
     }
