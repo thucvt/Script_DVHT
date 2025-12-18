@@ -123,7 +123,7 @@
         "type": "winget",
         "check_path": "%LOCALAPPDATA%\\Programs\\Canva\\Canva.exe",
         "check_name": "canva",
-        "fallback_url": "https://desktop-release.canva.com/Canva%20Setup.exe",
+        "fallback_url": "https://www.canva.com/download/windows/canva-desktop/",
         "install_args": "/silent",
         "domain": "canva.com",
         "desc": "Ứng dụng thiết kế đồ họa kéo thả: làm slide, poster, ảnh bìa nhanh chóng."
