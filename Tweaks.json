@@ -1,10 +1,5 @@
 [
   {
-    "name": "Super Optimize For Win 10/11",
-    "desc": "Siêu tối ưu cực mạnh (By ThucIT) - Siêu nhẹ máy",
-    "cmd": "RUN_ThucIT_SERVICES"
-  },
-  {
     "name": "Create Restore Point",
     "desc": "Tạo điểm khôi phục (Backup) an toàn",
     "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
@@ -134,30 +129,7 @@
     "desc": "Tắt dịch vụ máy in (Tiết kiệm RAM nếu không in ấn)",
     "cmd": "Set-Service -Name Spooler -StartupType Disabled; Stop-Service -Name Spooler -Force"
   },
-  {
-    "name": "Chrome: Force Install Extensions",
-    "desc": "Tự động cài uBlock, I don't care about cookies, Return YT Dislike (Không cho gỡ)",
-    "type": "cmd",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"1\" /t REG_SZ /d \"cjpalhdlnbpafiamejdnhcphjbkeiagm\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"2\" /t REG_SZ /d \"fihnjjcciajhdojfnbdddfaoknhalnja\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"3\" /t REG_SZ /d \"bnomihfieiccainjcjblhegjgglakjdd\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"8\" /t REG_SZ /d \"gebbhagfogifgggkldgodflihgfeippi\" /f"
-  },
-  {
-    "name": "Chrome: Enterprise Hardening",
-    "desc": "Tối ưu Chrome: Tắt Telemetry, Chặn theo dõi, Tắt chạy nền, Set Google là trang chủ",
-    "type": "cmd",
-    "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"MetricsReportingEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"BackgroundModeEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"SafeBrowsingEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"PasswordLeakDetectionEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"HomepageLocation\" /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"NewTabPageLocation\" /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"ShowCastIconInToolbar\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"ForceGoogleSafeSearch\" /t REG_DWORD /d 1 /f"
-  },
-  {
-    "name": "Chrome: Config uBlock Origin",
-    "desc": "Nạp sẵn bộ lọc quảng cáo VN & Quốc tế cho uBlock (Cực mạnh)",
-    "type": "cmd",
-    "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\policy\" /v \"adminSettings\" /t REG_SZ /d \"{\\\"userSettings\\\":{\\\"advancedUserEnabled\\\":true,\\\"cloudStorageEnabled\\\":true,\\\"uiAccentCustom0\\\":\\\"#56a22b\\\",\\\"selectedFilterLists\\\":[\\\"user-filters\\\",\\\"ublock-filters\\\",\\\"ublock-badware\\\",\\\"ublock-privacy\\\",\\\"ublock-quick-fixes\\\",\\\"easylist\\\",\\\"adguard-generic\\\",\\\"adguard-mobile\\\",\\\"easyprivacy\\\",\\\"urlhaus-1\\\",\\\"https://filters.adtidy.org/windows/filters/18.txt\\\"]}}\" /f"
-  },
-   {
-    "name": "Freeze Google/Chrome Updates",
-    "desc": "Chặn Google tự động Update & Chuyển Chrome sang kênh ổn định (Extended Stable)",
-    "type": "cmd",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"UpdateDefault\" /t REG_DWORD /d 3 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"InstallDefault\" /t REG_DWORD /d 4 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"AutoUpdateCheckPeriodMinutes\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"ProxyMode\" /t REG_SZ /d \"direct\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"TargetChannel{8A69D345-D564-463C-AFF1-A69D9E530F96}\" /t REG_SZ /d \"extended\" /f"
-  },
+
   {
     "name": "Block Urban VPN Telemetry",
     "desc": "Chặn Urban VPN thu thập dữ liệu & theo dõi người dùng (Privacy)",
