@@ -129,7 +129,6 @@
     "desc": "Tắt dịch vụ máy in (Tiết kiệm RAM nếu không in ấn)",
     "cmd": "Set-Service -Name Spooler -StartupType Disabled; Stop-Service -Name Spooler -Force"
   },
-
   {
     "name": "Block Urban VPN Telemetry",
     "desc": "Chặn Urban VPN thu thập dữ liệu & theo dõi người dùng (Privacy)",
