@@ -1,204 +1,411 @@
 [
   {
-    "name": "Create Restore Point",
-    "desc": "Tạo điểm khôi phục (Backup) an toàn",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Create Restore Point (Nên chạy)",
+    "desc": "Tạo điểm khôi phục (Backup) an toàn nên chạy trước khi áp dụng các tweak kia",
     "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
   },
   {
-    "name": "Disable Bing Search",
-    "desc": "Tắt tìm kiếm Web trong Start Menu",
-    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d 0 /f"
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Super Optimize For Win 10/11",
+    "desc": "Siêu tối ưu cực mạnh (By ThucIT) - Siêu nhẹ máy",
+    "cmd": "RUN_ThucIT_SERVICES"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Enable Boot Optimize (By ThucIT)",
+    "desc": "Sắp xếp file khởi động liền mạch (Giúp ổ SSD & HDD boot nhanh hơn)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Dfrg\\BootOptimizeFunction\" /v \"Enable\" /t REG_SZ /d \"Yes\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Dfrg\\BootOptimizeFunction\" /v \"BootOptimizeFunction\" /t REG_SZ /d \"Yes\" /f"
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Speed Up Windows Response (By ThucIT)",
+    "desc": "Giảm độ trễ Menu, Tự đóng App treo, Tắt máy cực nhanh (WaitToKill set 2000ms an toàn)",
+    "cmd": "reg add \"HKCU\\Control Panel\\Desktop\" /v \"AutoEndTasks\" /t REG_SZ /d \"1\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"100\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"HungAppTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"WaitToKillAppTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"LowLevelHooksTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\" /v \"WaitToKillServiceTimeout\" /t REG_SZ /d \"2000\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v \"EnableQuickReboot\" /t REG_SZ /d \"1\" /f"
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Explorer Stability & Tweaks (By ThucIT)",
+    "desc": "Chạy Explorer tiến trình riêng (Chống Crash toàn bộ), Tắt check Shortcut/Disk Space/Internet Search",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Advanced\" /v \"SeparateProcess\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v \"StartupDelayInMSec\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoLowDiskSpaceChecks\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"LinkResolveIgnoreLinkInfo\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveSearch\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveTrack\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoInternetOpenWith\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Add 'Copy To' & 'Move To'",
+    "desc": "Thêm tùy chọn Copy/Move nhanh vào menu chuột phải trick của mình sài lâu rồi nên share lại hihi  (Tiện lợi)",
+    "cmd": "reg add \"HKCR\\AllFilesystemObjects\\shellex\\ContextMenuHandlers\\Copy To\" /ve /d \"{C2FBB630-2971-11D1-A18C-00C04FD75D13}\" /f; reg add \"HKCR\\AllFilesystemObjects\\shellex\\ContextMenuHandlers\\Move To\" /ve /d \"{C2FBB631-2971-11D1-A18C-00C04FD75D13}\" /f"
+  },
+
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Sticky Keys",
     "desc": "Tắt phím dính (Shift 5 lần)",
     "cmd": "reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Mouse Acceleration",
     "desc": "Tắt gia tốc chuột (Chuẩn FPS)",
     "cmd": "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseSpeed\" /t REG_SZ /d \"0\" /f; reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseThreshold1\" /t REG_SZ /d \"0\" /f; reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseThreshold2\" /t REG_SZ /d \"0\" /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Set Time to UTC",
     "desc": "Fix lỗi lệch giờ Windows/macOS",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation\" /v \"RealTimeIsUniversal\" /t REG_DWORD /d 1 /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Hibernation",
     "desc": "Tắt ngủ đông (Tiết kiệm ổ cứng)",
     "cmd": "powercfg /h off"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Show File Extensions",
     "desc": "Hiện đuôi file (.exe, .txt)",
     "cmd": "Set-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name \"HideFileExt\" -Value 0"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Classic Context Menu",
     "desc": "Menu chuột phải kiểu cũ (Win 11)",
     "cmd": "reg add \"HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32\" /f /ve"
   },
   {
-    "name": "Disable Telemetry",
-    "desc": "Chặn thu thập dữ liệu ngầm",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f"
-  },
-  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Background Apps",
     "desc": "Tắt ứng dụng chạy nền (Tiết kiệm Pin)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable GameDVR",
     "desc": "Tắt Xbox Game Bar (Giảm lag)",
     "cmd": "reg add \"HKCU\\System\\GameConfigStore\" /v GameDVR_Enabled /t REG_DWORD /d 0 /f"
   },
   {
-    "name": "Disable Consumer Features",
-    "desc": "Chặn tự tải CandyCrush, TikTok...",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures /t REG_DWORD /d 1 /f"
-  },
-  {
-    "name": "Disable Location Tracking",
-    "desc": "Tắt định vị vị trí",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
-  },
-  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Open Explorer to This PC",
     "desc": "Mở File Explorer vào This PC (thay vì Quick Access)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 1 /f"
   },
   {
-  "name": "Restore: Explorer to Quick Access",
-  "desc": "Khôi phục mở File Explorer vào Quick Access (Mặc định)",
-  "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 2 /f"
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Restore: Explorer to Quick Access",
+    "desc": "Khôi phục mở File Explorer vào Quick Access (Mặc định)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d 2 /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Verbose Status Messages",
     "desc": "Hiện chi tiết quá trình tắt/mở máy (Loading...)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v \"VerboseStatus\" /t REG_DWORD /d 1 /f"
   },
   {
-    "name": "Disable Network Throttling",
-    "desc": "Tắt giới hạn băng thông mạng (Giảm Ping/Lag)",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d 4294967295 /f"
-  },
-  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Startup Delay",
     "desc": "Tắt độ trễ khi khởi động ứng dụng cùng Windows (Boot nhanh hơn)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v StartupDelayInMSec /t REG_DWORD /d 0 /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Instant Menu Display",
     "desc": "Menu chuột phải/Start hiện ngay lập tức (Không delay)",
     "cmd": "reg add \"HKCU\\Control Panel\\Desktop\" /v MenuShowDelay /t REG_SZ /d \"0\" /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Transparency Effects",
     "desc": "Tắt hiệu ứng trong suốt (Giảm tải GPU/VRAM)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v EnableTransparency /t REG_DWORD /d 0 /f"
   },
   {
-    "name": "Disable Delivery Optimization",
-    "desc": "Tắt chia sẻ update P2P (Hút băng thông/Ổ cứng ngầm)",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization\" /v DODownloadMode /t REG_DWORD /d 0 /f"
-  },
-  {
-    "name": "Disable SysMain (Superfetch)",
-    "desc": "Tắt SysMain (Giảm 100% Disk trên HDD, tiết kiệm RAM)",
-    "cmd": "Set-Service -Name SysMain -StartupType Disabled; Stop-Service -Name SysMain -Force"
-  },
-  {
-    "name": "Disable Windows Search Indexing",
-    "desc": "Tắt lập chỉ mục tìm kiếm (Giảm tải CPU/Disk chạy ngầm)",
-    "cmd": "Set-Service -Name WSearch -StartupType Disabled; Stop-Service -Name WSearch -Force"
-  },
-  {
-    "name": "Disable VBS (Core Isolation)",
-    "desc": "Tắt Virtualization-Based Security (Tăng FPS Game 10-20%)",
-    "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\" /v \"EnableVirtualizationBasedSecurity\" /t REG_DWORD /d 0 /f"
-  },
-  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "High Priority for Games",
     "desc": "Ưu tiên CPU cho tác vụ Game/Đồ họa (Win32Priority)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"GPU Priority\" /t REG_DWORD /d 8 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Priority\" /t REG_DWORD /d 6 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Scheduling Category\" /t REG_SZ /d \"High\" /f"
   },
   {
-    "name": "Disable Print Spooler",
-    "desc": "Tắt dịch vụ máy in (Tiết kiệm RAM nếu không in ấn)",
-    "cmd": "Set-Service -Name Spooler -StartupType Disabled; Stop-Service -Name Spooler -Force"
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Disable Automatic Maintenance",
+    "desc": "Tắt tính năng tự động bảo trì (Ngăn Windows tự chạy ngầm làm Disk 100%)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance\" /v \"MaintenanceDisabled\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance\" /v \"WakeUp\" /t REG_DWORD /d 0 /f"
   },
   {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Disable Auto Defrag Schedule",
+    "desc": "Tắt lịch tự động chống phân mảnh ổ cứng (Giảm tải Disk 100% cho HDD cũ)",
+    "type": "powershell",
+    "cmd": "$list = @('HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Defrag', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{B5644C60-C73F-4DD3-BA88-601B81C2003B}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{B5644C60-C73F-4DD3-BA88-601B81C2003B}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{B5644C60-C73F-4DD3-BA88-601B81C2003B}'); foreach ($k in $list) { Remove-Item -LiteralPath $k -Recurse -Force -ErrorAction SilentlyContinue }"
+  },
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
+    "name": "Disable Bing Search",
+    "desc": "Tắt tìm kiếm Web trong Start Menu",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
+    "name": "Disable Telemetry",
+    "desc": "Chặn thu thập dữ liệu ngầm",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
+    "name": "Disable Consumer Features",
+    "desc": "Chặn tự tải CandyCrush, TikTok...",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
+    "name": "Disable Location Tracking",
+    "desc": "Tắt định vị vị trí",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
+  },
+{
+  "category": "🔒 QUYỀN RIÊNG TƯ",
+  "name": "Enable Location Tracking",
+  "desc": "Bật lại định vị vị trí (Khôi phục mặc định)",
+  "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 0 /f"
+},
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Block Urban VPN Telemetry",
     "desc": "Chặn Urban VPN thu thập dữ liệu & theo dõi người dùng (Privacy)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_extensions_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"log_to_eventlog\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f"
   },
   {
-    "name": "Enable Chrome Zstd Compression",
-    "desc": "Kích hoạt thuật toán nén Zstd & Dictionary Transport (Tăng tốc tải trang & Tiết kiệm băng thông)",
-    "type": "cmd",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"CompressionDictionaryTransportEnabled\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ZstdContentEncodingEnabled\" /t REG_DWORD /d 1 /f"
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Disable Network Throttling",
+    "desc": "Tắt giới hạn băng thông mạng (Giảm Ping/Lag)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d 4294967295 /f"
   },
   {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Disable Delivery Optimization",
+    "desc": "Tắt chia sẻ update P2P (Hút băng thông/Ổ cứng ngầm)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization\" /v DODownloadMode /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🌐 MẠNG & INTERNET",
     "name": "Optimize Network TCP/IP (Gaming/Latency)",
     "desc": "Giảm độ trễ mạng (Ping), Tối ưu TCP NoDelay (Giúp phản hồi game/thao tác remote desktop nhanh hơn)",
     "type": "cmd",
     "cmd": "cmd /c \"for /f \"tokens=*\" %a in ('reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces /s /f \"{*}\" /k ^| findstr HKEY') do (reg add \"%a\" /v TcpAckFrequency /t REG_DWORD /d 1 /f & reg add \"%a\" /v TCPNoDelay /t REG_DWORD /d 1 /f & reg add \"%a\" /v TcpDelAckTicks /t REG_DWORD /d 0 /f) & netsh int tcp set global autotuninglevel=normal & netsh int tcp set global rss=enabled & netsh int tcp set heuristics disabled\""
   },
   {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Set DNS: Google (8.8.8.8)",
+    "desc": "Đổi DNS sang Google (Ổn định, vào được một số web bị chặn)",
+    "type": "powershell",
+    "cmd": "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'} | Set-DnsClientServerAddress -ServerAddresses ('8.8.8.8', '8.8.4.4')"
+  },
+  {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Set DNS: Cloudflare (1.1.1.1)",
+    "desc": "Đổi DNS sang Cloudflare (Tốc độ phản hồi cực nhanh, bảo mật)",
+    "type": "powershell",
+    "cmd": "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'} | Set-DnsClientServerAddress -ServerAddresses ('1.1.1.1', '1.0.0.1')"
+  },
+  {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Reset DNS (Auto)",
+    "desc": "Trả lại DNS mặc định của nhà mạng (IP động)",
+    "type": "powershell",
+    "cmd": "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'} | Set-DnsClientServerAddress -ResetServerAddresses"
+  },
+  {
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Quick System Clean",
     "desc": "Dọn dẹp File tạm (Temp), Prefetch, File Log, Empty Recycle Bin (An toàn - Nhanh)",
     "type": "cmd",
     "cmd": "cmd /c \"del /f /s /q \"%TEMP%\\*\" & rd /s /q \"%TEMP%\" & del /f /s /q \"%windir%\\Temp\\*\" & del /f /s /q \"%windir%\\Prefetch\\*.*\" & wevtutil cl Application & wevtutil cl System & PowerShell -Command \"Clear-RecycleBin -Force -ErrorAction SilentlyContinue\"\""
   },
   {
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Rebuild Icon Cache",
     "desc": "Xóa và tạo lại bộ nhớ đệm Icon (Sửa lỗi icon bị trắng/lỗi hình)",
     "type": "cmd",
     "cmd": "cmd /c \"taskkill /f /im explorer.exe & del /f /q \"%localappdata%\\IconCache.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\iconcache_*.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" & start explorer.exe\""
   },
   {
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Reset Windows Update & Clean Cache",
     "desc": "Dừng dịch vụ Update, xóa cache tải về bị lỗi và khởi động lại (Sửa lỗi không update được)",
     "type": "cmd",
     "cmd": "cmd /c \"net stop wuauserv & net stop cryptSvc & net stop bits & net stop msiserver & rd /s /q \"%windir%\\SoftwareDistribution\\Download\" & md \"%windir%\\SoftwareDistribution\\Download\" & net start wuauserv & net start bits & net start cryptSvc & net start msiserver\""
   },
   {
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Clean Browser Cache (Chrome/Edge)",
     "desc": "Xóa bộ nhớ đệm trình duyệt (Giữ lại Cookie & Lịch sử đăng nhập)",
     "type": "cmd",
     "cmd": "cmd /c \"del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\GPUCache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\*\"\""
   },
   {
-    "name": "Install .NET Framework 3.5",
-    "desc": "Cài đặt .NET 3.5 (Cần cho phần mềm kế toán MISA, HTKK, iTaxViewer...)",
-    "type": "cmd",
-    "cmd": "dism /online /enable-feature /featurename:NetFx3 /all /norestart"
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable SysMain (Superfetch)",
+    "desc": "Tắt SysMain (Giảm 100% Disk trên HDD, tiết kiệm RAM)",
+    "cmd": "Set-Service -Name SysMain -StartupType Disabled; Stop-Service -Name SysMain -Force"
   },
   {
-    "name": "Install DirectPlay (Legacy)",
-    "desc": "Kích hoạt DirectPlay (Hỗ trợ game cũ, ứng dụng đồ họa đời cũ)",
-    "type": "cmd",
-    "cmd": "dism /online /enable-feature /featurename:LegacyComponents /all /norestart & dism /online /enable-feature /featurename:DirectPlay /all /norestart"
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable Windows Search Indexing",
+    "desc": "Tắt lập chỉ mục tìm kiếm (Giảm tải CPU/Disk chạy ngầm)",
+    "cmd": "Set-Service -Name WSearch -StartupType Disabled; Stop-Service -Name WSearch -Force"
   },
   {
-    "name": "Enable SMB 1.0 Protocol",
-    "desc": "⚠️ NGUY HIỂM: Chỉ bật để kết nối máy in/Scan cũ qua LAN. Dễ dính virus WannaCry!",
-    "type": "cmd",
-    "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable BitLocker Tasks",
+    "desc": "Tắt lịch trình kiểm tra BitLocker (Chỉ dùng nếu máy KHÔNG bật mã hóa BitLocker)",
+    "type": "powershell",
+    "cmd": "$list = @('HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\BitLocker', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{4C63C196-31DA-48BB-AF82-2A3AD7A89C1C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{6069653E-1574-4D99-8917-2E5D993C8013}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{6069653E-1574-4D99-8917-2E5D993C8013}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{6069653E-1574-4D99-8917-2E5D993C8013}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{4C63C196-31DA-48BB-AF82-2A3AD7A89C1C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{4C63C196-31DA-48BB-AF82-2A3AD7A89C1C}'); foreach ($k in $list) { Remove-Item -LiteralPath $k -Recurse -Force -ErrorAction SilentlyContinue }"
   },
   {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable VBS (Core Isolation)",
+    "desc": "Tắt Virtualization-Based Security (Tăng FPS Game 10-20%)",
+    "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\" /v \"EnableVirtualizationBasedSecurity\" /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Optimize Memory Strategy (By ThucIT)",
+    "desc": "Ép nhân hệ thống chạy trên RAM (DisablePagingExecutive), Tăng System Cache, Tự nhả DLL thừa",
+    "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"DisablePagingExecutive\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d 2 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"LargeSystemCache\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"AlwaysUnloadDLL\" /t REG_DWORD /d 1 /f"
+  },  
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Nuke Bloatware Tasks (Deep Clean)",
+    "desc": "Xóa tận gốc Registry các tác vụ ngầm: Diagnosis, CloudRestore, PerformanceTrace, SPP... (Cực mạnh)",
+    "type": "powershell",
+    "cmd": "$list = @('HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Diagnosis', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\PerformanceTrace', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\ReFsDedupSvc', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\SoftwareProtectionPlatform', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\capabilityaccessmanager', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\CloudRestore', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Containers', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\StateRepository', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\LanguageComponentsInstaller', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\DiskFootprint', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{0C504050-6DEE-432A-A00C-92464C0AC3CE}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{13EA56F1-F3D0-45CC-BC92-3DAF3C9302F5}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{758ED09F-C7BC-4DEC-B9B6-FA6936E1A486}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{77BD5819-1698-4665-89D0-BC97E59A8A01}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{8CE14700-48B4-4B6E-852D-F6485711132A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{C6A68D4D-E2CC-49E3-AC15-A4AC966BFADD}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{0C504050-6DEE-432A-A00C-92464C0AC3CE}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{0C504050-6DEE-432A-A00C-92464C0AC3CE}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{13EA56F1-F3D0-45CC-BC92-3DAF3C9302F5}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{13EA56F1-F3D0-45CC-BC92-3DAF3C9302F5}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{758ED09F-C7BC-4DEC-B9B6-FA6936E1A486}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{758ED09F-C7BC-4DEC-B9B6-FA6936E1A486}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{77BD5819-1698-4665-89D0-BC97E59A8A01}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{77BD5819-1698-4665-89D0-BC97E59A8A01}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{8CE14700-48B4-4B6E-852D-F6485711132A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{8CE14700-48B4-4B6E-852D-F6485711132A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{C6A68D4D-E2CC-49E3-AC15-A4AC966BFADD}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{C6A68D4D-E2CC-49E3-AC15-A4AC966BFADD}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{51268699-2883-4E06-97B3-0FC406705B9A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{51268699-2883-4E06-97B3-0FC406705B9A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{51268699-2883-4E06-97B3-0FC406705B9A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BD024514-8867-435C-9243-F09AA34A2ED4}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{BD024514-8867-435C-9243-F09AA34A2ED4}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{BD024514-8867-435C-9243-F09AA34A2ED4}'); foreach ($k in $list) { Remove-Item -LiteralPath $k -Recurse -Force -ErrorAction SilentlyContinue }"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Nuke Scheduled Tasks (Part 2)",
+    "desc": "Xóa sạch Task: Windows Backup, Office, VS, StartAllBack, HidHide... (Cực mạnh - Chỉ dùng nếu muốn máy sạch bong)",
+    "type": "powershell",
+    "cmd": "$list = @('HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Maintenance', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\TaskScheduler\\Maintenance Configurator', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskStateFlags', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Maintenance', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{D8041C60-5E6F-4290-9E8D-E5EA50669A05}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{D8041C60-5E6F-4290-9E8D-E5EA50669A05}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{D8041C60-5E6F-4290-9E8D-E5EA50669A05}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\DiskCleanup', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{C1692FA0-130E-40EE-B858-E586325055D4}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{C1692FA0-130E-40EE-B858-E586325055D4}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{C1692FA0-130E-40EE-B858-E586325055D4}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\WindowsBackup', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Data Integrity Scan', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{2AC87143-4F04-451B-A3C4-273D0313029A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{5B854AF7-FF3C-4801-828A-9DBF6561A883}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{70AA91B8-7218-42D3-B416-49959D18E7E8}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A08367E5-27D7-47CB-ABCC-ED0ADF21D472}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{AF55360C-61AE-4AEA-B1FB-46B24385B460}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{C567CF9E-1DF9-4D39-A7CC-7752A88A160E}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{F2495FC2-A06A-42D0-BAB8-343D5134ADDB}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{2AC87143-4F04-451B-A3C4-273D0313029A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{2AC87143-4F04-451B-A3C4-273D0313029A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{5B854AF7-FF3C-4801-828A-9DBF6561A883}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{5B854AF7-FF3C-4801-828A-9DBF6561A883}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{70AA91B8-7218-42D3-B416-49959D18E7E8}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{70AA91B8-7218-42D3-B416-49959D18E7E8}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{A08367E5-27D7-47CB-ABCC-ED0ADF21D472}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{A08367E5-27D7-47CB-ABCC-ED0ADF21D472}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{AF55360C-61AE-4AEA-B1FB-46B24385B460}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{AF55360C-61AE-4AEA-B1FB-46B24385B460}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{C567CF9E-1DF9-4D39-A7CC-7752A88A160E}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{C567CF9E-1DF9-4D39-A7CC-7752A88A160E}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{F2495FC2-A06A-42D0-BAB8-343D5134ADDB}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{F2495FC2-A06A-42D0-BAB8-343D5134ADDB}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Power Efficiency Diagnostics', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{57955FAC-E7E3-403C-AAD2-EAF4C1CC6D69}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Setup', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{E87A4AC3-1613-4853-B7BF-40A2BF58226C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{E87A4AC3-1613-4853-B7BF-40A2BF58226C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{E87A4AC3-1613-4853-B7BF-40A2BF58226C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\WOF', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{B605371B-86F7-4F95-8E78-1FC028140C24}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{EF6662AC-4856-4E1A-83EA-6765ED6B2F7C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{B605371B-86F7-4F95-8E78-1FC028140C24}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{B605371B-86F7-4F95-8E78-1FC028140C24}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{EF6662AC-4856-4E1A-83EA-6765ED6B2F7C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{EF6662AC-4856-4E1A-83EA-6765ED6B2F7C}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\USB', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{9E1E5175-8678-49EA-90BE-604365D7BD5E}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{9E1E5175-8678-49EA-90BE-604365D7BD5E}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{9E1E5175-8678-49EA-90BE-604365D7BD5E}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Storage Tiers Management', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{BF41FB28-0BB4-4029-AEE9-561184B4A6B6}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{BF41FB28-0BB4-4029-AEE9-561184B4A6B6}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{9840408F-DF7E-4838-8580-BD1EEB75796A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{9840408F-DF7E-4838-8580-BD1EEB75796A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{9840408F-DF7E-4838-8580-BD1EEB75796A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BF41FB28-0BB4-4029-AEE9-561184B4A6B6}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Boot', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\AppxDeploymentClient\\Pre-staged app cleanup', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A8250646-BA40-4C81-A5B9-C6D6D1EE858A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{A8250646-BA40-4C81-A5B9-C6D6D1EE858A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{A8250646-BA40-4C81-A5B9-C6D6D1EE858A}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Live', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Aiseesoft Studio', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\VisualStudio', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Office', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Office\\Office Feature Updates', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Office\\Office Feature Updates Logon', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Office\\Office Performance Monitor', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{5A7B58AB-DA50-4771-874A-455DBC383AA4}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{5BC662AA-7158-4A2E-BD09-4AE2DDDA66A7}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{8624126E-B8F0-41B9-A802-4D60082495F8}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{DB4D5859-6455-4202-A9F6-D2DBB50E392D}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Time Zone', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{283DCF87-F75B-4207-8769-88637C1723EB}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\StartAllBack Update', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\HidHide_Updater', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\ViGEmBus_Updater', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{8FB6415D-7287-4E00-A0C9-12E377ACEA64}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{8FB6415D-7287-4E00-A0C9-12E377ACEA64}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{8FB6415D-7287-4E00-A0C9-12E377ACEA64}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{4B9B7F51-7C42-432B-BE6A-ABD895E01ECB}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{4B9B7F51-7C42-432B-BE6A-ABD895E01ECB}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{4B9B7F51-7C42-432B-BE6A-ABD895E01ECB}'); foreach ($k in $list) { Remove-Item -LiteralPath $k -Recurse -Force -ErrorAction SilentlyContinue }"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Remove '- Shortcut' Suffix",
+    "desc": "Tự động bỏ chữ '- Shortcut' khi tạo icon mới ra Desktop (Nhìn gọn hơn)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"link\" /t REG_BINARY /d 00000000 /f"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Show Seconds in Clock",
+    "desc": "Hiện giây trên đồng hồ thanh Taskbar (Chuẩn xác từng giây để săn Sale/Vé)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSecondsInSystemClock\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Remove Widgets & Chat",
+    "desc": "Tắt icon Widget (Tin tức) và Chat (Teams) cho rộng chỗ Taskbar (Win 11)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarMn\" /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🌍 TRÌNH DUYỆT",
+    "name": "Chrome: Force Install Extensions",
+    "desc": "Tự động cài uBlock, I don't care about cookies, Return YT Dislike (Không cho gỡ)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"1\" /t REG_SZ /d \"cjpalhdlnbpafiamejdnhcphjbkeiagm\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"2\" /t REG_SZ /d \"fihnjjcciajhdojfnbdddfaoknhalnja\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"3\" /t REG_SZ /d \"bnomihfieiccainjcjblhegjgglakjdd\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\" /v \"8\" /t REG_SZ /d \"gebbhagfogifgggkldgodflihgfeippi\" /f"
+  },
+  {
+    "category": "🌍 TRÌNH DUYỆT",
+    "name": "Chrome: Enterprise Hardening",
+    "desc": "Tối ưu Chrome: Tắt Telemetry, Chặn theo dõi, Tắt chạy nền, Set Google là trang chủ",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"MetricsReportingEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"BackgroundModeEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"SafeBrowsingEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"PasswordLeakDetectionEnabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"HomepageLocation\" /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"NewTabPageLocation\" /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"ShowCastIconInToolbar\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\" /v \"ForceGoogleSafeSearch\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "🌍 TRÌNH DUYỆT",
+    "name": "Chrome: Config uBlock Origin",
+    "desc": "Nạp sẵn bộ lọc quảng cáo VN & Quốc tế cho uBlock (Cực mạnh)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\policy\" /v \"adminSettings\" /t REG_SZ /d \"{\\\"userSettings\\\":{\\\"advancedUserEnabled\\\":true,\\\"cloudStorageEnabled\\\":true,\\\"uiAccentCustom0\\\":\\\"#56a22b\\\",\\\"selectedFilterLists\\\":[\\\"user-filters\\\",\\\"ublock-filters\\\",\\\"ublock-badware\\\",\\\"ublock-privacy\\\",\\\"ublock-quick-fixes\\\",\\\"easylist\\\",\\\"adguard-generic\\\",\\\"adguard-mobile\\\",\\\"easyprivacy\\\",\\\"urlhaus-1\\\",\\\"https://filters.adtidy.org/windows/filters/18.txt\\\"]}}\" /f"
+  },
+  {
+    "category": "🌍 TRÌNH DUYỆT",
+    "name": "Freeze Google/Chrome Updates",
+    "desc": "Chặn Google tự động Update & Chuyển Chrome sang kênh ổn định (Extended Stable)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"UpdateDefault\" /t REG_DWORD /d 3 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"InstallDefault\" /t REG_DWORD /d 4 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"AutoUpdateCheckPeriodMinutes\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"ProxyMode\" /t REG_SZ /d \"direct\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Update\" /v \"TargetChannel{8A69D345-D564-463C-AFF1-A69D9E530F96}\" /t REG_SZ /d \"extended\" /f"
+  },
+  {
+    "category": "🌍 TRÌNH DUYỆT",
+    "name": "Enable Chrome Zstd Compression",
+    "desc": "Kích hoạt thuật toán nén Zstd & Dictionary Transport (Tăng tốc tải trang & Tiết kiệm băng thông)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"CompressionDictionaryTransportEnabled\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ZstdContentEncodingEnabled\" /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Hardening Brave Browser (Enterprise)",
     "desc": "Tối ưu hóa Brave: Tắt Wallet/VPN/AI, Chặn Telemetry, Bật nén Zstd, Tối ưu RAM (Super Lite)",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveWalletDisabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveVPNDisabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveAIChatEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BackgroundModeEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v MetricsReportingEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v SafeBrowsingEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v ZstdContentEncodingEnabled /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v NetworkPredictionOptions /t REG_DWORD /d 2 /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v HomepageLocation /t REG_SZ /d \"google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v NewTabPageLocation /t REG_SZ /d \"google.com\" /f"
   },
   {
+    "category": "🌍 TRÌNH DUYỆT",
     "name": "Firefox: Enterprise Hardening",
     "desc": "Tối ưu Firefox: Tắt Pocket/Sync/Telemetry, Chặn theo dõi, Tắt Disk Cache, Ram Nghèo Không Dùng",
     "type": "cmd",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableTelemetry /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxAccounts /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisablePocket /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxStudies /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableBuiltinPDFViewer /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v URL /t REG_SZ /d \"https://google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v StartPage /t REG_SZ /d \"homepage\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v Locked /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v SponsoredTopSites /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v Pocket /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"browser.cache.disk.enable\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"geo.enabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Permissions\\Location\" /v BlockNewRequests /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "💾 CÀI ĐẶT BỔ SUNG",
+    "name": "Install .NET Framework 3.5",
+    "desc": "Cài đặt .NET 3.5 (Cần cho phần mềm kế toán MISA, HTKK, iTaxViewer...)",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:NetFx3 /all /norestart"
+  },
+  {
+    "category": "💾 CÀI ĐẶT BỔ SUNG",
+    "name": "Install DirectPlay (Legacy)",
+    "desc": "Kích hoạt DirectPlay (Hỗ trợ game cũ, ứng dụng đồ họa đời cũ)",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:LegacyComponents /all /norestart & dism /online /enable-feature /featurename:DirectPlay /all /norestart"
+  },
+  {
+    "category": "🖨️ MÁY IN",
+    "name": "Disable Print Spooler",
+    "desc": "Tắt dịch vụ máy in (Tiết kiệm RAM nếu không in ấn)",
+    "cmd": "Set-Service -Name Spooler -StartupType Disabled; Stop-Service -Name Spooler -Force"
+  },
+  {
+    "category": "🖨️ MÁY IN",
+    "name": "Enable Print Spooler",
+    "desc": "Bật lại dịch vụ máy in (Cần thiết để in ấn & cài Driver)",
+    "cmd": "Set-Service -Name Spooler -StartupType Automatic; Start-Service -Name Spooler"
+  },
+  {
+    "category": "🖨️ MÁY IN",
+    "name": "Enable SMB 1.0 (Fix Scan LAN)",
+    "desc": "Bật giao thức chia sẻ file cũ. Sửa lỗi máy in/photocopy đời cũ không scan được vào máy tính.",
+    "type": "cmd",
+    "cmd": "dism /online /enable-feature /featurename:SMB1Protocol /all /norestart"
+  },
+  {
+    "category": "🖨️ MÁY IN",
+    "name": "Disable SMB 1.0 (Secure)",
+    "desc": "Tắt SMB 1.0 để bảo mật (Chống mã độc WannaCry). Nên tắt ngay nếu không dùng máy in cũ.",
+    "type": "cmd",
+    "cmd": "dism /online /disable-feature /featurename:SMB1Protocol /norestart"
+  },
+  {
+    "category": "👑 BẢN QUYỀN & THÔNG TIN",
+    "name": "Branding: TỰ LÀM IT Signature",
+    "desc": "Đóng dấu thông tin OEM: TỰ LÀM IT by ThucVuong (Thay thế thông tin FPT/Dell/HP...)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"TỰ LÀM IT (by ThucVuong)\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"01204825860\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://www.facebook.com/trongthuc.vuong\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOwner\" /t REG_SZ /d \"ThucVuong\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"TỰ LÀM IT\" /f"
+  },
+  {
+    "category": "👑 BẢN QUYỀN & THÔNG TIN",
+    "name": "Custom Branding (Khả dụng từ V1.8)",
+    "desc": "Để lại thông tin của bạn để hỗ trợ khách có gì thì bạn bị dí.",
+    "cmd": "RUN_CUSTOM_OEM_SETUP"
   }
 ]
