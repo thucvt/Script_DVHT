@@ -245,6 +245,12 @@
     "desc": "Tắt định vị vị trí",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
   },
+{
+  "category": "🔒 QUYỀN RIÊNG TƯ",
+  "name": "Enable Location Tracking",
+  "desc": "Bật lại định vị vị trí (Khôi phục mặc định)",
+  "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 0 /f"
+},
   {
     "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Block Urban VPN Telemetry",
