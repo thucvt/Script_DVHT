@@ -78,7 +78,7 @@
         "id": "DrawIO_Direct",
         "name": "Draw.IO (Vẽ biểu đồ)",
         "type": "exe_url",
-        "url": "https://github.com/jgraph/drawio-desktop/releases/latest/download/draw.io-windows-installer.exe",
+        "url": "https://github.com/jgraph/drawio-desktop/releases/download/v29.0.3/draw.io-29.0.3-windows-installer.exe",
         "install_args": "/allusers /S",
         "check_path": "%ProgramFiles%\\draw.io\\draw.io.exe",
         "check_name": "draw.io",
