@@ -104,7 +104,7 @@
     "install_args": "/S",
     "check_path": "%ProgramFiles%\\Adobe\\Adobe Photoshop 2025\\Photoshop.exe",
     "check_name": "Photoshop",
-    "domain": "adobe.com",
+    "icon_url": "https://static.vecteezy.com/system/resources/thumbnails/038/600/554/small/adobe-photoshop-logos-adobe-icons-abstract-art-free-vector.jpg",
     "desc": "Phần mềm chỉnh sửa ảnh chuyên nghiệp, bản 2025 hỗ trợ AI Generative Fill."
   },
   {
@@ -115,7 +115,7 @@
     "install_args": "/S",
     "check_path": "%ProgramFiles%\\Adobe\\Adobe Illustrator 2025\\Support Files\\Contents\\Windows\\Illustrator.exe",
     "check_name": "Illustrator",
-    "domain": "adobe.com",
+    "icon_url": "https://static.vecteezy.com/system/resources/thumbnails/046/437/283/small_2x/adobe-illustrator-icon-free-png.png",
     "desc": "Thiết kế đồ họa vector, logo, minh họa. Bản mới nhất tối ưu hiệu năng."
   },
   {
