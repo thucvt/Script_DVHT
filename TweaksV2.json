@@ -259,7 +259,7 @@
     "desc": "Bảo mật riêng tư: Không hiện danh sách các file vừa mở trong Quick Access (Tránh người khác nhìn thấy)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowRecent /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v Start_TrackDocs /t REG_DWORD /d 0 /f"
-  }
+  },
   {
     "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Location Tracking",
