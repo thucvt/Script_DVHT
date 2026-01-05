@@ -139,6 +139,20 @@
     "type": "powershell",
     "cmd": "$list = @('HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\Defrag', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{B5644C60-C73F-4DD3-BA88-601B81C2003B}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{B5644C60-C73F-4DD3-BA88-601B81C2003B}', 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{B5644C60-C73F-4DD3-BA88-601B81C2003B}'); foreach ($k in $list) { Remove-Item -LiteralPath $k -Recurse -Force -ErrorAction SilentlyContinue }"
   },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Disable Driver Updates",
+    "desc": "Chặn Windows Update tự động cài đè Driver (Tránh lỗi màn hình xanh/lỗi máy in do driver mới)",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v ExcludeWUDriversInQualityUpdate /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Disable NTFS Last Access",
+    "desc": "Tắt ghi lại lần cuối mở file (Giảm thao tác ghi ổ cứng, tăng tốc duyệt thư mục)",
+    "type": "cmd",
+    "cmd": "fsutil behavior set disablelastaccess 1"
+  },
 
   
   {
@@ -241,6 +255,13 @@
   },
   {
     "category": "🔒 QUYỀN RIÊNG TƯ",
+    "name": "Explorer: Hide Recent Files",
+    "desc": "Bảo mật riêng tư: Không hiện danh sách các file vừa mở trong Quick Access (Tránh người khác nhìn thấy)",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowRecent /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v Start_TrackDocs /t REG_DWORD /d 0 /f"
+  }
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Location Tracking",
     "desc": "Tắt định vị vị trí",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
@@ -314,6 +335,13 @@
   },
   {
     "category": "🛠️ SỬA LỖI & DỌN DẸP",
+    "name": "Reset Network Stack (Winsock)",
+    "desc": "Reset toàn bộ hệ thống mạng (Sửa lỗi mất mạng, chấm than vàng, không nhận IP)",
+    "type": "cmd",
+    "cmd": "netsh winsock reset & netsh int ip reset & ipconfig /release & ipconfig /renew & ipconfig /flushdns"
+  },
+  {
+    "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Reset Windows Update & Clean Cache",
     "desc": "Dừng dịch vụ Update, xóa cache tải về bị lỗi và khởi động lại (Sửa lỗi không update được)",
     "type": "cmd",
@@ -356,7 +384,14 @@
     "name": "Optimize Memory Strategy (By ThucIT)",
     "desc": "Ép nhân hệ thống chạy trên RAM (DisablePagingExecutive), Tăng System Cache, Tự nhả DLL thừa",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"DisablePagingExecutive\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d 2 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"LargeSystemCache\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"AlwaysUnloadDLL\" /t REG_DWORD /d 1 /f"
-  },  
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable UAC (Admin Prompt)",
+    "desc": "Tắt thông báo User Account Control (Không hỏi Yes/No khi chạy App Admin) - Cẩn thận khi dùng",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v EnableLUA /t REG_DWORD /d 0 /f"
+  },
   {
     "category": "⚠️ NÂNG CAO",
     "name": "Nuke Bloatware Tasks (Deep Clean)",
@@ -451,6 +486,13 @@
     "desc": "Kích hoạt DirectPlay (Hỗ trợ game cũ, ứng dụng đồ họa đời cũ)",
     "type": "cmd",
     "cmd": "dism /online /enable-feature /featurename:LegacyComponents /all /norestart & dism /online /enable-feature /featurename:DirectPlay /all /norestart"
+  },
+  {
+    "category": "💾 CÀI ĐẶT BỔ SUNG",
+    "name": "Restore Classic Photo Viewer",
+    "desc": "Khôi phục trình xem ảnh cũ (Windows Photo Viewer) - Nhẹ hơn, nhanh hơn app Photos mới",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows Photo Viewer\\Capabilities\\FileAssociations\" /v \".jpg\" /t REG_SZ /d \"PhotoViewer.FileAssoc.Tiff\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows Photo Viewer\\Capabilities\\FileAssociations\" /v \".png\" /t REG_SZ /d \"PhotoViewer.FileAssoc.Tiff\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows Photo Viewer\\Capabilities\\FileAssociations\" /v \".jpeg\" /t REG_SZ /d \"PhotoViewer.FileAssoc.Tiff\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows Photo Viewer\\Capabilities\\FileAssociations\" /v \".bmp\" /t REG_SZ /d \"PhotoViewer.FileAssoc.Tiff\" /f"
   },
   {
     "category": "🖨️ MÁY IN",
