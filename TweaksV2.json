@@ -524,5 +524,33 @@
     "desc": "Bảo mật cao: Tắt thực thi JavaScript trong Adobe (Chống virus ẩn trong file PDF)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Adobe\\Acrobat Reader\\DC\\JSPrefs\" /v bEnableJS /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "📊 OFFICE TWEAK",
+    "name": "Office: Disable Hardware Acceleration",
+    "desc": "Sửa lỗi Excel/Word bị trắng màn hình, giật lag khi gõ phím (Tắt tăng tốc đồ họa)",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Common\\Graphics\" /v DisableHardwareAcceleration /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "📊 OFFICE TWEAK",
+    "name": "Office: No Splash Screen",
+    "desc": "Tăng tốc khởi động Office: Tắt màn hình logo chào mừng khi mở Word/Excel",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Options\" /v DisableBootToOfficeStart /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Options\" /v DisableBootToOfficeStart /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Options\" /v DisableBootToOfficeStart /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "📊 OFFICE TWEAK",
+    "name": "Office: Fix Protected View (All)",
+    "desc": "Sửa lỗi không mở được file tải từ mạng/Email, lỗi OLE (Tắt Protected View & Bật Network Location cho Word/Excel/PPT)",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 1 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "📊 OFFICE TWEAK",
+    "name": "Office: Restore Security Defaults",
+    "desc": "Khôi phục cài đặt gốc: Bật lại Protected View và chặn file lạ (An toàn hơn, dùng khi muốn reset lại)",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 0 /f"
   }
 ]
