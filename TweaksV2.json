@@ -489,5 +489,19 @@
     "name": "Custom Branding (Khả dụng từ V1.8)",
     "desc": "Để lại thông tin của bạn để hỗ trợ khách có gì thì bạn bị dí.",
     "cmd": "RUN_CUSTOM_OEM_SETUP"
+  },
+  {
+    "category": "📄 PDF TOOLS",
+    "name": "Fix Preview Adobe Reader",
+    "desc": "Sửa lỗi không xem trước được file PDF (Tắt Protected Mode & Bật Thumbnail cho Adobe Reader)",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Adobe\\Acrobat Reader\\DC\\Privileged\" /v bProtectedMode /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Adobe\\Acrobat Reader\\DC\\AVGeneral\" /v bEnableInstallPreview /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "📄 PDF TOOLS",
+    "name": "Fix Preview Foxit Reader",
+    "desc": "Sửa lỗi không xem trước được file PDF (Tắt Safe Reading & Protected View cho Foxit)",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Foxit Software\\Foxit PDF Reader\\Preferences\\Trust Manager\" /v bSafeMode /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Foxit Software\\Foxit PDF Reader\\Preferences\\Security\" /v bProtectedView /t REG_DWORD /d 0 /f"
   }
 ]
