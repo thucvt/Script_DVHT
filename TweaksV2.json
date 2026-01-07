@@ -548,14 +548,14 @@
   },
  {
     "category": "📄 PDF & OFFICE",
-    "name": "Fix: Preview Blocked (Mark of the Web)",
+    "name": "Fix: Preview Blocked (Chạy cùng với Unblock All Files in Downloads )",
     "desc": "Sửa lỗi 'The file you are attempting to preview...' (Tắt tính năng đánh dấu file tải từ Internet là nguy hiểm)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments\" /v SaveZoneInformation /t REG_DWORD /d 1 /f"
   },
   {
     "category": "📄 PDF & OFFICE",
-    "name": "Unblock All Files in Downloads",
+    "name": "Unblock All Files in Downloads (chạy cùng với Fix: Preview Blocked)",
     "desc": "Mở khóa toàn bộ file trong thư mục Downloads (Sửa lỗi không xem trước được file cũ đã tải)",
     "type": "powershell",
     "cmd": "Get-ChildItem -Path \"$env:USERPROFILE\\Downloads\" -Recurse | Unblock-File"
