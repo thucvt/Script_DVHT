@@ -559,6 +559,7 @@
     "desc": "Mở khóa toàn bộ file trong thư mục Downloads (Sửa lỗi không xem trước được file cũ đã tải)",
     "type": "powershell",
     "cmd": "$folders = @(\"$env:USERPROFILE\\Downloads\", \"$env:USERPROFILE\\Documents\", \"$env:USERPROFILE\\Desktop\"); foreach ($f in $folders) { Get-ChildItem -Path $f -Recurse -File -ErrorAction SilentlyContinue | Unblock-File }"  }
+  ,
   {
     "category": "📄 PDF TOOLS",
     "name": "Adobe: Fast Launch & Clean UI",
