@@ -156,79 +156,79 @@
 
   
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Clean Windows Update Cache",
     "desc": "Xóa bộ nhớ đệm cập nhật cũ, giúp sửa lỗi Update (Yêu cầu dừng Service)",
     "cmd": "net stop wuauserv; Remove-Item -Path \"C:\\Windows\\SoftwareDistribution\\Download\\*\" -Recurse -Force -ErrorAction SilentlyContinue; net start wuauserv"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Clean System Junk & Temp",
     "desc": "Dọn dẹp Temp, Log files và làm sạch thùng rác (Recycle Bin)",
     "cmd": "Remove-Item -Path \"$env:TEMP\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path \"C:\\Windows\\Temp\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Clear-RecycleBin -Force -ErrorAction SilentlyContinue"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Optimize RAM (Disable SysMain)",
     "desc": "Tắt dịch vụ SysMain (Superfetch) để giảm tải Disk/RAM không cần thiết",
     "cmd": "sc config SysMain start= disabled; sc stop SysMain"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Optimize SSD (TRIM & Defrag)",
     "desc": "Bật TRIM để tăng tuổi thọ SSD và tắt tự động chống phân mảnh định kỳ",
     "cmd": "fsutil behavior set DisableDeleteNotify 0; schtasks /Change /TN \"Microsoft\\Windows\\Defrag\\ScheduledDefrag\" /Disable"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Optimize Network & DNS",
     "desc": "Xóa cache DNS và tối ưu hóa thuật toán TCP để mạng ổn định hơn",
     "cmd": "ipconfig /flushdns; netsh int tcp set global autotuninglevel=normal; netsh int tcp set global congestionprovider=ctcp"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Game Bar & DVR",
     "desc": "Tắt tính năng quay màn hình ngầm của Xbox (GameDVR) giúp tăng FPS",
     "cmd": "reg add \"HKCU\\System\\GameConfigStore\" /v GameDVR_Enabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Optimize Boot Time",
     "desc": "Giảm thời gian chờ Menu Boot xuống 5 giây",
     "cmd": "bcdedit /timeout 5"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "High Performance & Visuals",
     "desc": "Bật chế độ hiệu năng cao và tối ưu hiệu ứng hình ảnh (Giữ lại Font smoothing)",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects\" /v VisualFXSetting /t REG_DWORD /d 3 /f; reg add \"HKCU\\Control Panel\\Desktop\" /v FontSmoothing /t REG_SZ /d 2 /f; powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Telemetry",
     "desc": "Chặn Microsoft thu thập dữ liệu chẩn đoán và tắt DiagTrack Service",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f; sc config DiagTrack start= disabled; sc stop DiagTrack"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Background Apps",
     "desc": "Ngăn các ứng dụng chạy ngầm không cần thiết để tiết kiệm tài nguyên",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BackgroundAppGlobalToggle /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Tips & Ads",
     "desc": "Tắt các quảng cáo, gợi ý, mẹo vặt phiền phức trong Start Menu và Settings",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SubscribedContent-310093Enabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SoftLandingEnabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Delivery Optimization",
     "desc": "Tắt tính năng chia sẻ băng thông Update (P2P) của Windows",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config\" /v DODownloadMode /t REG_DWORD /d 0 /f"
   },
   {
-    "category": "Tối ưu khác",
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Clear Thumbnail Cache",
     "desc": "Xóa bộ nhớ đệm hình thu nhỏ, giúp sửa lỗi hiển thị icon sai",
     "cmd": "Remove-Item -Path \"$env:LocalAppData\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" -Force -ErrorAction SilentlyContinue"
