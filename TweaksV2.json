@@ -608,5 +608,26 @@
     "desc": "Khôi phục cài đặt gốc: Bật lại Protected View và chặn file lạ (An toàn hơn, dùng khi muốn reset lại)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\PowerPoint\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableInternetFilesInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableAttachmentsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\ProtectedView\" /v DisableUnsafeLocationsInPV /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Word\\Security\\Trusted Locations\" /v AllowNetworkLocations /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🛠️ Explorer",
+    "name": "Restart File Explorer (Nhanh)",
+    "desc": "Khởi động lại ngay lập tức Windows Explorer khi bị đơ Taskbar hoặc treo thư mục (Không làm mất dữ liệu đang làm).",
+    "type": "cmd",
+    "cmd": "taskkill /f /im explorer.exe & start explorer.exe"
+  },
+  {
+    "category": "🛠️ Explorer",
+    "name": "Fix Explorer Freeze (Clear Cache)",
+    "desc": "Sửa lỗi đơ cứng khi mở This PC. Xóa sạch rác trong bộ nhớ tạm của Quick Access và Recent Files (Thủ phạm chính).",
+    "type": "cmd",
+    "cmd": "del /F /Q \"%APPDATA%\\Microsoft\\Windows\\Recent\\*\" & del /F /Q \"%APPDATA%\\Microsoft\\Windows\\Recent\\AutomaticDestinations\\*\" & del /F /Q \"%APPDATA%\\Microsoft\\Windows\\Recent\\CustomDestinations\\*\" & taskkill /f /im explorer.exe & start explorer.exe"
+  },
+  {
+    "category": "🛠️ Explorer",
+    "name": "Anti-Crash: Separate Explorer Process",
+    "desc": "Bật tính năng tách Process cho từng cửa sổ. Giúp chống sập dây chuyền: Nếu 1 thư mục bị đơ, Taskbar và các cửa sổ khác vẫn sống nhăn răng.",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v SeparateProcess /t REG_DWORD /d 1 /f"
   }
 ]
