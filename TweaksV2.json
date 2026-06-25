@@ -35,7 +35,6 @@
     "desc": "Thêm tùy chọn Copy/Move nhanh vào menu chuột phải trick của mình sài lâu rồi nên share lại hihi  (Tiện lợi)",
     "cmd": "reg add \"HKCR\\AllFilesystemObjects\\shellex\\ContextMenuHandlers\\Copy To\" /ve /d \"{C2FBB630-2971-11D1-A18C-00C04FD75D13}\" /f; reg add \"HKCR\\AllFilesystemObjects\\shellex\\ContextMenuHandlers\\Move To\" /ve /d \"{C2FBB631-2971-11D1-A18C-00C04FD75D13}\" /f"
   },
-
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Sticky Keys",
@@ -76,7 +75,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Background Apps",
     "desc": "Tắt ứng dụng chạy nền (Tiết kiệm Pin)",
-    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f"
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BackgroundAppGlobalToggle /t REG_DWORD /d 0 /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -153,8 +152,6 @@
     "type": "cmd",
     "cmd": "fsutil behavior set disablelastaccess 1"
   },
-
-  
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Clean Windows Update Cache",
@@ -211,12 +208,6 @@
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Disable Background Apps",
-    "desc": "Ngăn các ứng dụng chạy ngầm không cần thiết để tiết kiệm tài nguyên",
-    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications\" /v GlobalUserDisabled /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BackgroundAppGlobalToggle /t REG_DWORD /d 0 /f"
-  },
-  {
-    "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Tips & Ads",
     "desc": "Tắt các quảng cáo, gợi ý, mẹo vặt phiền phức trong Start Menu và Settings",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SubscribedContent-310093Enabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SoftLandingEnabled /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f"
@@ -225,7 +216,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Delivery Optimization",
     "desc": "Tắt tính năng chia sẻ băng thông Update (P2P) của Windows",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config\" /v DODownloadMode /t REG_DWORD /d 0 /f"
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config\" /v DODownloadMode /t REG_DWORD /d 0 /f; reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization\" /v DODownloadMode /t REG_DWORD /d 0 /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -233,19 +224,11 @@
     "desc": "Xóa bộ nhớ đệm hình thu nhỏ, giúp sửa lỗi hiển thị icon sai",
     "cmd": "Remove-Item -Path \"$env:LocalAppData\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" -Force -ErrorAction SilentlyContinue"
   },
-
-
   {
     "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Disable Bing Search",
     "desc": "Tắt tìm kiếm Web trong Start Menu",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d 0 /f"
-  },
-  {
-    "category": "🔒 QUYỀN RIÊNG TƯ",
-    "name": "Disable Telemetry",
-    "desc": "Chặn thu thập dữ liệu ngầm",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f"
   },
   {
     "category": "🔒 QUYỀN RIÊNG TƯ",
@@ -266,30 +249,24 @@
     "desc": "Tắt định vị vị trí",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 1 /f"
   },
-{
-  "category": "🔒 QUYỀN RIÊNG TƯ",
-  "name": "Enable Location Tracking",
-  "desc": "Bật lại định vị vị trí (Khôi phục mặc định)",
-  "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 0 /f"
-},
-{
+  {
+    "category": "🔒 QUYỀN RIÊNG TƯ",
+    "name": "Enable Location Tracking",
+    "desc": "Bật lại định vị vị trí (Khôi phục mặc định)",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors\" /v DisableLocation /t REG_DWORD /d 0 /f"
+  },
+  {
     "category": "🔒 QUYỀN RIÊNG TƯ",
     "name": "Block Urban VPN Telemetry",
     "desc": "Chặn Urban VPN thu thập dữ liệu & theo dõi người dùng (Privacy)",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_extensions_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"log_to_eventlog\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_policy_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_machine_id_data\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\Software\\Policies\\Google\\Chrome\\3rdparty\\extensions\\emahakmocgideepebncgnmlmliepgpgb\\Policy\" /v \"report_user_browsing_data\" /t REG_DWORD /d 0 /f"
-},
+  },
   {
     "category": "🌐 MẠNG & INTERNET",
     "name": "Disable Network Throttling",
     "desc": "Tắt giới hạn băng thông mạng (Giảm Ping/Lag)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d 4294967295 /f"
-  },
-  {
-    "category": "🌐 MẠNG & INTERNET",
-    "name": "Disable Delivery Optimization",
-    "desc": "Tắt chia sẻ update P2P (Hút băng thông/Ổ cứng ngầm)",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization\" /v DODownloadMode /t REG_DWORD /d 0 /f"
   },
   {
     "category": "🌐 MẠNG & INTERNET",
@@ -546,7 +523,7 @@
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Foxit Software\\Foxit PDF Reader\\Preferences\\Trust Manager\" /v bSafeMode /t REG_DWORD /d 0 /f & reg add \"HKCU\\Software\\Foxit Software\\Foxit PDF Reader\\Preferences\\Security\" /v bProtectedView /t REG_DWORD /d 0 /f"
   },
- {
+  {
     "category": "📄 PDF & OFFICE",
     "name": "Fix: Preview Blocked (Chạy cùng với Unblock All Files in Downloads )",
     "desc": "Sửa lỗi 'The file you are attempting to preview...' (Tắt tính năng đánh dấu file tải từ Internet là nguy hiểm)",
@@ -558,8 +535,8 @@
     "name": "Unblock All Files in Downloads (chạy cùng với Fix: Preview Blocked)",
     "desc": "Mở khóa toàn bộ file trong thư mục Downloads (Sửa lỗi không xem trước được file cũ đã tải)",
     "type": "powershell",
-    "cmd": "$folders = @(\"$env:USERPROFILE\\Downloads\", \"$env:USERPROFILE\\Documents\", \"$env:USERPROFILE\\Desktop\"); foreach ($f in $folders) { Get-ChildItem -Path $f -Recurse -File -ErrorAction SilentlyContinue | Unblock-File }"  }
-  ,
+    "cmd": "$folders = @(\"$env:USERPROFILE\\Downloads\", \"$env:USERPROFILE\\Documents\", \"$env:USERPROFILE\\Desktop\"); foreach ($f in $folders) { Get-ChildItem -Path $f -Recurse -File -ErrorAction SilentlyContinue | Unblock-File }"
+  },
   {
     "category": "📄 PDF TOOLS",
     "name": "Adobe: Fast Launch & Clean UI",
