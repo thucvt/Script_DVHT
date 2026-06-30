@@ -31,7 +31,7 @@
         "kill_process": "EVKey64.exe",
         "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe",
         "check_name": "evkey",
-        "domain": "https://evkeyvn.com/",
+        "domain": "evkeyvn.com",
         "desc": "Bộ gõ hiện đại, khắc phục lỗi gõ tiếng Việt trên Chrome, Excel và gợi ý từ thông minh."
       }
     ]
@@ -181,8 +181,8 @@
         "install_args": "/install",
         "check_path": "%LOCALAPPDATA%\\CentBrowser\\Application\\chrome.exe",
         "check_name": "cent browser",
+        "domain": "centbrowser.com",
         "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ, nhiều tính năng cử chỉ chuột tiện lợi.",
-        "domain": "centbrowser.com"
       },
       {
         "id": "Brave.Brave",
