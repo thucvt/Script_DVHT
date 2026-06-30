@@ -575,6 +575,18 @@
         "check_name": "gpu-z",
         "domain": "techpowerup.com",
         "desc": "Thông tin card đồ họa, driver, xung nhịp — chuẩn cho game/đồ họa."
+      },
+      {
+        "id": "ThrottleStop",
+        "name": "ThrottleStop",
+        "type": "portable",
+        "url": "https://uk2-dl.techpowerup.com/files/ThrottleStop_9.7.zip",
+        "exe_in_zip": "ThrottleStop.exe",
+        "kill_process": "ThrottleStop.exe",
+        "check_path": "%ProgramFiles%\\ThrottleStop\\ThrottleStop.exe",
+        "check_name": "throttlestop",
+        "domain": "techpowerup.com",
+        "desc": "Giám sát & giảm CPU throttling trên laptop — đôi cánh với GPU-Z, cần quyền Admin."
       }
     ]
   },
