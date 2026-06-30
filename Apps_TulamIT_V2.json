@@ -182,7 +182,7 @@
         "check_path": "%LOCALAPPDATA%\\CentBrowser\\Application\\chrome.exe",
         "check_name": "cent browser",
         "domain": "centbrowser.com",
-        "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ, nhiều tính năng cử chỉ chuột tiện lợi.",
+        "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ, nhiều tính năng cử chỉ chuột tiện lợi."
       },
       {
         "id": "Brave.Brave",
