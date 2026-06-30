@@ -4,12 +4,20 @@
   "updated_at": "2026-06-30T17:20:00+07:00",
   "items": [
     {
+      "id": "windows_11_home",
+      "software": "Windows 11 Home",
+      "category": "Windows",
+      "vendor": "Microsoft",
+      "description": "Key bản quyền chính hãng cho Windows 11 Home.",
+      "affiliate_url": "https://s.shopee.vn/8AU826VPUx"
+    },
+    {
       "id": "windows_11_pro",
       "software": "Windows 11 Pro",
       "category": "Windows",
       "vendor": "Microsoft",
       "description": "Key bản quyền chính hãng cho Windows 11 Pro.",
-      "affiliate_url": "https://shopee.vn/"
+      "affiliate_url": "https://s.shopee.vn/7VEREw7NTt"
     },
     {
       "id": "office_365_personal",
@@ -17,7 +25,7 @@
       "category": "Office",
       "vendor": "Microsoft",
       "description": "Gói Microsoft 365 chính hãng cho 1 người dùng.",
-      "affiliate_url": "https://shopee.vn/"
+      "affiliate_url": "https://s.shopee.vn/30m1sSbBWW"
     },
     {
       "id": "office_365_family",
@@ -25,7 +33,7 @@
       "category": "Office",
       "vendor": "Microsoft",
       "description": "Gói Microsoft 365 Family chính hãng cho nhiều người dùng.",
-      "affiliate_url": "https://shopee.vn/"
+      "affiliate_url": "https://s.shopee.vn/30m1sSbBWW"
     },
     {
       "id": "office_home_business_2024",
@@ -33,15 +41,8 @@
       "category": "Office",
       "vendor": "Microsoft",
       "description": "Bản Office vĩnh viễn chính hãng cho doanh nghiệp nhỏ.",
-      "affiliate_url": "https://shopee.vn/"
-    },
-    {
-      "id": "visual_studio_pro",
-      "software": "Visual Studio Professional",
-      "category": "Developer",
-      "vendor": "Microsoft",
-      "description": "Giấy phép chính hãng cho phát triển phần mềm chuyên nghiệp.",
-      "affiliate_url": "https://shopee.vn/"
+      "affiliate_url": "https://s.shopee.vn/30m1sSbBWW"
     }
+   
   ]
 }
