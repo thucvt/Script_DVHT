@@ -451,5 +451,206 @@
         "desc": "Thư viện âm thanh 3D đa nền tảng, sửa lỗi mất tiếng trong một số game cũ."
       }
     ]
+  },
+  {
+    "group_name": "10. 🎬 MEDIA & GIẢI TRÍ",
+    "apps": [
+      {
+        "id": "VideoLAN.VLC",
+        "name": "VLC Media Player",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\VideoLAN\\VLC\\vlc.exe",
+        "check_name": "vlc media player",
+        "fallback_url": "https://get.videolan.org/vlc/last/win64/vlc-3.0.21-win64.exe",
+        "install_args": "/S",
+        "domain": "videolan.org",
+        "desc": "Trình phát video/audio đa định dạng, miễn phí, không cần codec riêng."
+      },
+      {
+        "id": "Spotify.Spotify",
+        "name": "Spotify",
+        "type": "winget",
+        "check_path": "%APPDATA%\\Spotify\\Spotify.exe",
+        "check_name": "spotify",
+        "fallback_url": "https://download.scdn.co/SpotifySetup.exe",
+        "install_args": "/silent",
+        "domain": "spotify.com",
+        "desc": "Nghe nhạc streaming phổ biến nhất thế giới."
+      }
+    ]
+  },
+  {
+    "group_name": "11. 🔧 IT PRO & TÌM KIẾM",
+    "apps": [
+      {
+        "id": "voidtools.Everything",
+        "name": "Everything (Tìm file)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Everything\\Everything.exe",
+        "check_name": "everything",
+        "fallback_url": "https://www.voidtools.com/Everything-1.5.0.1397.x64-Setup.exe",
+        "install_args": "/S",
+        "domain": "voidtools.com",
+        "desc": "Tìm file/folder trên ổ cứng cực nhanh — công cụ không thể thiếu của IT."
+      },
+      {
+        "id": "Notepad++.Notepad++",
+        "name": "Notepad++",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Notepad++\\notepad++.exe",
+        "check_name": "notepad++",
+        "fallback_url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.7/npp.8.7.7.Installer.x64.exe",
+        "install_args": "/S",
+        "domain": "notepad-plus-plus.org",
+        "desc": "Soạn thảo văn bản/code nhẹ, hỗ trợ plugin mạnh."
+      },
+      {
+        "id": "PuTTY.PuTTY",
+        "name": "PuTTY (SSH/Telnet)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\PuTTY\\putty.exe",
+        "check_name": "putty",
+        "domain": "putty.org",
+        "desc": "Client SSH/Telnet chuẩn cho quản trị server và thiết bị mạng."
+      },
+      {
+        "id": "WinSCP.WinSCP",
+        "name": "WinSCP (SFTP/FTP)",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\WinSCP\\WinSCP.exe",
+        "check_name": "winscp",
+        "fallback_url": "https://winscp.net/download/files/6.3.7/WinSCP-6.3.7-Setup.exe",
+        "install_args": "/SILENT",
+        "domain": "winscp.net",
+        "desc": "Truyền file qua SFTP/FTP/SCP — đôi cánh với PuTTY."
+      },
+      {
+        "id": "Git.Git",
+        "name": "Git for Windows",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Git\\bin\\git.exe",
+        "check_name": "git",
+        "fallback_url": "https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.2/Git-2.47.1.2-64-bit.exe",
+        "install_args": "/VERYSILENT /NORESTART",
+        "domain": "git-scm.com",
+        "desc": "Hệ thống quản lý mã nguồn — cần cho dev và nhiều công cụ hiện đại."
+      }
+    ]
+  },
+  {
+    "group_name": "12. 🖥️ PHẦN CỨNG & Ổ ĐĨA",
+    "apps": [
+      {
+        "id": "CPUID.CPU-Z",
+        "name": "CPU-Z",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\CPUID\\CPU-Z\\cpuz.exe",
+        "check_name": "cpu-z",
+        "domain": "cpuid.com",
+        "desc": "Xem chi tiết CPU, mainboard, RAM — chuẩn khi mua/bán máy."
+      },
+      {
+        "id": "REALiX.HWiNFO",
+        "name": "HWiNFO64",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\HWiNFO64\\HWiNFO64.exe",
+        "check_name": "hwinfo",
+        "domain": "hwinfo.com",
+        "desc": "Giám sát phần cứng chi tiết: nhiệt, volt, tốc độ quạt, SMART."
+      },
+      {
+        "id": "CrystalDiskInfo.CrystalDiskInfo",
+        "name": "CrystalDiskInfo",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\CrystalDiskInfo\\DiskInfo64.exe",
+        "check_name": "crystaldiskinfo",
+        "domain": "crystalmark.info",
+        "desc": "Đọc SMART ổ cứng/SSD — cảnh báo sớm khi ổ sắp hỏng."
+      },
+      {
+        "id": "TechPowerUp.GPU-Z",
+        "name": "GPU-Z",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\GPU-Z\\GPU-Z.exe",
+        "check_name": "gpu-z",
+        "domain": "techpowerup.com",
+        "desc": "Thông tin card đồ họa, driver, xung nhịp — chuẩn cho game/đồ họa."
+      }
+    ]
+  },
+  {
+    "group_name": "13. ☁️ CLOUD & CHAT THÊM",
+    "apps": [
+      {
+        "id": "Telegram.TelegramDesktop",
+        "name": "Telegram Desktop",
+        "type": "winget",
+        "check_path": "%APPDATA%\\Telegram Desktop\\Telegram.exe",
+        "check_name": "telegram",
+        "domain": "telegram.org",
+        "desc": "Nhắn tin, gọi video, nhóm lớn — phổ biến trong cộng đồng IT."
+      },
+      {
+        "id": "Discord.Discord",
+        "name": "Discord",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Discord\\Update.exe",
+        "check_name": "discord",
+        "domain": "discord.com",
+        "desc": "Chat voice/text cho game, học online và làm việc nhóm."
+      },
+      {
+        "id": "Microsoft.OneDrive",
+        "name": "Microsoft OneDrive",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Microsoft\\OneDrive\\OneDrive.exe",
+        "check_name": "microsoft onedrive",
+        "domain": "microsoft.com",
+        "desc": "Đồng bộ file lên cloud Microsoft — tích hợp Office."
+      },
+      {
+        "id": "Google.GoogleDrive",
+        "name": "Google Drive",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Google\\Drive File Stream\\launch.bat",
+        "check_name": "google drive",
+        "domain": "google.com",
+        "desc": "Đồng bộ Google Drive trên máy tính."
+      }
+    ]
+  },
+  {
+    "group_name": "14. ⚙️ RUNTIME BỔ SUNG",
+    "apps": [
+      {
+        "id": "Microsoft.DotNet.DesktopRuntime.9",
+        "name": ".NET Desktop Runtime 9",
+        "type": "winget",
+        "check_name": "windows desktop runtime 9",
+        "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\9.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "fallback_url": "https://aka.ms/dotnet/9.0/windowsdesktop-runtime-win-x64.exe",
+        "install_args": "/install /quiet /norestart",
+        "domain": "dotnet.microsoft.com",
+        "desc": "Runtime .NET 9 cho ứng dụng mới nhất."
+      },
+      {
+        "id": "Python.Python.3.12",
+        "name": "Python 3.12",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Python\\Python312\\python.exe",
+        "check_name": "python 3.12",
+        "domain": "python.org",
+        "desc": "Ngôn ngữ lập trình phổ biến — automation, AI, web."
+      },
+      {
+        "id": "OpenJS.NodeJS.LTS",
+        "name": "Node.js LTS",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\nodejs\\node.exe",
+        "check_name": "node.js",
+        "domain": "nodejs.org",
+        "desc": "Runtime JavaScript — cần cho nhiều công cụ dev hiện đại."
+      }
+    ]
   }
 ]
