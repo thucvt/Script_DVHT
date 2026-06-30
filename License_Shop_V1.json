@@ -1,0 +1,47 @@
+{
+  "schema": "tulamit-license-shop-v1",
+  "title": "Mua key bản quyền chính hãng",
+  "updated_at": "2026-06-30T17:20:00+07:00",
+  "items": [
+    {
+      "id": "windows_11_pro",
+      "software": "Windows 11 Pro",
+      "category": "Windows",
+      "vendor": "Microsoft",
+      "description": "Key bản quyền chính hãng cho Windows 11 Pro.",
+      "affiliate_url": "https://shopee.vn/"
+    },
+    {
+      "id": "office_365_personal",
+      "software": "Microsoft 365 Personal",
+      "category": "Office",
+      "vendor": "Microsoft",
+      "description": "Gói Microsoft 365 chính hãng cho 1 người dùng.",
+      "affiliate_url": "https://shopee.vn/"
+    },
+    {
+      "id": "office_365_family",
+      "software": "Microsoft 365 Family",
+      "category": "Office",
+      "vendor": "Microsoft",
+      "description": "Gói Microsoft 365 Family chính hãng cho nhiều người dùng.",
+      "affiliate_url": "https://shopee.vn/"
+    },
+    {
+      "id": "office_home_business_2024",
+      "software": "Office Home & Business 2024",
+      "category": "Office",
+      "vendor": "Microsoft",
+      "description": "Bản Office vĩnh viễn chính hãng cho doanh nghiệp nhỏ.",
+      "affiliate_url": "https://shopee.vn/"
+    },
+    {
+      "id": "visual_studio_pro",
+      "software": "Visual Studio Professional",
+      "category": "Developer",
+      "vendor": "Microsoft",
+      "description": "Giấy phép chính hãng cho phát triển phần mềm chuyên nghiệp.",
+      "affiliate_url": "https://shopee.vn/"
+    }
+  ]
+}

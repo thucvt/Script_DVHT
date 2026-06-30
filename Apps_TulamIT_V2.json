@@ -17,7 +17,7 @@
         "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip",
         "exe_in_zip": "UniKeyNT.exe",
         "kill_process": "UniKeyNT.exe",
-        "check_path": "%ProgramFiles%\\Unikey\\UniKeyNT.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\Unikey\\UniKeyNT.exe",
         "check_name": "unikey",
         "icon_url": "https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg",
         "desc": "Bộ gõ tiếng Việt phổ biến nhất, bản ổn định RC2 chính chủ."
@@ -29,7 +29,7 @@
         "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip",
         "exe_in_zip": "EVKey64.exe",
         "kill_process": "EVKey64.exe",
-        "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\EVKey\\EVKey64.exe",
         "check_name": "evkey",
         "domain": "evkeyvn.com",
         "desc": "Bộ gõ hiện đại, khắc phục lỗi gõ tiếng Việt trên Chrome, Excel và gợi ý từ thông minh."
@@ -46,7 +46,7 @@
         "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
         "exe_in_zip": "Office Tool Plus.exe",
         "auto_run": true,
-        "check_path": "%ProgramFiles%\\OfficeToolPlus\\Office Tool Plus.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\OfficeToolPlus\\Office Tool Plus.exe",
         "check_name": "office tool plus",
         "domain": "officetool.plus",
         "desc": "Công cụ mạnh mẽ hỗ trợ tải, cài đặt tùy chỉnh và quản lý bản quyền Office."
@@ -583,7 +583,7 @@
         "url": "https://uk2-dl.techpowerup.com/files/ThrottleStop_9.7.zip",
         "exe_in_zip": "ThrottleStop.exe",
         "kill_process": "ThrottleStop.exe",
-        "check_path": "%ProgramFiles%\\ThrottleStop\\ThrottleStop.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\ThrottleStop\\ThrottleStop.exe",
         "check_name": "throttlestop",
         "domain": "techpowerup.com",
         "desc": "Giám sát & giảm CPU throttling trên laptop — đôi cánh với GPU-Z, cần quyền Admin."
