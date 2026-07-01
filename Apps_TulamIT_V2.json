@@ -560,7 +560,7 @@
         "desc": "Giám sát phần cứng chi tiết: nhiệt, volt, tốc độ quạt, SMART."
       },
       {
-        "id": "CrystalDiskInfo.CrystalDiskInfo",
+        "id": "CrystalDewWorld.CrystalDiskInfo",
         "name": "CrystalDiskInfo",
         "type": "winget",
         "check_path": "%ProgramFiles%\\CrystalDiskInfo\\DiskInfo64.exe",
