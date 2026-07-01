@@ -3,7 +3,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Create Restore Point (Nên chạy)",
     "desc": "Tạo điểm khôi phục (Backup) an toàn nên chạy trước khi áp dụng các tweak kia",
-    "cmd": "Checkpoint-Computer -Description \"AutoTweak_Sacombank\" -RestorePointType \"MODIFY_SETTINGS\""
+    "cmd": "Checkpoint-Computer -Description \"TuLamIT_V3\" -RestorePointType \"MODIFY_SETTINGS\""
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -198,7 +198,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "High Performance & Visuals",
     "desc": "Bật chế độ hiệu năng cao và tối ưu hiệu ứng hình ảnh (Giữ lại Font smoothing)",
-    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects\" /v VisualFXSetting /t REG_DWORD /d 3 /f; reg add \"HKCU\\Control Panel\\Desktop\" /v FontSmoothing /t REG_SZ /d 2 /f; powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects\" /v VisualFXSetting /t REG_DWORD /d 2 /f; reg add \"HKCU\\Control Panel\\Desktop\" /v FontSmoothing /t REG_SZ /d 2 /f; powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -561,7 +561,7 @@
   {
     "category": "📊 OFFICE TWEAK",
     "name": "Office: Disable Hardware Acceleration",
-    "desc": "Sửa lỗi Excel/Word bị trắng màn hình, giật lag khi gõ phím (Tắt tăng tốc đồ họa)",
+    "desc": "Sửa Excel/Word trắng màn hình (tắt GPU). ⚠️ Một số máy bị tối/đen — dùng «Restore Security Defaults» hoặc đặt DisableHardwareAcceleration=0",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Common\\Graphics\" /v DisableHardwareAcceleration /t REG_DWORD /d 1 /f"
   },
