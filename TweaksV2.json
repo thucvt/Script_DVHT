@@ -7,8 +7,8 @@
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Super Optimize For Win 10/11",
-    "desc": "Tối ưu startup type hàng trăm Windows service. Một số service không có trên bản Win của bạn sẽ tự bỏ qua — bình thường.",
+    "name": "Super Optimize For Win 10/11 (ThucIT)",
+    "desc": "Tối ưu startup type hàng trăm Windows service. Một số service không có trên bản Win của bạn sẽ tự bỏ qua.",
     "cmd": "RUN_ThucIT_SERVICES"
   },
   {
