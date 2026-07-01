@@ -116,8 +116,8 @@
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Transparency Effects",
-    "desc": "Tắt hiệu ứng trong suốt (Giảm tải GPU/VRAM)",
-    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v EnableTransparency /t REG_DWORD /d 0 /f"
+    "desc": "Tắt hiệu ứng trong suốt + acrylic (EnableTransparency + VisualFXSetting)",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v EnableTransparency /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects\" /v VisualFXSetting /t REG_DWORD /d 2 /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -198,7 +198,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "High Performance & Visuals",
     "desc": "Bật chế độ hiệu năng cao và tối ưu hiệu ứng hình ảnh (Giữ lại Font smoothing)",
-    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects\" /v VisualFXSetting /t REG_DWORD /d 2 /f; reg add \"HKCU\\Control Panel\\Desktop\" /v FontSmoothing /t REG_SZ /d 2 /f; powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v EnableTransparency /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects\" /v VisualFXSetting /t REG_DWORD /d 2 /f; reg add \"HKCU\\Control Panel\\Desktop\" /v FontSmoothing /t REG_SZ /d 2 /f; powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -500,8 +500,8 @@
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
     "name": "Branding: TỰ LÀM IT Signature",
-    "desc": "Đóng dấu thông tin OEM: TỰ LÀM IT by ThucVuong (Thay thế thông tin FPT/Dell/HP...)",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"TỰ LÀM IT (by ThucVuong)\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"0705558789\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://www.facebook.com/trongthuc.vuong\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOwner\" /t REG_SZ /d \"ThucVuong\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"TỰ LÀM IT\" /f"
+    "desc": "Ghi thông tin hỗ trợ OEM (SĐT/FB) — không ghi dòng Model dưới tên máy trong Settings.",
+    "cmd": "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /f 2>nul & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"TỰ LÀM IT\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"0705558789\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://www.facebook.com/trongthuc.vuong\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"TỰ LÀM IT\" /f"
   },
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
