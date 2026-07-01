@@ -65,12 +65,12 @@
       {
         "id": "Foxit.FoxitReader",
         "name": "Foxit PDF Reader",
-        "type": "exe_url",  
-        "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2025.2.1/FoxitPDFReader202521_L10N_Setup_Prom_x64.exe", 
-        "check_path": "%ProgramFiles(x86)%\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe",
         "check_name": "foxit pdf reader",
-        "install_args": "",
-        "kill_process": "FoxitReader.exe",  
+        "fallback_url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.1.1/FoxitPDFReader202611_L10N_Setup_x64.exe",
+        "install_args": "/quiet /norestart",
+        "kill_process": "FoxitReader.exe",
         "domain": "foxit.com",
         "desc": "Trình đọc PDF siêu nhẹ, tốc độ mở file nhanh, hỗ trợ tạo chữ ký và ghi chú mạnh mẽ."
       },
@@ -432,10 +432,11 @@
       {
         "id": "Nvidia.PhysX",
         "name": "NVIDIA PhysX System",
-        "type": "exe_url",
-        "url": "https://us.download.nvidia.com/Windows/9.19.0218/PhysX-9.19.0218-SystemSoftware.exe",
-        "install_args": "/silent",
+        "type": "winget",
         "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll",
+        "check_name": "nvidia physx",
+        "fallback_url": "https://us.download.nvidia.com/Windows/9.23.1019/PhysX_9.23.1019_SystemSoftware.exe",
+        "install_args": "/quiet /norestart",
         "domain": "nvidia.com",
         "desc": "Công cụ hỗ trợ xử lý vật lý trong game, cần thiết cho các máy dùng card NVIDIA."
       },
